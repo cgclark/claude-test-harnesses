@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "مشروع لغة الإشارة",
-  "Big Top": "Big Top",
   "Transcription app": "تطبيق النسخ",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "كل المواقع",
   "Reyal website": "موقع Reyal",
   "Booking portal": "بوابة الحجز",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "ينطق Mac عبارات اختبار بأصوات اصطناعية في أداة التعرف على الكلام في التطبيق، فتُختبر الأوامر الصوتية دون أن يتكلم أحد."
+  },
+  "device-audio-replay.md": {
+   "name": "إعادة تشغيل الصوت على جهاز",
+   "does": "يحوّل Mac كل محادثة اختبار إلى ملف صوتي، ويستمع إليه تطبيق الهاتف بدلًا من الميكروفون، فتُختبر الميزات الصوتية على الهاتف الحقيقي دون أن يتكلم أحد."
   },
   "siri-phrasing-check.md": {
    "name": "صياغة عبارات Siri",

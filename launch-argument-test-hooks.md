@@ -85,7 +85,7 @@ xcrun simctl launch "$UDID" <bundle-id> -reset<Thing> -<defaultsKey> <value>
 # Mac (Designed for iPad / native): scope to one launch
 open -g "<path to .app>" --env "<APP>_SHOW=settings"
 
-# Physical device from the Mac (flag checked in devicectl's help; not run with hooks here)
+# Physical device from the Mac (used by device-audio-replay.md)
 xcrun devicectl device process launch --device <device-id> \
   -e '{"<APP>_SHOW":"settings"}' <bundle-id>
 ```
@@ -101,6 +101,12 @@ hook are in `game-console-driving.md`.
 for i in $(seq 1 60); do grep -q "<APP>_SHOW=settings" "$OUT/app.log" && break; sleep 1; done
 xcrun simctl io "$UDID" screenshot "$OUT/settings.png"
 ```
+
+For a hook that runs a script (typed turns, an audio replay), end with one done line that carries the state to
+check, e.g. `<APP>_SAY → done · <n> notes · open: <text>`. The harness waits on it and checks from it, so it
+needs no second copy of the app's storage logic. When several harnesses drive the same feature (typed turns on
+the simulator, audio on a device, a Mac bench), have them all read one scenario file; see
+`device-audio-replay.md`.
 
 **5. Pull dumps from the container.** Dump hooks write to the app's Documents folder:
 
@@ -120,6 +126,7 @@ in the code, so they never show up as strings.
 - **`SIMCTL_CHILD_*` set during `simctl boot` sticks to every later launch.** One hook kept opening Settings for a day. See `headless-ios.md`.
 - **Hooks that fire every time a view appears overwrite the tester's changes.** The seed and builder hooks re-ran each time the home list reappeared, and the seed was written back over edits. Fire once per launch.
 - **Seeded data becomes real data.** A health seeder's synthetic rides were ordinary workouts once saved. They showed up as a route in the picker, added to the training load, were pushed to a server as history, and Claude spent rounds treating its own test loop as the user's route. Fix: filter out records the app wrote, and purge them on launch on devices. The platform only lets an app delete what it saved, so the purge can't reach real data. A demo replay also saved a ride that never happened. Seed into a namespaced store, or inject the store and assert on what would have been written.
+- **A stale log passes for this run's.** When the harness reads a log file the app keeps in its container, the previous run's done line is still there until the new launch's reset wipes it, and gets read first. Overwrite the log before each launch. See `device-audio-replay.md`.
 - **Hooks gated on a second variable silently do nothing.** The engine's command hook ran only when its delay variable was also set (see `game-console-driving.md`). Document each hook's partner next to it.
 - **A written rule doesn't keep hooks out of release.** Hook reads drift outside `#if DEBUG` as code moves, and nobody notices because debug runs still work. What fixed it for good was moving every read onto one helper that returns nothing outside DEBUG (a Swift `TestHooks` type, or a single C function for an engine), plus a source check in the build that fails on any read outside that helper. Wrapping each read in `#if DEBUG` where it's used also works, but only a build check keeps it that way.
 - **A Release build that needs hooks is its own build, not a leak.** Performance scripts that drive a Release copy through a hook should turn the gate on with an explicit compiler flag in that one script, so the shipped Release build still compiles every hook out. Confirm by disassembling the shipped build's gate: it should be a plain "return nothing".

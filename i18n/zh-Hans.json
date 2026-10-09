@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "手语项目",
-  "Big Top": "Big Top",
   "Transcription app": "转写应用",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "所有网站",
   "Reyal website": "Reyal 网站",
   "Booking portal": "预订平台",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac 用合成语音把测试短语读给应用的语音识别器，无需任何人开口就能测试语音命令。"
+  },
+  "device-audio-replay.md": {
+   "name": "真机音频回放",
+   "does": "Mac 把每段测试对话转成音频文件，手机上的应用收听该文件而非麦克风，无需任何人开口就能在真机上测试语音功能。"
   },
   "siri-phrasing-check.md": {
    "name": "Siri 说法检查",

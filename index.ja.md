@@ -9,9 +9,11 @@
 
 Claude Codeが自分の作業を自ら確かめる方法です。アプリを実行し、読み取れる形で記録を取り、人が確認する前に合格か不合格かを判定します。各名前から、手順をすべて載せたページが開きます。 各ハーネスのページ自体は英語です。
 
-<img class="c" src="icons/claude-code.svg" alt="Claude推奨" title="Claude推奨" width="16" height="16"> **Claude推奨**: 標準ツールをそのまま使用 (8)<br>
-<img class="c" src="icons/claude-code.svg" alt="Claude推奨・拡張あり" title="Claude推奨・拡張あり" width="16" height="16"><img class="o" src="icons/plus.png" alt="Claude推奨・拡張あり" title="Claude推奨・拡張あり" width="16" height="16"> **Claude推奨・拡張あり**: 動かすために手を加える必要があった標準ツール (4)<br>
-<img class="o" src="icons/hammer.fill.png" alt="独自開発" title="独自開発" width="16" height="16"> **独自開発**: 自分たちで編み出す必要があった手法 (30)
+<table class="key okey">
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="Claude推奨" title="Claude推奨" width="16" height="16"></td><td><b>Claude推奨</b>: 標準ツールをそのまま使用</td></tr>
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="Claude推奨・拡張あり" title="Claude推奨・拡張あり" width="16" height="16"><img class="o" src="icons/plus.png" alt="Claude推奨・拡張あり" title="Claude推奨・拡張あり" width="16" height="16"></td><td><b>Claude推奨・拡張あり</b>: 動かすために手を加える必要があった標準ツール</td></tr>
+<tr><td class="ki"><img class="o" src="icons/hammer.fill.png" alt="独自開発" title="独自開発" width="16" height="16"></td><td><b>独自開発</b>: 自分たちで編み出す必要があった手法</td></tr>
+</table>
 
 <img class="o t" src="icons/checkmark.square.png" alt="そのバージョンで動作" title="そのバージョンで動作" width="16" height="16"> そのバージョンで動作 · <img class="o t" src="icons/square.png" alt="未確認" title="未確認" width="16" height="16"> 未確認 · <img class="o t" src="icons/xmark.square.png" alt="そこではまだ動作しない" title="そこではまだ動作しない" width="16" height="16"> そこではまだ動作しない
 
@@ -21,7 +23,7 @@ OSのバージョンに依存しないハーネスは、両方で動作するも
 
 <table class="key">
 <tr><td><img class="app-sm" src="icons/apps/quake3.png" alt="" width="20" height="20"> Quake 3</td><td><img class="app-sm" src="icons/apps/throwdown.png" alt="" width="20" height="20"> Throwdown</td><td><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="" width="20" height="20"> Frictionless Coffee</td></tr>
-<tr><td><img class="app-sm" src="icons/apps/big-top.png" alt="" width="20" height="20"> Big Top</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
+<tr><td><img class="app-sm" src="icons/apps/circus.png" alt="" width="20" height="20"> Circus</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
 </table>
 
 ## シミュレータ・Mac・デバイス上のアプリ
@@ -66,8 +68,9 @@ OSのバージョンに依存しないハーネスは、両方で動作するも
 <table class="wide">
 <thead><tr><th width="190">ハーネス</th><th>機能</th><th width="60">初出</th><th width="80">macOS<br>/ iOS 26</th><th width="80">macOS<br>/ iOS 27</th><th width="70">由来</th></tr></thead>
 <tbody>
-<tr><td><a href="on-device-image-reduction.md">スクリーンショットをテキストに</a></td><td>Claudeが読む前に、スクリーンショットやスキャンをMac上でテキストに変換します。画像を外に出さずに済み、Claudeのメモリ使用量も大幅に減ります。</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="そのバージョンで動作" title="そのバージョンで動作" width="16" height="16"></td><td class="m" rowspan="8"><img class="o" src="icons/hammer.fill.png" alt="独自開発" title="独自開発" width="16" height="16"></td></tr>
-<tr><td><a href="voice-bench.md">voice-bench</a></td><td>Macが合成音声でテストフレーズを話し、アプリの音声認識に聞かせます。誰も話さなくても音声コマンドをテストできます。</td><td class="app-c"><img class="app-sm" src="icons/apps/big-top.png" alt="Big Top" title="Big Top" width="22" height="22"></td><td class="m"><img class="o t" src="icons/square.png" alt="未確認" title="未確認" width="16" height="16"></td><td class="m"><img class="o t" src="icons/checkmark.square.png" alt="そのバージョンで動作" title="そのバージョンで動作" width="16" height="16"></td></tr>
+<tr><td><a href="on-device-image-reduction.md">スクリーンショットをテキストに</a></td><td>Claudeが読む前に、スクリーンショットやスキャンをMac上でテキストに変換します。画像を外に出さずに済み、Claudeのメモリ使用量も大幅に減ります。</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="そのバージョンで動作" title="そのバージョンで動作" width="16" height="16"></td><td class="m" rowspan="9"><img class="o" src="icons/hammer.fill.png" alt="独自開発" title="独自開発" width="16" height="16"></td></tr>
+<tr><td><a href="voice-bench.md">voice-bench</a></td><td>Macが合成音声でテストフレーズを話し、アプリの音声認識に聞かせます。誰も話さなくても音声コマンドをテストできます。</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/circus.png" alt="Circus" title="Circus" width="22" height="22"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="未確認" title="未確認" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="そのバージョンで動作" title="そのバージョンで動作" width="16" height="16"></td></tr>
+<tr><td><a href="device-audio-replay.md">実機での音声再生</a></td><td>Macがテスト用の会話をそれぞれ音声ファイルに変換し、スマートフォンのアプリがマイクの代わりにそれを聞き取ります。誰も話さなくても、実際のスマートフォンで音声機能をテストできます。</td></tr>
 <tr><td><a href="siri-phrasing-check.md">Siriのフレーズ</a></td><td>「order my usual」など、アプリにSiri用として組み込んだフレーズが、人が実際に言う言い方と合っているか確かめます。Siriがそれを正しく振り分けるかは、まだ実機での確認が必要です。</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="Frictionless Coffee" title="Frictionless Coffee" width="22" height="22"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="そのバージョンで動作" title="そのバージョンで動作" width="16" height="16"></td></tr>
 <tr><td><a href="golden-snapshot.md">リファレンススナップショット</a></td><td>書き直しの前にアプリの出力をすべて保存し、書き直したバージョンがまったく同じ出力を生むかを確かめます。</td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="そのバージョンで動作" title="そのバージョンで動作" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="未確認" title="未確認" width="16" height="16"></td></tr>
 <tr><td><a href="transcription-accuracy-scoring.md">文字起こしの精度</a></td><td>正しい書き起こし付きの公開録音でアプリの音声テキスト変換を実行し、誤った文字の数をスコア化します。</td><td class="app-c"></td></tr>

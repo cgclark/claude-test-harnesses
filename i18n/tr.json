@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "İşaret dili çalışması",
-  "Big Top": "Big Top",
   "Transcription app": "Transkripsiyon uygulaması",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "Tüm siteler",
   "Reyal website": "Reyal web sitesi",
   "Booking portal": "Rezervasyon portalı",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac, test ifadelerini sentetik seslerle uygulamanın konuşma tanıyıcısına söyler; böylece sesli komutlar kimse konuşmadan test edilebilir."
+  },
+  "device-audio-replay.md": {
+   "name": "Cihazda ses oynatma",
+   "does": "Mac, her test konuşmasını bir ses dosyasına dönüştürür ve telefondaki uygulama mikrofon yerine onu dinler; böylece sesli özellikler kimse konuşmadan gerçek telefonda test edilebilir."
   },
   "siri-phrasing-check.md": {
    "name": "Siri ifadeleri",

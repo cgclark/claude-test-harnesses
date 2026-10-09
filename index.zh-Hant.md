@@ -9,9 +9,11 @@
 
 讓 Claude Code 檢查自己工作的方法：執行應用程式，擷取它能讀取的內容，並在需要人來看之前判定通過或失敗。點選每個名稱即可開啟含完整做法的頁面。 各測試工具頁面本身為英文。
 
-<img class="c" src="icons/claude-code.svg" alt="Claude 推薦" title="Claude 推薦" width="16" height="16"> **Claude 推薦**: 直接沿用的標準工具 (8)<br>
-<img class="c" src="icons/claude-code.svg" alt="Claude 推薦，經擴充" title="Claude 推薦，經擴充" width="16" height="16"><img class="o" src="icons/plus.png" alt="Claude 推薦，經擴充" title="Claude 推薦，經擴充" width="16" height="16"> **Claude 推薦，經擴充**: 我們得先補強才能運作的標準工具 (4)<br>
-<img class="o" src="icons/hammer.fill.png" alt="自行打造" title="自行打造" width="16" height="16"> **自行打造**: 我們自行摸索出來的方法 (30)
+<table class="key okey">
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="Claude 推薦" title="Claude 推薦" width="16" height="16"></td><td><b>Claude 推薦</b>: 直接沿用的標準工具</td></tr>
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="Claude 推薦，經擴充" title="Claude 推薦，經擴充" width="16" height="16"><img class="o" src="icons/plus.png" alt="Claude 推薦，經擴充" title="Claude 推薦，經擴充" width="16" height="16"></td><td><b>Claude 推薦，經擴充</b>: 我們得先補強才能運作的標準工具</td></tr>
+<tr><td class="ki"><img class="o" src="icons/hammer.fill.png" alt="自行打造" title="自行打造" width="16" height="16"></td><td><b>自行打造</b>: 我們自行摸索出來的方法</td></tr>
+</table>
 
 <img class="o t" src="icons/checkmark.square.png" alt="可在該版本上運作" title="可在該版本上運作" width="16" height="16"> 可在該版本上運作 · <img class="o t" src="icons/square.png" alt="尚未確認" title="尚未確認" width="16" height="16"> 尚未確認 · <img class="o t" src="icons/xmark.square.png" alt="在該版本上尚無法運作" title="在該版本上尚無法運作" width="16" height="16"> 在該版本上尚無法運作
 
@@ -21,7 +23,7 @@
 
 <table class="key">
 <tr><td><img class="app-sm" src="icons/apps/quake3.png" alt="" width="20" height="20"> Quake 3</td><td><img class="app-sm" src="icons/apps/throwdown.png" alt="" width="20" height="20"> Throwdown</td><td><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="" width="20" height="20"> Frictionless Coffee</td></tr>
-<tr><td><img class="app-sm" src="icons/apps/big-top.png" alt="" width="20" height="20"> Big Top</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
+<tr><td><img class="app-sm" src="icons/apps/circus.png" alt="" width="20" height="20"> Circus</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
 </table>
 
 ## 模擬器、Mac 與裝置上的應用程式
@@ -66,8 +68,9 @@
 <table class="wide">
 <thead><tr><th width="190">測試工具</th><th>能力</th><th width="60">來自</th><th width="80">macOS<br>/ iOS 26</th><th width="80">macOS<br>/ iOS 27</th><th width="70">出處</th></tr></thead>
 <tbody>
-<tr><td><a href="on-device-image-reduction.md">截圖轉文字</a></td><td>在 Claude 讀取之前，先在 Mac 上把截圖和掃描檔轉成文字，既能保護圖片隱私，也能大幅減少 Claude 記憶空間的用量。</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="可在該版本上運作" title="可在該版本上運作" width="16" height="16"></td><td class="m" rowspan="8"><img class="o" src="icons/hammer.fill.png" alt="自行打造" title="自行打造" width="16" height="16"></td></tr>
-<tr><td><a href="voice-bench.md">voice-bench</a></td><td>Mac 以合成語音將測試語句唸給應用程式的語音辨識器聽，不需要任何人開口就能測試語音指令。</td><td class="app-c"><img class="app-sm" src="icons/apps/big-top.png" alt="Big Top" title="Big Top" width="22" height="22"></td><td class="m"><img class="o t" src="icons/square.png" alt="尚未確認" title="尚未確認" width="16" height="16"></td><td class="m"><img class="o t" src="icons/checkmark.square.png" alt="可在該版本上運作" title="可在該版本上運作" width="16" height="16"></td></tr>
+<tr><td><a href="on-device-image-reduction.md">截圖轉文字</a></td><td>在 Claude 讀取之前，先在 Mac 上把截圖和掃描檔轉成文字，既能保護圖片隱私，也能大幅減少 Claude 記憶空間的用量。</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="可在該版本上運作" title="可在該版本上運作" width="16" height="16"></td><td class="m" rowspan="9"><img class="o" src="icons/hammer.fill.png" alt="自行打造" title="自行打造" width="16" height="16"></td></tr>
+<tr><td><a href="voice-bench.md">voice-bench</a></td><td>Mac 以合成語音將測試語句唸給應用程式的語音辨識器聽，不需要任何人開口就能測試語音指令。</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/circus.png" alt="Circus" title="Circus" width="22" height="22"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="尚未確認" title="尚未確認" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="可在該版本上運作" title="可在該版本上運作" width="16" height="16"></td></tr>
+<tr><td><a href="device-audio-replay.md">實體裝置音訊重播</a></td><td>Mac 將每段測試對話轉成音訊檔，手機上的應用程式改聽這個檔案而非麥克風，不需要任何人開口就能在實體手機上測試語音功能。</td></tr>
 <tr><td><a href="siri-phrasing-check.md">Siri 說法檢查</a></td><td>檢查應用程式內建給 Siri 的語句（例如「order my usual」）是否符合大家實際的說法；Siri 能否正確轉送這些語句，仍需在手機上確認。</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="Frictionless Coffee" title="Frictionless Coffee" width="22" height="22"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="可在該版本上運作" title="可在該版本上運作" width="16" height="16"></td></tr>
 <tr><td><a href="golden-snapshot.md">參考快照</a></td><td>在改寫之前儲存應用程式的完整輸出，再檢查改寫後的版本是否產生完全相同的輸出。</td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="可在該版本上運作" title="可在該版本上運作" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="尚未確認" title="尚未確認" width="16" height="16"></td></tr>
 <tr><td><a href="transcription-accuracy-scoring.md">轉錄準確度</a></td><td>在附有正確逐字稿的公開錄音上執行應用程式的語音轉文字功能，並依出錯的字元數評分。</td><td class="app-c"></td></tr>

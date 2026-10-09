@@ -299,8 +299,8 @@
     ]
    },
    {
-    "app": "Big Top",
-    "icon": "big-top",
+    "app": "Circus",
+    "icon": "circus",
     "rows": [
      {
       "name": "voice-bench",
@@ -310,6 +310,15 @@
       "v27": "☑",
       "origin": "built",
       "tech": "Speech features with no one speaking: synthetic voices → on-device transcriber → the app's own turn logic"
+     },
+     {
+      "name": "Audio replay on a device",
+      "file": "device-audio-replay.md",
+      "does": "The Mac turns each test conversation into an audio file and the phone app listens to it instead of the microphone, so voice features can be tested on the real phone without anyone talking.",
+      "tech": "Real phone, no one speaking: synthesised scenario audio → the app's on-device transcriber in place of the mic (holds while the app speaks) → app log done line checked",
+      "v26": "☐",
+      "v27": "☑",
+      "origin": "built"
      }
     ]
    },

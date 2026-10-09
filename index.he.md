@@ -9,9 +9,11 @@
 
 דרכים שבהן Claude Code בודק את העבודה של עצמו: מריץ את האפליקציה, לוכד משהו שהוא יכול לקרוא, ומחליט אם הבדיקה עברה או נכשלה לפני שאדם צריך להסתכל. כל שם פותח דף עם המתכון המלא. דפי מערכי הבדיקה עצמם כתובים באנגלית.
 
-<img class="c" src="icons/claude-code.svg" alt="מומלץ על ידי Claude" title="מומלץ על ידי Claude" width="16" height="16"> **מומלץ על ידי Claude**: כלי סטנדרטי בשימוש כמו שהוא (8)<br>
-<img class="c" src="icons/claude-code.svg" alt="מומלץ על ידי Claude, מורחב" title="מומלץ על ידי Claude, מורחב" width="16" height="16"><img class="o" src="icons/plus.png" alt="מומלץ על ידי Claude, מורחב" title="מומלץ על ידי Claude, מורחב" width="16" height="16"> **מומלץ על ידי Claude, מורחב**: כלי סטנדרטי שהיינו צריכים להוסיף לו לפני שעבד (4)<br>
-<img class="o" src="icons/hammer.fill.png" alt="נבנה על ידינו" title="נבנה על ידינו" width="16" height="16"> **נבנה על ידינו**: שיטה שהיינו צריכים לפתח בעצמנו (30)
+<table class="key okey">
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="מומלץ על ידי Claude" title="מומלץ על ידי Claude" width="16" height="16"></td><td><b>מומלץ על ידי Claude</b>: כלי סטנדרטי בשימוש כמו שהוא</td></tr>
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="מומלץ על ידי Claude, מורחב" title="מומלץ על ידי Claude, מורחב" width="16" height="16"><img class="o" src="icons/plus.png" alt="מומלץ על ידי Claude, מורחב" title="מומלץ על ידי Claude, מורחב" width="16" height="16"></td><td><b>מומלץ על ידי Claude, מורחב</b>: כלי סטנדרטי שהיינו צריכים להוסיף לו לפני שעבד</td></tr>
+<tr><td class="ki"><img class="o" src="icons/hammer.fill.png" alt="נבנה על ידינו" title="נבנה על ידינו" width="16" height="16"></td><td><b>נבנה על ידינו</b>: שיטה שהיינו צריכים לפתח בעצמנו</td></tr>
+</table>
 
 <img class="o t" src="icons/checkmark.square.png" alt="עובד בגרסה הזו" title="עובד בגרסה הזו" width="16" height="16"> עובד בגרסה הזו · <img class="o t" src="icons/square.png" alt="עדיין לא אומת" title="עדיין לא אומת" width="16" height="16"> עדיין לא אומת · <img class="o t" src="icons/xmark.square.png" alt="עדיין לא עובד שם" title="עדיין לא עובד שם" width="16" height="16"> עדיין לא עובד שם
 
@@ -21,7 +23,7 @@
 
 <table class="key">
 <tr><td><img class="app-sm" src="icons/apps/quake3.png" alt="" width="20" height="20"> Quake 3</td><td><img class="app-sm" src="icons/apps/throwdown.png" alt="" width="20" height="20"> Throwdown</td><td><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="" width="20" height="20"> Frictionless Coffee</td></tr>
-<tr><td><img class="app-sm" src="icons/apps/big-top.png" alt="" width="20" height="20"> Big Top</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
+<tr><td><img class="app-sm" src="icons/apps/circus.png" alt="" width="20" height="20"> Circus</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
 </table>
 
 ## אפליקציות בסימולטורים, במחשבי Mac & במכשירים
@@ -66,8 +68,9 @@
 <table class="wide">
 <thead><tr><th width="190">מערך בדיקה</th><th>יכולת</th><th width="60">מתוך</th><th width="80">macOS<br>/ iOS 26</th><th width="80">macOS<br>/ iOS 27</th><th width="70">מקור</th></tr></thead>
 <tbody>
-<tr><td><a href="on-device-image-reduction.md">מצילומי מסך לטקסט</a></td><td>ממיר צילומי מסך וסריקות לטקסט ב-Mac לפני ש-Claude קורא אותם, וכך התמונות נשארות פרטיות ומנוצל הרבה פחות מהזיכרון של Claude.</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="עובד בגרסה הזו" title="עובד בגרסה הזו" width="16" height="16"></td><td class="m" rowspan="8"><img class="o" src="icons/hammer.fill.png" alt="נבנה על ידינו" title="נבנה על ידינו" width="16" height="16"></td></tr>
-<tr><td><a href="voice-bench.md">voice-bench</a></td><td>ה-Mac משמיע משפטי בדיקה בקולות סינתטיים אל מזהה הדיבור של האפליקציה, כך שאפשר לבדוק פקודות קוליות בלי שאף אחד ידבר.</td><td class="app-c"><img class="app-sm" src="icons/apps/big-top.png" alt="Big Top" title="Big Top" width="22" height="22"></td><td class="m"><img class="o t" src="icons/square.png" alt="עדיין לא אומת" title="עדיין לא אומת" width="16" height="16"></td><td class="m"><img class="o t" src="icons/checkmark.square.png" alt="עובד בגרסה הזו" title="עובד בגרסה הזו" width="16" height="16"></td></tr>
+<tr><td><a href="on-device-image-reduction.md">מצילומי מסך לטקסט</a></td><td>ממיר צילומי מסך וסריקות לטקסט ב-Mac לפני ש-Claude קורא אותם, וכך התמונות נשארות פרטיות ומנוצל הרבה פחות מהזיכרון של Claude.</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="עובד בגרסה הזו" title="עובד בגרסה הזו" width="16" height="16"></td><td class="m" rowspan="9"><img class="o" src="icons/hammer.fill.png" alt="נבנה על ידינו" title="נבנה על ידינו" width="16" height="16"></td></tr>
+<tr><td><a href="voice-bench.md">voice-bench</a></td><td>ה-Mac משמיע משפטי בדיקה בקולות סינתטיים אל מזהה הדיבור של האפליקציה, כך שאפשר לבדוק פקודות קוליות בלי שאף אחד ידבר.</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/circus.png" alt="Circus" title="Circus" width="22" height="22"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="עדיין לא אומת" title="עדיין לא אומת" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="עובד בגרסה הזו" title="עובד בגרסה הזו" width="16" height="16"></td></tr>
+<tr><td><a href="device-audio-replay.md">השמעת שמע במכשיר</a></td><td>ה-Mac הופך כל שיחת בדיקה לקובץ שמע, ואפליקציית הטלפון מאזינה לו במקום למיקרופון, כך שאפשר לבדוק תכונות קוליות בטלפון האמיתי בלי שאף אחד ידבר.</td></tr>
 <tr><td><a href="siri-phrasing-check.md">ניסוחים ל-Siri</a></td><td>בודק שהביטויים שמובנים באפליקציה עבור Siri, כמו &quot;order my usual&quot;, תואמים את מה שאנשים אומרים; כדי לבדוק אם Siri מנתבת אותם נכון עדיין צריך את הטלפון.</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="Frictionless Coffee" title="Frictionless Coffee" width="22" height="22"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="עובד בגרסה הזו" title="עובד בגרסה הזו" width="16" height="16"></td></tr>
 <tr><td><a href="golden-snapshot.md">תמונת מצב לייחוס</a></td><td>שומר את הפלט המלא של האפליקציה לפני שכתוב, ואז בודק שהגרסה המשוכתבת מפיקה בדיוק את אותו פלט.</td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="עובד בגרסה הזו" title="עובד בגרסה הזו" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="עדיין לא אומת" title="עדיין לא אומת" width="16" height="16"></td></tr>
 <tr><td><a href="transcription-accuracy-scoring.md">דיוק התמלול</a></td><td>מריץ את המרת הדיבור לטקסט של האפליקציה על הקלטות ציבוריות שמגיעות עם תמלולים נכונים, ומודד בכמה תווים היא טועה.</td><td class="app-c"></td></tr>

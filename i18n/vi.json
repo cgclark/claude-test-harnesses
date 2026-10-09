@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "Công việc về ngôn ngữ ký hiệu",
-  "Big Top": "Big Top",
   "Transcription app": "Ứng dụng chép lời",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "Tất cả trang web",
   "Reyal website": "Trang web Reyal",
   "Booking portal": "Cổng đặt chỗ",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac đọc các câu thử bằng giọng tổng hợp vào bộ nhận dạng giọng nói của ứng dụng, nên có thể kiểm thử lệnh thoại mà không cần ai nói."
+  },
+  "device-audio-replay.md": {
+   "name": "Phát lại âm thanh trên thiết bị",
+   "does": "Mac chuyển mỗi cuộc hội thoại thử thành một tệp âm thanh và ứng dụng trên điện thoại nghe tệp đó thay cho micrô, nên có thể kiểm thử các tính năng giọng nói trên điện thoại thật mà không cần ai nói."
   },
   "siri-phrasing-check.md": {
    "name": "Câu lệnh Siri",

@@ -121,6 +121,7 @@ xcrun simctl shutdown "$UDID"      # unless the human is watching it
 - **Two Claude sessions on one sim hang each other** (1–3 min timeouts on boot/install/launch). Give each session its own named device.
 - **Do not edit the sim's preferences plist with `plutil`.** It fights `cfprefsd`'s cache and silently wipes user settings. Use `simctl spawn defaults write` or launch env.
 - **Do not edit an on-disk config the app rewrites on exit.** A `terminate` after your edit restores the old value. Set the value through the app (hook or command) and read it back from the app's log.
+- **The app's own log file outlives the launch.** A harness that waits on a line in a log the app writes to its container can read the previous run's line before the new launch resets it. Empty the file before each launch (details in `device-audio-replay.md`).
 - **Log lines may carry colour or prefix codes**; anchor a grep on the message, not `^`.
 - **Clicking a rotated or game view from outside is skewed.** Add env-gated test hooks instead of synthesising taps.
 - **Simulator.app is gone in the Xcode 27 era**, replaced by **Device Hub** (`open -a "Device Hub"`). `simctl` is unchanged.

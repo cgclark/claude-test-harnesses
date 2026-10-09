@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "עבודה על שפת סימנים",
-  "Big Top": "Big Top",
   "Transcription app": "אפליקציית תמלול",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "כל האתרים",
   "Reyal website": "האתר של Reyal",
   "Booking portal": "פורטל הזמנות",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "ה-Mac משמיע משפטי בדיקה בקולות סינתטיים אל מזהה הדיבור של האפליקציה, כך שאפשר לבדוק פקודות קוליות בלי שאף אחד ידבר."
+  },
+  "device-audio-replay.md": {
+   "name": "השמעת שמע במכשיר",
+   "does": "ה-Mac הופך כל שיחת בדיקה לקובץ שמע, ואפליקציית הטלפון מאזינה לו במקום למיקרופון, כך שאפשר לבדוק תכונות קוליות בטלפון האמיתי בלי שאף אחד ידבר."
   },
   "siri-phrasing-check.md": {
    "name": "ניסוחים ל-Siri",

@@ -39,18 +39,22 @@ print(SpeechTranscriber.isAvailable, await SpeechTranscriber.installedLocales)
 // if let req = try await AssetInventory.assetInstallationRequest(supporting: [transcriber]) { try await req.downloadAndInstall() }
 ```
 
-**3. Add an executable target** to the package:
+**3. Keep the scenarios in one JSON file** that every harness reads (format in [device-audio-replay](device-audio-replay.md#recipe), step 1).
+
+**4. Add an executable target** to the package:
 
 ```swift
 .executableTarget(name: "voice-bench", dependencies: ["<SharedLogic>"]),
 ```
 
-**4. Write `Sources/voice-bench/main.swift`** with these parts:
+**5. Write `Sources/voice-bench/main.swift`** with these parts:
 
 ```swift
-// Scenario = lines to say + expected handling + words the end state must contain / lack.
-struct Step { var say: String; var kind: <Kind>; var after: TimeInterval = 5 }
-struct Scenario { var name: String; var steps: [Step]; var has: [String] = []; var lacks: [String] = [] }
+// Scenario = lines to say + expected handling + words the end state must contain / lack. Read them from the
+// project's one scenario file (JSON), the same file the simulator and device harnesses read; never a list in code.
+struct Step: Decodable { var say: String; var kind: <Kind>; var op: <Op>?; var after: TimeInterval? }
+struct Scenario: Decodable { var name: String; var steps: [Step]; var noteHas: [String]?; var noteLacks: [String]? }
+let scenarios = try JSONDecoder().decode([Scenario].self, from: Data(contentsOf: <scenario file URL>))
 
 // Render a line. `say` can wedge: kill it after ~20 s and fail only that line.
 func speak(_ text: String, voice: String, to url: URL) throws {
@@ -88,21 +92,26 @@ side effects), advance a fake clock by `step.after`, pass each transcript to the
 Hand sentences to the logic the way the app's live loop does (e.g. a sentence that is a complete turn goes at once,
 the rest wait for end of speech), or the bench tests a different flow than the phone runs.
 
-**5. Run it** from the package directory:
+**6. Run it** from the package directory:
 
 ```bash
 swift run -c release voice-bench            # all scenarios × voices × clean and noisy
 swift run -c release voice-bench --quick    # one voice, clean: the inner loop
 swift run -c release voice-bench --names    # wake-name recognition rate
+swift run -c release voice-bench --export <dir> [--wind]   # one audio file per scenario, for the phone
 ```
 
-**6. Measure a wake name before adopting it.** `--names` speaks each candidate in a few carrier phrases
+`--export` speaks each scenario with one voice, each line after its `after` pause, into one file per scenario
+(`01.caf`, `02.caf`, ...). [device-audio-replay](device-audio-replay.md) plays those files into the app's own
+transcriber on the phone, which covers what this bench can't.
+
+**7. Measure a wake name before adopting it.** `--names` speaks each candidate in a few carrier phrases
 ("<Name>, write a note, buy milk.") across voices and noise, and counts how often the lowercased transcript
 contains it. One project's numbers: a two-word product name 9/30 (heard as near-homophones), a three-syllable
 word 21/30, a distinctive two-syllable common noun 30/30.
 
-**7. Make it the gate.** When the phone shows a failure, add that exact phrase as a scenario, fix until it
-passes, then ask for a phone test.
+**8. Make it the gate.** When the phone shows a failure, add that exact phrase as a scenario in the shared
+file, fix until it passes here, then run it on the phone with [device-audio-replay](device-audio-replay.md).
 
 ## Traps
 
@@ -113,7 +122,7 @@ passes, then ask for a phone test.
 - **`say` wedges occasionally.** Run it as a `Process` with a timeout and one retry; fail the line, not the run.
 - **Voices differ per Mac.** Filter your voice list by `AVSpeechSynthesisVoice.speechVoices()` names and keep one
   default (e.g. Samantha) that is always present, or the run silently shrinks.
-- **Numbers come back as digits** ("ten" → "10"). Normalize before matching expected words.
+- **Numbers come back as digits or words, depending on the recogniser** (the phone wrote "10" where the Mac wrote "ten"). Normalize both sides to digits before matching expected words.
 - **Content mishearings are not logic failures.** "bread" → "bred", "oat" → "old". Count scenarios where every
   line was handled correctly but a content word was misheard separately, so the score measures your logic.
 - **Testing a copy of the logic.** If the bench has its own parser, a pass means nothing. Import the shared package.
@@ -125,8 +134,8 @@ passes, then ask for a phone test.
 
 ## What it does not cover
 
-The phone's microphone and audio session (pausing while the app speaks, locked phone, interruptions), AirPods or
-external mics, real wind and road noise, Siri and Shortcuts handoff, human accents and speech rates beyond the
+The phone's own recogniser and audio session (pausing while the app speaks, locked phone, interruptions; run
+[device-audio-replay](device-audio-replay.md) for those), the microphone itself, AirPods or external mics, real wind and road noise, Siri and Shortcuts handoff, human accents and speech rates beyond the
 installed voices, and any network-backed recognition. Those stay with the human on a device.
 
 ## Loading this into Claude
@@ -134,5 +143,6 @@ installed voices, and any network-backed recognition. Those stay with the human 
 > Voice features are tested with voice-bench before any device test: `swift run -c release voice-bench --quick`
 > from `<package dir>` (full run without `--quick`). The bench feeds on-device transcriptions of `say` audio into
 > the same `<TurnLogic>` the app runs. When a phrase fails on the phone, add it as a scenario in
-> `Sources/voice-bench/main.swift` and make it pass first. Test any new wake name with `--names` before adopting
+> `<scenario file>` (shared with the device and simulator harnesses) and make it pass first. `--export <dir>`
+> writes the per-scenario audio for the device replay. Test any new wake name with `--names` before adopting
 > it. Only mic/session, headphones, real wind and Siri need the device.

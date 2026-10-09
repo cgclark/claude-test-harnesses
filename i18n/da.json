@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "Tegnsprogsarbejde",
-  "Big Top": "Big Top",
   "Transcription app": "Transskriptionsapp",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "Alle websteder",
   "Reyal website": "Reyal-webstedet",
   "Booking portal": "Bookingportal",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac'en siger testfraser med syntetiske stemmer ind i appens talegenkendelse, så stemmekommandoer kan testes, uden at nogen taler."
+  },
+  "device-audio-replay.md": {
+   "name": "Lydafspilning på en enhed",
+   "does": "Mac'en laver hver testsamtale om til en lydfil, og appen på telefonen lytter til den i stedet for mikrofonen, så stemmefunktioner kan testes på den rigtige telefon, uden at nogen taler."
   },
   "siri-phrasing-check.md": {
    "name": "Siri-formuleringer",

@@ -9,9 +9,11 @@
 
 Claude Code가 자기 작업을 스스로 확인하는 방법입니다. 앱을 실행하고, 읽을 수 있는 결과를 캡처한 다음, 사람이 볼 필요가 생기기 전에 통과인지 실패인지 판단합니다. 각 이름을 누르면 전체 절차가 담긴 페이지가 열립니다. 하네스 페이지 자체는 영어로 되어 있습니다.
 
-<img class="c" src="icons/claude-code.svg" alt="Claude 추천" title="Claude 추천" width="16" height="16"> **Claude 추천**: 표준 도구를 그대로 사용 (8)<br>
-<img class="c" src="icons/claude-code.svg" alt="Claude 추천, 확장함" title="Claude 추천, 확장함" width="16" height="16"><img class="o" src="icons/plus.png" alt="Claude 추천, 확장함" title="Claude 추천, 확장함" width="16" height="16"> **Claude 추천, 확장함**: 작동하도록 기능을 보태야 했던 표준 도구 (4)<br>
-<img class="o" src="icons/hammer.fill.png" alt="직접 제작" title="직접 제작" width="16" height="16"> **직접 제작**: 우리가 직접 고안해야 했던 방법 (30)
+<table class="key okey">
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="Claude 추천" title="Claude 추천" width="16" height="16"></td><td><b>Claude 추천</b>: 표준 도구를 그대로 사용</td></tr>
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="Claude 추천, 확장함" title="Claude 추천, 확장함" width="16" height="16"><img class="o" src="icons/plus.png" alt="Claude 추천, 확장함" title="Claude 추천, 확장함" width="16" height="16"></td><td><b>Claude 추천, 확장함</b>: 작동하도록 기능을 보태야 했던 표준 도구</td></tr>
+<tr><td class="ki"><img class="o" src="icons/hammer.fill.png" alt="직접 제작" title="직접 제작" width="16" height="16"></td><td><b>직접 제작</b>: 우리가 직접 고안해야 했던 방법</td></tr>
+</table>
 
 <img class="o t" src="icons/checkmark.square.png" alt="해당 버전에서 작동" title="해당 버전에서 작동" width="16" height="16"> 해당 버전에서 작동 · <img class="o t" src="icons/square.png" alt="아직 확인되지 않음" title="아직 확인되지 않음" width="16" height="16"> 아직 확인되지 않음 · <img class="o t" src="icons/xmark.square.png" alt="아직 그 버전에서 작동하지 않음" title="아직 그 버전에서 작동하지 않음" width="16" height="16"> 아직 그 버전에서 작동하지 않음
 
@@ -21,7 +23,7 @@ OS 버전에 의존하지 않는 하네스는 두 버전 모두에서 작동하�
 
 <table class="key">
 <tr><td><img class="app-sm" src="icons/apps/quake3.png" alt="" width="20" height="20"> Quake 3</td><td><img class="app-sm" src="icons/apps/throwdown.png" alt="" width="20" height="20"> Throwdown</td><td><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="" width="20" height="20"> Frictionless Coffee</td></tr>
-<tr><td><img class="app-sm" src="icons/apps/big-top.png" alt="" width="20" height="20"> Big Top</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
+<tr><td><img class="app-sm" src="icons/apps/circus.png" alt="" width="20" height="20"> Circus</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
 </table>
 
 ## 시뮬레이터, Mac & 기기의 앱
@@ -66,8 +68,9 @@ OS 버전에 의존하지 않는 하네스는 두 버전 모두에서 작동하�
 <table class="wide">
 <thead><tr><th width="190">하네스</th><th>기능</th><th width="60">최초 앱</th><th width="80">macOS<br>/ iOS 26</th><th width="80">macOS<br>/ iOS 27</th><th width="70">출처</th></tr></thead>
 <tbody>
-<tr><td><a href="on-device-image-reduction.md">스크린샷을 텍스트로</a></td><td>Claude가 읽기 전에 Mac에서 스크린샷과 스캔을 텍스트로 바꾸므로, 이미지를 비공개로 유지하고 Claude의 메모리를 훨씬 적게 씁니다.</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="해당 버전에서 작동" title="해당 버전에서 작동" width="16" height="16"></td><td class="m" rowspan="8"><img class="o" src="icons/hammer.fill.png" alt="직접 제작" title="직접 제작" width="16" height="16"></td></tr>
-<tr><td><a href="voice-bench.md">voice-bench</a></td><td>Mac이 합성 음성으로 테스트 문구를 말해 앱의 음성 인식기에 들려주므로, 아무도 말하지 않아도 음성 명령을 테스트할 수 있습니다.</td><td class="app-c"><img class="app-sm" src="icons/apps/big-top.png" alt="Big Top" title="Big Top" width="22" height="22"></td><td class="m"><img class="o t" src="icons/square.png" alt="아직 확인되지 않음" title="아직 확인되지 않음" width="16" height="16"></td><td class="m"><img class="o t" src="icons/checkmark.square.png" alt="해당 버전에서 작동" title="해당 버전에서 작동" width="16" height="16"></td></tr>
+<tr><td><a href="on-device-image-reduction.md">스크린샷을 텍스트로</a></td><td>Claude가 읽기 전에 Mac에서 스크린샷과 스캔을 텍스트로 바꾸므로, 이미지를 비공개로 유지하고 Claude의 메모리를 훨씬 적게 씁니다.</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="해당 버전에서 작동" title="해당 버전에서 작동" width="16" height="16"></td><td class="m" rowspan="9"><img class="o" src="icons/hammer.fill.png" alt="직접 제작" title="직접 제작" width="16" height="16"></td></tr>
+<tr><td><a href="voice-bench.md">voice-bench</a></td><td>Mac이 합성 음성으로 테스트 문구를 말해 앱의 음성 인식기에 들려주므로, 아무도 말하지 않아도 음성 명령을 테스트할 수 있습니다.</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/circus.png" alt="Circus" title="Circus" width="22" height="22"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="아직 확인되지 않음" title="아직 확인되지 않음" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="해당 버전에서 작동" title="해당 버전에서 작동" width="16" height="16"></td></tr>
+<tr><td><a href="device-audio-replay.md">기기에서 오디오 재생</a></td><td>Mac이 각 테스트 대화를 오디오 파일로 바꾸고 휴대폰 앱이 마이크 대신 그 파일을 들으므로, 아무도 말하지 않아도 실제 휴대폰에서 음성 기능을 테스트할 수 있습니다.</td></tr>
 <tr><td><a href="siri-phrasing-check.md">Siri 문구</a></td><td>&quot;order my usual&quot;처럼 Siri용으로 앱에 넣어 둔 문구가 사람들이 실제로 하는 말과 맞는지 확인합니다. Siri가 이를 올바르게 전달하는지는 아직 휴대폰에서 확인해야 합니다.</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="Frictionless Coffee" title="Frictionless Coffee" width="22" height="22"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="해당 버전에서 작동" title="해당 버전에서 작동" width="16" height="16"></td></tr>
 <tr><td><a href="golden-snapshot.md">기준 스냅샷</a></td><td>코드를 다시 작성하기 전에 앱의 전체 출력을 저장해 두고, 다시 작성한 버전이 정확히 같은 출력을 내는지 확인합니다.</td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="해당 버전에서 작동" title="해당 버전에서 작동" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="아직 확인되지 않음" title="아직 확인되지 않음" width="16" height="16"></td></tr>
 <tr><td><a href="transcription-accuracy-scoring.md">받아쓰기 정확도</a></td><td>정답 대본이 함께 제공되는 공개 녹음으로 앱의 음성 텍스트 변환을 실행하고, 틀린 글자 수로 점수를 매깁니다.</td><td class="app-c"></td></tr>

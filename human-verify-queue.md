@@ -11,7 +11,7 @@ on the Mac and tell me?" Then it waits. Each ask costs the person a context swit
 back without the details Claude needed. Or Claude reports the work as done when it only compiled.
 
 Built for the Quake 3 port, where the ray-tracing page needs a hardware ray-tracing Mac, spatial taps need a
-Vision Pro, and controller checks need a pad in hand. A voice project (Big Top) uses the same idea inline,
+Vision Pro, and controller checks need a pad in hand. A voice project (Circus) uses the same idea inline,
 tagging steps in its module list.
 
 ## What it does
@@ -63,7 +63,7 @@ It does not become a question in the thread. Never report a queued item as done:
 "done, unverified" until its entry comes back.
 ```
 
-**4. Inline tags, for a step list.** Big Top's module list marks the steps an autonomous run can't finish
+**4. Inline tags, for a step list.** Circus's module list marks the steps an autonomous run can't finish
 alone, each with a "Done when":
 
 ```markdown

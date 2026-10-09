@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "Viittomakielityö",
-  "Big Top": "Big Top",
   "Transcription app": "Litterointisovellus",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "Kaikki sivustot",
   "Reyal website": "Reyalin verkkosivusto",
   "Booking portal": "Varausportaali",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac puhuu testilauseita synteettisillä äänillä sovelluksen puheentunnistimeen, joten äänikomentoja voi testata ilman, että kenenkään tarvitsee puhua."
+  },
+  "device-audio-replay.md": {
+   "name": "Äänen toisto laitteella",
+   "does": "Mac muuntaa jokaisen testikeskustelun äänitiedostoksi, ja puhelimen sovellus kuuntelee sitä mikrofonin sijaan, joten äänitoimintoja voi testata oikealla puhelimella ilman, että kenenkään tarvitsee puhua."
   },
   "siri-phrasing-check.md": {
    "name": "Siri-lauseet",

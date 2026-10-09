@@ -9,9 +9,11 @@
 
 طرق يتحقق بها Claude Code من عمله بنفسه: يشغّل التطبيق، ويلتقط شيئًا يستطيع قراءته، ويقرر النجاح أو الفشل قبل أن يحتاج أحد إلى النظر. كل اسم يفتح صفحة فيها الطريقة كاملة. صفحات بيئات الاختبار نفسها باللغة الإنجليزية.
 
-<img class="c" src="icons/claude-code.svg" alt="يوصي به Claude" title="يوصي به Claude" width="16" height="16"> **يوصي به Claude**: أداة قياسية تُستخدم كما هي (8)<br>
-<img class="c" src="icons/claude-code.svg" alt="يوصي به Claude، مع توسيع" title="يوصي به Claude، مع توسيع" width="16" height="16"><img class="o" src="icons/plus.png" alt="يوصي به Claude، مع توسيع" title="يوصي به Claude، مع توسيع" width="16" height="16"> **يوصي به Claude، مع توسيع**: أداة قياسية اضطررنا إلى الإضافة إليها حتى تعمل (4)<br>
-<img class="o" src="icons/hammer.fill.png" alt="من صنعنا" title="من صنعنا" width="16" height="16"> **من صنعنا**: طريقة اضطررنا إلى ابتكارها (30)
+<table class="key okey">
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="يوصي به Claude" title="يوصي به Claude" width="16" height="16"></td><td><b>يوصي به Claude</b>: أداة قياسية تُستخدم كما هي</td></tr>
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="يوصي به Claude، مع توسيع" title="يوصي به Claude، مع توسيع" width="16" height="16"><img class="o" src="icons/plus.png" alt="يوصي به Claude، مع توسيع" title="يوصي به Claude، مع توسيع" width="16" height="16"></td><td><b>يوصي به Claude، مع توسيع</b>: أداة قياسية اضطررنا إلى الإضافة إليها حتى تعمل</td></tr>
+<tr><td class="ki"><img class="o" src="icons/hammer.fill.png" alt="من صنعنا" title="من صنعنا" width="16" height="16"></td><td><b>من صنعنا</b>: طريقة اضطررنا إلى ابتكارها</td></tr>
+</table>
 
 <img class="o t" src="icons/checkmark.square.png" alt="تعمل على ذلك الإصدار" title="تعمل على ذلك الإصدار" width="16" height="16"> تعمل على ذلك الإصدار · <img class="o t" src="icons/square.png" alt="لم يتأكد ذلك بعد" title="لم يتأكد ذلك بعد" width="16" height="16"> لم يتأكد ذلك بعد · <img class="o t" src="icons/xmark.square.png" alt="لا تعمل هناك بعد" title="لا تعمل هناك بعد" width="16" height="16"> لا تعمل هناك بعد
 
@@ -21,7 +23,7 @@
 
 <table class="key">
 <tr><td><img class="app-sm" src="icons/apps/quake3.png" alt="" width="20" height="20"> Quake 3</td><td><img class="app-sm" src="icons/apps/throwdown.png" alt="" width="20" height="20"> Throwdown</td><td><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="" width="20" height="20"> Frictionless Coffee</td></tr>
-<tr><td><img class="app-sm" src="icons/apps/big-top.png" alt="" width="20" height="20"> Big Top</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
+<tr><td><img class="app-sm" src="icons/apps/circus.png" alt="" width="20" height="20"> Circus</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
 </table>
 
 ## التطبيقات على المحاكيات وأجهزة Mac والأجهزة
@@ -66,8 +68,9 @@
 <table class="wide">
 <thead><tr><th width="190">بيئة الاختبار</th><th>القدرة</th><th width="60">المصدر</th><th width="80">macOS<br>/ iOS 26</th><th width="80">macOS<br>/ iOS 27</th><th width="70">الأصل</th></tr></thead>
 <tbody>
-<tr><td><a href="on-device-image-reduction.md">من لقطات الشاشة إلى نص</a></td><td>يحوّل لقطات الشاشة والمستندات الممسوحة إلى نص على Mac قبل أن يقرأها Claude، مما يُبقي الصور خاصة ويستهلك قدرًا أقل بكثير من ذاكرة Claude.</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="تعمل على ذلك الإصدار" title="تعمل على ذلك الإصدار" width="16" height="16"></td><td class="m" rowspan="8"><img class="o" src="icons/hammer.fill.png" alt="من صنعنا" title="من صنعنا" width="16" height="16"></td></tr>
-<tr><td><a href="voice-bench.md">voice-bench</a></td><td>ينطق Mac عبارات اختبار بأصوات اصطناعية في أداة التعرف على الكلام في التطبيق، فتُختبر الأوامر الصوتية دون أن يتكلم أحد.</td><td class="app-c"><img class="app-sm" src="icons/apps/big-top.png" alt="Big Top" title="Big Top" width="22" height="22"></td><td class="m"><img class="o t" src="icons/square.png" alt="لم يتأكد ذلك بعد" title="لم يتأكد ذلك بعد" width="16" height="16"></td><td class="m"><img class="o t" src="icons/checkmark.square.png" alt="تعمل على ذلك الإصدار" title="تعمل على ذلك الإصدار" width="16" height="16"></td></tr>
+<tr><td><a href="on-device-image-reduction.md">من لقطات الشاشة إلى نص</a></td><td>يحوّل لقطات الشاشة والمستندات الممسوحة إلى نص على Mac قبل أن يقرأها Claude، مما يُبقي الصور خاصة ويستهلك قدرًا أقل بكثير من ذاكرة Claude.</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="تعمل على ذلك الإصدار" title="تعمل على ذلك الإصدار" width="16" height="16"></td><td class="m" rowspan="9"><img class="o" src="icons/hammer.fill.png" alt="من صنعنا" title="من صنعنا" width="16" height="16"></td></tr>
+<tr><td><a href="voice-bench.md">voice-bench</a></td><td>ينطق Mac عبارات اختبار بأصوات اصطناعية في أداة التعرف على الكلام في التطبيق، فتُختبر الأوامر الصوتية دون أن يتكلم أحد.</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/circus.png" alt="Circus" title="Circus" width="22" height="22"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="لم يتأكد ذلك بعد" title="لم يتأكد ذلك بعد" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="تعمل على ذلك الإصدار" title="تعمل على ذلك الإصدار" width="16" height="16"></td></tr>
+<tr><td><a href="device-audio-replay.md">إعادة تشغيل الصوت على جهاز</a></td><td>يحوّل Mac كل محادثة اختبار إلى ملف صوتي، ويستمع إليه تطبيق الهاتف بدلًا من الميكروفون، فتُختبر الميزات الصوتية على الهاتف الحقيقي دون أن يتكلم أحد.</td></tr>
 <tr><td><a href="siri-phrasing-check.md">صياغة عبارات Siri</a></td><td>يتحقق من أن العبارات المدمجة في التطبيق لـ Siri، مثل «order my usual»، تطابق ما يقوله الناس؛ أما توجيه Siri لها توجيهًا صحيحًا فلا يزال يحتاج إلى الهاتف.</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="Frictionless Coffee" title="Frictionless Coffee" width="22" height="22"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="تعمل على ذلك الإصدار" title="تعمل على ذلك الإصدار" width="16" height="16"></td></tr>
 <tr><td><a href="golden-snapshot.md">لقطة مرجعية</a></td><td>يحفظ المخرجات الكاملة للتطبيق قبل إعادة كتابته، ثم يتحقق من أن النسخة المعاد كتابتها تنتج المخرجات نفسها تمامًا.</td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="تعمل على ذلك الإصدار" title="تعمل على ذلك الإصدار" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="لم يتأكد ذلك بعد" title="لم يتأكد ذلك بعد" width="16" height="16"></td></tr>
 <tr><td><a href="transcription-accuracy-scoring.md">دقة النسخ</a></td><td>يشغّل تحويل الكلام إلى نص في التطبيق على تسجيلات عامة مرفقة بنصوص صحيحة، ويحسب عدد الحروف التي يخطئ فيها.</td><td class="app-c"></td></tr>

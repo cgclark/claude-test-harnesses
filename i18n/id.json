@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "Pekerjaan bahasa isyarat",
-  "Big Top": "Big Top",
   "Transcription app": "Aplikasi transkripsi",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "Semua situs",
   "Reyal website": "Situs web Reyal",
   "Booking portal": "Portal pemesanan",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac mengucapkan frasa uji dengan suara sintetis ke pengenal suara aplikasi, sehingga perintah suara bisa diuji tanpa ada yang berbicara."
+  },
+  "device-audio-replay.md": {
+   "name": "Pemutaran ulang audio di perangkat",
+   "does": "Mac mengubah setiap percakapan uji menjadi file audio, lalu aplikasi di ponsel mendengarkannya sebagai ganti mikrofon, sehingga fitur suara bisa diuji di ponsel sungguhan tanpa ada yang berbicara."
   },
   "siri-phrasing-check.md": {
    "name": "Frasa Siri",

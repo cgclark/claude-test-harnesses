@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "งานภาษามือ",
-  "Big Top": "Big Top",
   "Transcription app": "แอปถอดเสียง",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "ทุกเว็บไซต์",
   "Reyal website": "เว็บไซต์ Reyal",
   "Booking portal": "พอร์ทัลการจอง",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac พูดประโยคทดสอบด้วยเสียงสังเคราะห์เข้าไปยังตัวรู้จำเสียงพูดของแอป จึงทดสอบคำสั่งเสียงได้โดยไม่ต้องมีใครพูด"
+  },
+  "device-audio-replay.md": {
+   "name": "เล่นเสียงซ้ำบนอุปกรณ์",
+   "does": "Mac แปลงบทสนทนาทดสอบแต่ละชุดเป็นไฟล์เสียง แล้วแอปบนโทรศัพท์จะฟังไฟล์นั้นแทนไมโครโฟน จึงทดสอบฟีเจอร์เสียงบนโทรศัพท์จริงได้โดยไม่ต้องมีใครพูด"
   },
   "siri-phrasing-check.md": {
    "name": "ประโยคสำหรับ Siri",

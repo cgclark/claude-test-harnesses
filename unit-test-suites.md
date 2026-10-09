@@ -8,7 +8,7 @@
 
 This is standard practice, and Claude recommended it. Our sizes: about 990 XCTest cases in a fitness app,
 about 50 in a coffee-machine app, 77 Swift Testing tests in a voice-routing package, and 35 `node:test`
-cases for a relay server. Built for Throwdown, Frictionless Coffee and Big Top. The useful part is where
+cases for a relay server. Built for Throwdown, Frictionless Coffee and Circus. The useful part is where
 they fell short, below.
 
 ## What it does

@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "Projet en langue des signes",
-  "Big Top": "Big Top",
   "Transcription app": "App de transcription",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "Tous les sites",
   "Reyal website": "Site web Reyal",
   "Booking portal": "Portail de réservation",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Le Mac prononce des phrases de test avec des voix de synthèse dans la reconnaissance vocale de l'app, pour tester les commandes vocales sans que personne ne parle."
+  },
+  "device-audio-replay.md": {
+   "name": "Lecture audio sur un appareil",
+   "does": "Le Mac transforme chaque conversation de test en fichier audio, que l'app du téléphone écoute à la place du micro, pour tester les fonctions vocales sur le vrai téléphone sans que personne ne parle."
   },
   "siri-phrasing-check.md": {
    "name": "Formulations Siri",

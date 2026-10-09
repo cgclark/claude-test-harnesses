@@ -11,9 +11,11 @@ and a paragraph to paste into a project's `CLAUDE.md`. [TEMPLATE.md](TEMPLATE.md
 [index.md](index.md) is the same list in plain language, in 27 languages, also on the web at
 [gate.locii-innovations.com/ai/…/test_harnesses](https://gate.locii-innovations.com/ai/TZcyE-nc36-Fu-naDOIm2So4/test_harnesses/).
 
-<img class="c" src="icons/claude-code.svg" alt="Claude recommended" title="Claude recommended" width="16" height="16"> **Claude recommended**: a standard tool or practice Claude proposed, used as is (8)<br>
-<img class="c" src="icons/claude-code.svg" alt="Claude recommended, extended" title="Claude recommended, extended" width="16" height="16"><img class="o" src="icons/plus.png" alt="Claude recommended, extended" title="Claude recommended, extended" width="16" height="16"> **Claude recommended, extended**: a standard tool we had to add to before it worked reliably (4)<br>
-<img class="o" src="icons/hammer.fill.png" alt="Built by us" title="Built by us" width="16" height="16"> **Built by us**: a method we had to develop (30)
+<table class="key okey">
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="Claude recommended" title="Claude recommended" width="16" height="16"></td><td><b>Claude recommended</b>: a standard tool or practice Claude proposed, used as is</td></tr>
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="Claude recommended, extended" title="Claude recommended, extended" width="16" height="16"><img class="o" src="icons/plus.png" alt="Claude recommended, extended" title="Claude recommended, extended" width="16" height="16"></td><td><b>Claude recommended, extended</b>: a standard tool we had to add to before it worked reliably</td></tr>
+<tr><td class="ki"><img class="o" src="icons/hammer.fill.png" alt="Built by us" title="Built by us" width="16" height="16"></td><td><b>Built by us</b>: a method we had to develop</td></tr>
+</table>
 
 <img class="o t" src="icons/checkmark.square.png" alt="works on that version" title="works on that version" width="16" height="16"> works on that version · <img class="o t" src="icons/square.png" alt="not confirmed yet" title="not confirmed yet" width="16" height="16"> not confirmed yet · <img class="o t" src="icons/xmark.square.png" alt="doesn&#x27;t work there yet" title="doesn&#x27;t work there yet" width="16" height="16"> doesn't work there yet
 
@@ -23,7 +25,7 @@ Harnesses that don't depend on the OS version count as working on both. The rest
 
 <table class="key">
 <tr><td><img class="app-sm" src="icons/apps/quake3.png" alt="" width="20" height="20"> Quake 3</td><td><img class="app-sm" src="icons/apps/throwdown.png" alt="" width="20" height="20"> Throwdown</td><td><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="" width="20" height="20"> Frictionless Coffee</td></tr>
-<tr><td><img class="app-sm" src="icons/apps/big-top.png" alt="" width="20" height="20"> Big Top</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
+<tr><td><img class="app-sm" src="icons/apps/circus.png" alt="" width="20" height="20"> Circus</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
 </table>
 
 ## Apps on simulators, Macs & devices
@@ -68,8 +70,9 @@ Harnesses that don't depend on the OS version count as working on both. The rest
 <table class="wide">
 <thead><tr><th width="190">Harness</th><th>Capability</th><th width="60">From</th><th width="80">macOS<br>/ iOS 26</th><th width="80">macOS<br>/ iOS 27</th><th width="70">Origin</th></tr></thead>
 <tbody>
-<tr><td><a href="on-device-image-reduction.md">Screenshots to text</a></td><td>Screenshots and scans reduced to text locally before Claude reads them</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="works on that version" title="works on that version" width="16" height="16"></td><td class="m" rowspan="8"><img class="o" src="icons/hammer.fill.png" alt="Built by us" title="Built by us" width="16" height="16"></td></tr>
-<tr><td><a href="voice-bench.md">voice-bench</a></td><td>Speech features with no one speaking: synthetic voices → on-device transcriber → the app&#x27;s own turn logic</td><td class="app-c"><img class="app-sm" src="icons/apps/big-top.png" alt="Big Top" title="Big Top" width="22" height="22"></td><td class="m"><img class="o t" src="icons/square.png" alt="not confirmed yet" title="not confirmed yet" width="16" height="16"></td><td class="m"><img class="o t" src="icons/checkmark.square.png" alt="works on that version" title="works on that version" width="16" height="16"></td></tr>
+<tr><td><a href="on-device-image-reduction.md">Screenshots to text</a></td><td>Screenshots and scans reduced to text locally before Claude reads them</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="works on that version" title="works on that version" width="16" height="16"></td><td class="m" rowspan="9"><img class="o" src="icons/hammer.fill.png" alt="Built by us" title="Built by us" width="16" height="16"></td></tr>
+<tr><td><a href="voice-bench.md">voice-bench</a></td><td>Speech features with no one speaking: synthetic voices → on-device transcriber → the app&#x27;s own turn logic</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/circus.png" alt="Circus" title="Circus" width="22" height="22"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="not confirmed yet" title="not confirmed yet" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="works on that version" title="works on that version" width="16" height="16"></td></tr>
+<tr><td><a href="device-audio-replay.md">Audio replay on a device</a></td><td>Real phone, no one speaking: synthesised scenario audio → the app&#x27;s on-device transcriber in place of the mic (holds while the app speaks) → app log done line checked</td></tr>
 <tr><td><a href="siri-phrasing-check.md">Siri phrasing</a></td><td>Compiled App Shortcut phrases match what people say; real routing stays on the device</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="Frictionless Coffee" title="Frictionless Coffee" width="22" height="22"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="works on that version" title="works on that version" width="16" height="16"></td></tr>
 <tr><td><a href="golden-snapshot.md">Golden snapshot</a></td><td>A refactor or data migration reproduces the old output exactly</td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="works on that version" title="works on that version" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="not confirmed yet" title="not confirmed yet" width="16" height="16"></td></tr>
 <tr><td><a href="transcription-accuracy-scoring.md">Transcription accuracy</a></td><td>Character error rate against public ground-truth speech sets</td><td class="app-c"></td></tr>

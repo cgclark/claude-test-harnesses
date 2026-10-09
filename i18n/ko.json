@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "수어 작업",
-  "Big Top": "Big Top",
   "Transcription app": "받아쓰기 앱",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "모든 사이트",
   "Reyal website": "Reyal 웹사이트",
   "Booking portal": "예약 포털",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac이 합성 음성으로 테스트 문구를 말해 앱의 음성 인식기에 들려주므로, 아무도 말하지 않아도 음성 명령을 테스트할 수 있습니다."
+  },
+  "device-audio-replay.md": {
+   "name": "기기에서 오디오 재생",
+   "does": "Mac이 각 테스트 대화를 오디오 파일로 바꾸고 휴대폰 앱이 마이크 대신 그 파일을 들으므로, 아무도 말하지 않아도 실제 휴대폰에서 음성 기능을 테스트할 수 있습니다."
   },
   "siri-phrasing-check.md": {
    "name": "Siri 문구",

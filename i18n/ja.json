@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "手話の取り組み",
-  "Big Top": "Big Top",
   "Transcription app": "文字起こしアプリ",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "すべてのサイト",
   "Reyal website": "ReyalのWebサイト",
   "Booking portal": "予約ポータル",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Macが合成音声でテストフレーズを話し、アプリの音声認識に聞かせます。誰も話さなくても音声コマンドをテストできます。"
+  },
+  "device-audio-replay.md": {
+   "name": "実機での音声再生",
+   "does": "Macがテスト用の会話をそれぞれ音声ファイルに変換し、スマートフォンのアプリがマイクの代わりにそれを聞き取ります。誰も話さなくても、実際のスマートフォンで音声機能をテストできます。"
   },
   "siri-phrasing-check.md": {
    "name": "Siriのフレーズ",

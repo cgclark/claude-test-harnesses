@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "सांकेतिक भाषा का काम",
-  "Big Top": "Big Top",
   "Transcription app": "ट्रांसक्रिप्शन ऐप",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "सभी साइटें",
   "Reyal website": "Reyal वेबसाइट",
   "Booking portal": "बुकिंग पोर्टल",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac सिंथेटिक आवाज़ों में टेस्ट वाक्य ऐप के स्पीच रिकग्नाइज़र को सुनाता है, ताकि किसी के बोले बिना वॉइस कमांड टेस्ट हो सकें।"
+  },
+  "device-audio-replay.md": {
+   "name": "डिवाइस पर ऑडियो रीप्ले",
+   "does": "Mac हर टेस्ट बातचीत को एक ऑडियो फ़ाइल में बदलता है और फ़ोन का ऐप माइक्रोफ़ोन की जगह उसे सुनता है, ताकि किसी के बोले बिना असली फ़ोन पर वॉइस फ़ीचर टेस्ट हो सकें।"
   },
   "siri-phrasing-check.md": {
    "name": "Siri वाक्यांश",

@@ -35,7 +35,7 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "Sign-language work",
-  "Big Top": "Big Top",
+  "Circus": "Circus",
   "Transcription app": "Transcription app",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "The Mac speaks test phrases in synthetic voices into the app's speech recogniser, so voice commands can be tested without anyone talking."
+  },
+  "device-audio-replay.md": {
+   "name": "Audio replay on a device",
+   "does": "The Mac turns each test conversation into an audio file and the phone app listens to it instead of the microphone, so voice features can be tested on the real phone without anyone talking."
   },
   "siri-phrasing-check.md": {
    "name": "Siri phrasing",

@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "手語專案",
-  "Big Top": "Big Top",
   "Transcription app": "逐字稿應用程式",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "所有網站",
   "Reyal website": "Reyal 網站",
   "Booking portal": "預約平台",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac 以合成語音將測試語句唸給應用程式的語音辨識器聽，不需要任何人開口就能測試語音指令。"
+  },
+  "device-audio-replay.md": {
+   "name": "實體裝置音訊重播",
+   "does": "Mac 將每段測試對話轉成音訊檔，手機上的應用程式改聽這個檔案而非麥克風，不需要任何人開口就能在實體手機上測試語音功能。"
   },
   "siri-phrasing-check.md": {
    "name": "Siri 說法檢查",

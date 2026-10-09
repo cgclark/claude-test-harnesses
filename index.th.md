@@ -9,9 +9,11 @@
 
 วิธีที่ Claude Code ใช้ตรวจงานของตัวเอง: เปิดแอป เก็บสิ่งที่มันอ่านได้ แล้วตัดสินว่าผ่านหรือไม่ผ่านก่อนที่คนจะต้องมาดู ชื่อแต่ละรายการจะเปิดหน้าที่มีวิธีทำครบถ้วน หน้าของชุดเครื่องมือทดสอบแต่ละหน้าเป็นภาษาอังกฤษ
 
-<img class="c" src="icons/claude-code.svg" alt="Claude แนะนำ" title="Claude แนะนำ" width="16" height="16"> **Claude แนะนำ**: เครื่องมือมาตรฐานที่ใช้ตามเดิม (8)<br>
-<img class="c" src="icons/claude-code.svg" alt="Claude แนะนำ และต่อยอด" title="Claude แนะนำ และต่อยอด" width="16" height="16"><img class="o" src="icons/plus.png" alt="Claude แนะนำ และต่อยอด" title="Claude แนะนำ และต่อยอด" width="16" height="16"> **Claude แนะนำ และต่อยอด**: เครื่องมือมาตรฐานที่เราต้องเสริมเพิ่มก่อนจึงจะใช้ได้ (4)<br>
-<img class="o" src="icons/hammer.fill.png" alt="เราสร้างเอง" title="เราสร้างเอง" width="16" height="16"> **เราสร้างเอง**: วิธีที่เราต้องคิดขึ้นเอง (30)
+<table class="key okey">
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="Claude แนะนำ" title="Claude แนะนำ" width="16" height="16"></td><td><b>Claude แนะนำ</b>: เครื่องมือมาตรฐานที่ใช้ตามเดิม</td></tr>
+<tr><td class="ki"><img class="c" src="icons/claude-code.svg" alt="Claude แนะนำ และต่อยอด" title="Claude แนะนำ และต่อยอด" width="16" height="16"><img class="o" src="icons/plus.png" alt="Claude แนะนำ และต่อยอด" title="Claude แนะนำ และต่อยอด" width="16" height="16"></td><td><b>Claude แนะนำ และต่อยอด</b>: เครื่องมือมาตรฐานที่เราต้องเสริมเพิ่มก่อนจึงจะใช้ได้</td></tr>
+<tr><td class="ki"><img class="o" src="icons/hammer.fill.png" alt="เราสร้างเอง" title="เราสร้างเอง" width="16" height="16"></td><td><b>เราสร้างเอง</b>: วิธีที่เราต้องคิดขึ้นเอง</td></tr>
+</table>
 
 <img class="o t" src="icons/checkmark.square.png" alt="ใช้ได้กับเวอร์ชันนั้น" title="ใช้ได้กับเวอร์ชันนั้น" width="16" height="16"> ใช้ได้กับเวอร์ชันนั้น · <img class="o t" src="icons/square.png" alt="ยังไม่ได้ยืนยัน" title="ยังไม่ได้ยืนยัน" width="16" height="16"> ยังไม่ได้ยืนยัน · <img class="o t" src="icons/xmark.square.png" alt="ยังใช้ไม่ได้กับเวอร์ชันนั้น" title="ยังใช้ไม่ได้กับเวอร์ชันนั้น" width="16" height="16"> ยังใช้ไม่ได้กับเวอร์ชันนั้น
 
@@ -21,7 +23,7 @@
 
 <table class="key">
 <tr><td><img class="app-sm" src="icons/apps/quake3.png" alt="" width="20" height="20"> Quake 3</td><td><img class="app-sm" src="icons/apps/throwdown.png" alt="" width="20" height="20"> Throwdown</td><td><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="" width="20" height="20"> Frictionless Coffee</td></tr>
-<tr><td><img class="app-sm" src="icons/apps/big-top.png" alt="" width="20" height="20"> Big Top</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
+<tr><td><img class="app-sm" src="icons/apps/circus.png" alt="" width="20" height="20"> Circus</td><td><img class="app-sm" src="icons/apps/enc0der.png" alt="" width="20" height="20"> Enc0der</td></tr>
 </table>
 
 ## แอปบนเครื่องจำลอง, Mac & อุปกรณ์
@@ -66,8 +68,9 @@
 <table class="wide">
 <thead><tr><th width="190">ชุดเครื่องมือทดสอบ</th><th>ความสามารถ</th><th width="60">ที่มา</th><th width="80">macOS<br>/ iOS 26</th><th width="80">macOS<br>/ iOS 27</th><th width="70">แหล่งกำเนิด</th></tr></thead>
 <tbody>
-<tr><td><a href="on-device-image-reduction.md">แปลงภาพหน้าจอเป็นข้อความ</a></td><td>แปลงภาพหน้าจอและภาพสแกนเป็นข้อความบน Mac ก่อนที่ Claude จะอ่าน ทำให้ภาพยังเป็นส่วนตัวและใช้หน่วยความจำของ Claude น้อยลงมาก</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="ใช้ได้กับเวอร์ชันนั้น" title="ใช้ได้กับเวอร์ชันนั้น" width="16" height="16"></td><td class="m" rowspan="8"><img class="o" src="icons/hammer.fill.png" alt="เราสร้างเอง" title="เราสร้างเอง" width="16" height="16"></td></tr>
-<tr><td><a href="voice-bench.md">voice-bench</a></td><td>Mac พูดประโยคทดสอบด้วยเสียงสังเคราะห์เข้าไปยังตัวรู้จำเสียงพูดของแอป จึงทดสอบคำสั่งเสียงได้โดยไม่ต้องมีใครพูด</td><td class="app-c"><img class="app-sm" src="icons/apps/big-top.png" alt="Big Top" title="Big Top" width="22" height="22"></td><td class="m"><img class="o t" src="icons/square.png" alt="ยังไม่ได้ยืนยัน" title="ยังไม่ได้ยืนยัน" width="16" height="16"></td><td class="m"><img class="o t" src="icons/checkmark.square.png" alt="ใช้ได้กับเวอร์ชันนั้น" title="ใช้ได้กับเวอร์ชันนั้น" width="16" height="16"></td></tr>
+<tr><td><a href="on-device-image-reduction.md">แปลงภาพหน้าจอเป็นข้อความ</a></td><td>แปลงภาพหน้าจอและภาพสแกนเป็นข้อความบน Mac ก่อนที่ Claude จะอ่าน ทำให้ภาพยังเป็นส่วนตัวและใช้หน่วยความจำของ Claude น้อยลงมาก</td><td class="app-c"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="ใช้ได้กับเวอร์ชันนั้น" title="ใช้ได้กับเวอร์ชันนั้น" width="16" height="16"></td><td class="m" rowspan="9"><img class="o" src="icons/hammer.fill.png" alt="เราสร้างเอง" title="เราสร้างเอง" width="16" height="16"></td></tr>
+<tr><td><a href="voice-bench.md">voice-bench</a></td><td>Mac พูดประโยคทดสอบด้วยเสียงสังเคราะห์เข้าไปยังตัวรู้จำเสียงพูดของแอป จึงทดสอบคำสั่งเสียงได้โดยไม่ต้องมีใครพูด</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/circus.png" alt="Circus" title="Circus" width="22" height="22"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="ยังไม่ได้ยืนยัน" title="ยังไม่ได้ยืนยัน" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="ใช้ได้กับเวอร์ชันนั้น" title="ใช้ได้กับเวอร์ชันนั้น" width="16" height="16"></td></tr>
+<tr><td><a href="device-audio-replay.md">เล่นเสียงซ้ำบนอุปกรณ์</a></td><td>Mac แปลงบทสนทนาทดสอบแต่ละชุดเป็นไฟล์เสียง แล้วแอปบนโทรศัพท์จะฟังไฟล์นั้นแทนไมโครโฟน จึงทดสอบฟีเจอร์เสียงบนโทรศัพท์จริงได้โดยไม่ต้องมีใครพูด</td></tr>
 <tr><td><a href="siri-phrasing-check.md">ประโยคสำหรับ Siri</a></td><td>ตรวจว่าประโยคที่ฝังไว้ในแอปสำหรับ Siri เช่น &quot;order my usual&quot; ตรงกับสิ่งที่คนพูดจริง ส่วน Siri จะส่งต่อคำสั่งได้ถูกต้องหรือไม่ยังต้องทดสอบบนโทรศัพท์</td><td class="app-c" rowspan="2"><img class="app-sm" src="icons/apps/frictionless-coffee.png" alt="Frictionless Coffee" title="Frictionless Coffee" width="22" height="22"></td><td class="m" colspan="2"><img class="o t" src="icons/checkmark.square.png" alt="ใช้ได้กับเวอร์ชันนั้น" title="ใช้ได้กับเวอร์ชันนั้น" width="16" height="16"></td></tr>
 <tr><td><a href="golden-snapshot.md">สแนปช็อตอ้างอิง</a></td><td>บันทึกผลลัพธ์ทั้งหมดของแอปไว้ก่อนเขียนโค้ดใหม่ แล้วตรวจว่าเวอร์ชันที่เขียนใหม่ให้ผลลัพธ์เหมือนเดิมทุกประการ</td><td class="m" rowspan="2"><img class="o t" src="icons/checkmark.square.png" alt="ใช้ได้กับเวอร์ชันนั้น" title="ใช้ได้กับเวอร์ชันนั้น" width="16" height="16"></td><td class="m" rowspan="2"><img class="o t" src="icons/square.png" alt="ยังไม่ได้ยืนยัน" title="ยังไม่ได้ยืนยัน" width="16" height="16"></td></tr>
 <tr><td><a href="transcription-accuracy-scoring.md">ความแม่นยำของการถอดเสียง</a></td><td>รันระบบแปลงเสียงพูดเป็นข้อความของแอปกับไฟล์เสียงสาธารณะที่มีบทถอดความที่ถูกต้องมาด้วย แล้วนับว่าผิดไปกี่ตัวอักษร</td><td class="app-c"></td></tr>

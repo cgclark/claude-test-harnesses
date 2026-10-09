@@ -35,7 +35,6 @@
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
   "Sign-language work": "Робота з мовою жестів",
-  "Big Top": "Big Top",
   "Transcription app": "Застосунок для транскрипції",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -44,7 +43,8 @@
   "All sites": "Усі сайти",
   "Reyal website": "Вебсайт Reyal",
   "Booking portal": "Портал бронювання",
-  "Map in Motion": "Map in Motion"
+  "Map in Motion": "Map in Motion",
+  "Circus": "Circus"
  },
  "rows": {
   "headless-ios.md": {
@@ -154,6 +154,10 @@
   "voice-bench.md": {
    "name": "voice-bench",
    "does": "Mac промовляє тестові фрази синтетичними голосами в розпізнавач мовлення застосунку, тож голосові команди можна перевірити без участі людини, що говорить."
+  },
+  "device-audio-replay.md": {
+   "name": "Відтворення аудіо на пристрої",
+   "does": "Mac перетворює кожну тестову розмову на аудіофайл, і застосунок на телефоні слухає його замість мікрофона, тож голосові функції можна перевірити на справжньому телефоні без участі людини, що говорить."
   },
   "siri-phrasing-check.md": {
    "name": "Фрази для Siri",
