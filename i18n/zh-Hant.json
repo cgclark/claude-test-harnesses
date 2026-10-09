@@ -1,0 +1,219 @@
+{
+ "title": "Claude 自動化測試工具",
+ "intro": "讓 Claude Code 檢查自己工作的方法：執行應用程式，擷取它能讀取的內容，並在需要人來看之前判定通過或失敗。點選每個名稱即可開啟含完整做法的頁面。",
+ "pages_english": "各測試工具頁面本身為英文。",
+ "languages": "語言",
+ "o_claude": "Claude 推薦",
+ "o_claude_d": "直接沿用的標準工具",
+ "o_extended": "Claude 推薦，經擴充",
+ "o_extended_d": "我們得先補強才能運作的標準工具",
+ "o_built": "自行打造",
+ "o_built_d": "我們自行摸索出來的方法",
+ "t_yes": "可在該版本上運作",
+ "t_unk": "尚未確認",
+ "t_no": "在該版本上尚無法運作",
+ "os_note": "不受作業系統版本影響的測試工具，視為在兩個版本上都能運作。其餘則依各自上次使用時的情況勾選；這台 Mac 已於 2026 年 10 月 2 日升級至 27，針對 27 架構的逐一檢查仍有待進行。",
+ "from": "來自",
+ "from_d": "每個測試工具最初打造時所屬的應用程式",
+ "h_harness": "測試工具",
+ "h_capability": "能力",
+ "h_from": "來自",
+ "h_origin": "出處",
+ "project_specific": "專案專屬",
+ "footer": "更偏技術的版本見 GitHub 上的 {README}，專為載入 Claude 而撰寫。",
+ "categories": {
+  "Apps on simulators, Macs & devices": "模擬器、Mac 與裝置上的應用程式",
+  "Graphics & games": "圖形與遊戲",
+  "Voice, language & data": "語音、語言與資料",
+  "Hardware, networks & services": "硬體、網路與服務",
+  "Web": "網頁"
+ },
+ "apps": {
+  "All apps": "所有應用程式",
+  "Quake 3": "Quake 3",
+  "Throwdown": "Throwdown",
+  "Frictionless Coffee": "Frictionless Coffee",
+  "xwtool": "xwtool",
+  "Sign-language work": "手語專案",
+  "Big Top": "Big Top",
+  "Transcription app": "逐字稿應用程式",
+  "Enc0der": "Enc0der",
+  "Dossier": "Dossier",
+  "Ranger Bluetooth bridge": "Ranger Bluetooth 橋接器",
+  "Web services": "網路服務",
+  "All sites": "所有網站",
+  "Reyal website": "Reyal 網站",
+  "Booking portal": "預約平台",
+  "Map in Motion": "Map in Motion"
+ },
+ "rows": {
+  "headless-ios.md": {
+   "name": "背景模擬器",
+   "does": "Claude 建置 iPhone 應用程式，在背景的模擬器中執行，並自行擷取螢幕畫面和記錄檔，因此不必占用你的螢幕就能檢查某個畫面。"
+  },
+  "uikit-layout-probe.md": {
+   "name": "版面探測",
+   "does": "在你切換畫面時，Claude 逐時刻測量螢幕實際排出的版面，例如列的高度和捲動位置，藉此找出某處看起來不對的原因，而不是用猜的。"
+  },
+  "launch-argument-test-hooks.md": {
+   "name": "啟動參數掛鉤",
+   "does": "測試版建置中的隱藏開關，可讓應用程式帶著範例資料直接開啟指定畫面，Claude 不必在應用程式裡一路點按，就能抵達任何畫面。"
+  },
+  "designed-for-ipad-on-mac.md": {
+   "name": "在 Mac 上執行 iPad 應用程式",
+   "does": "把應用程式的 iPad 版當作一般 Mac 應用程式執行，Claude 便能在 Mac 上測試，並取得記錄檔和視窗截圖。"
+  },
+  "applescript-screencapture-fallback.md": {
+   "name": "AppleScript 與螢幕擷取",
+   "does": "當 Claude 無法直接控制螢幕時，就以 AppleScript 操作 Mac 應用程式，並只拍下它們的視窗來查看結果。"
+  },
+  "unit-test-suites.md": {
+   "name": "單元測試",
+   "does": "針對應用程式內部邏輯（例如計分、路線和佇列）的自動測試，幾秒內就能跑完，不必開啟應用程式。"
+  },
+  "human-verify-queue.md": {
+   "name": "僅限人工的檢查清單",
+   "does": "一份持續更新的清單，列出只有人才能做的檢查，例如戴上頭戴裝置或使用實體手機，讓其餘工作不必等這些檢查。"
+  },
+  "build-check-all-targets.md": {
+   "name": "建置所有目標",
+   "does": "每次變更後一併重新建置 iPhone、Mac 和 Vision Pro 版本，並檢查測試設定絕不會被存進玩家自己的設定。"
+  },
+  "swiftui-live-preview.md": {
+   "name": "SwiftUI 即時預覽",
+   "does": "在 Xcode 的即時預覽中顯示單一畫面並截圖，Claude 不必建置並執行整個遊戲，就能檢查版面變更。"
+  },
+  "accessibility-tree-tapping.md": {
+   "name": "依輔助使用資訊點按",
+   "does": "依應用程式自己回報的位置點按模擬器中的按鈕，而不是從截圖猜測按鈕位置。"
+  },
+  "two-simulator-peer-test.md": {
+   "name": "兩台模擬器扮演兩個人",
+   "does": "在兩台模擬 iPhone 上以兩個不同的人執行應用程式，不需要兩支實體手機，就能測試邀請、挑戰和同步。"
+  },
+  "localized-screens-contact-sheets.md": {
+   "name": "每種語言的每個畫面",
+   "does": "將每個主要畫面在每種語言下的樣子，外加一種單字特別長的虛構語言，拍下來排在同一張總覽圖上，放不下的文字一眼就能看出。"
+  },
+  "device-crashlog-pull.md": {
+   "name": "當機報告",
+   "does": "從實體 iPhone 取出當機報告並閱讀，讓只在手機上發生的當機有明確的原因。"
+  },
+  "stdlib-test-suite.md": {
+   "name": "小型測試套件",
+   "does": "為 Python 工具準備的一小組獨立自動檢查，不必安裝任何東西，在哪裡都能執行。"
+  },
+  "game-console-driving.md": {
+   "name": "操控遊戲主控台",
+   "does": "透過指令碼將指令傳送到遊戲內建的主控台，事後再讀取其記錄檔，而不是在遊戲視窗中輸入。"
+  },
+  "renderer-ab-on-demos.md": {
+   "name": "前後畫格比較",
+   "does": "在圖形變更前後播放同一段錄製的遊戲片段，並逐像素比較畫格。"
+  },
+  "realtime-raytracing-on-mac.md": {
+   "name": "Mac 上的光線追蹤",
+   "does": "可個別顯示光線追蹤照明每個步驟（陰影、反射、環境光）的測試檢視，另有會印出通過或失敗的自我檢查。"
+  },
+  "vision-pro-screenshots.md": {
+   "name": "Vision Pro 截圖",
+   "does": "在模擬器和頭戴裝置上擷取 Vision Pro 應用程式顯示的內容，包括每隻眼睛看到的 3D 畫面。"
+  },
+  "plugin-test-cases.md": {
+   "name": "遊戲模組",
+   "does": "將每個熱門多人模組載入我們版本的遊戲，啟動一張地圖，並檢查記錄檔中是否有錯誤。"
+  },
+  "side-by-side-reference-engine.md": {
+   "name": "與原版並排比較",
+   "does": "在我們的版本和原版遊戲中錄下同一場景並排呈現，顯示任何差異。"
+  },
+  "offline-shader-compile.md": {
+   "name": "離線著色器編譯",
+   "does": "在 Mac 上編譯光線追蹤的圖形程式碼，因為模擬器會略過這部分程式碼，否則錯誤只會在裝置上才出現。"
+  },
+  "gpu-frame-capture.md": {
+   "name": "GPU 畫格擷取",
+   "does": "在圖形晶片上擷取一個畫格，列出每個繪製步驟的成本，找出慢在哪裡。"
+  },
+  "levelshot-capture.md": {
+   "name": "關卡截圖",
+   "does": "以地圖作者選定的鏡頭角度為每張地圖拍一張圖，並排在同一張總覽圖上。"
+  },
+  "shader-math-verifiers.md": {
+   "name": "著色器數學",
+   "does": "緩慢而精確地重新計算 Quake 3 的煙霧和火焰效果，並檢查快速的圖形版本畫出的畫面是否相同。"
+  },
+  "motion-compare.md": {
+   "name": "動作比對",
+   "does": "將電腦產生的手語手部動畫，與其所依據的真人手語者逐格並排播放，檢查動作是否一致。"
+  },
+  "on-device-image-reduction.md": {
+   "name": "截圖轉文字",
+   "does": "在 Claude 讀取之前，先在 Mac 上把截圖和掃描檔轉成文字，既能保護圖片隱私，也能大幅減少 Claude 記憶空間的用量。"
+  },
+  "voice-bench.md": {
+   "name": "voice-bench",
+   "does": "Mac 以合成語音將測試語句唸給應用程式的語音辨識器聽，不需要任何人開口就能測試語音指令。"
+  },
+  "siri-phrasing-check.md": {
+   "name": "Siri 說法檢查",
+   "does": "檢查應用程式內建給 Siri 的語句（例如「order my usual」）是否符合大家實際的說法；Siri 能否正確轉送這些語句，仍需在手機上確認。"
+  },
+  "golden-snapshot.md": {
+   "name": "參考快照",
+   "does": "在改寫之前儲存應用程式的完整輸出，再檢查改寫後的版本是否產生完全相同的輸出。"
+  },
+  "transcription-accuracy-scoring.md": {
+   "name": "轉錄準確度",
+   "does": "在附有正確逐字稿的公開錄音上執行應用程式的語音轉文字功能，並依出錯的字元數評分。"
+  },
+  "translation-lint.md": {
+   "name": "翻譯檢查",
+   "does": "檢查每則翻譯都保留了名稱、數字和約定術語，而且畫面上沒有漏掉未翻譯的文字。Quake 3 也有使用。"
+  },
+  "real-data-fixtures.md": {
+   "name": "真實資料",
+   "does": "以一組真實記錄的騎乘資料取代編造資料來測試路線比對，找出了編造測試漏掉的錯誤。"
+  },
+  "baseline-parity.md": {
+   "name": "與原版應用程式一致",
+   "does": "逐表、逐列比較我們 iPad 版本中的資料庫與原版 Windows 應用程式的資料庫。"
+  },
+  "document-value-verification.md": {
+   "name": "核對引用數值",
+   "does": "在 Claude 引用文件中的日期或數字之前，先檢查這段原文確實出現在該文件中。"
+  },
+  "reference-device-benchmarking.md": {
+   "name": "與已知正常的裝置比較",
+   "does": "記錄一套已知正常的配置（iPhone 直接連接耳機）的表現，並將我們橋接器的錄製結果與之比較。"
+  },
+  "bridge-probes-dashboard.md": {
+   "name": "橋接器探測程式與儀表板",
+   "does": "為自行車上 Bluetooth 音訊橋接器準備的小型測試程式與即時儀表板，騎乘時顯示聲音緩衝區、訊號強度和連線狀況。"
+  },
+  "bluetooth-packet-captures.md": {
+   "name": "Bluetooth 封包擷取",
+   "does": "直接錄下 Bluetooth 傳輸內容本身，查看裝置實際傳送了什麼，而不是它們回報了什麼。"
+  },
+  "health-endpoint-checks.md": {
+   "name": "健康檢查",
+   "does": "檢查每個網路服務都能從網際網路回應，而且應該封鎖的路徑確實遭到拒絕。"
+  },
+  "browser-driving.md": {
+   "name": "操控瀏覽器",
+   "does": "Claude 在瀏覽器中開啟網頁、填寫表單並讀取結果，檢查網站是否正常運作、外觀是否正確。"
+  },
+  "deploy-verification-breakpoint-sweep.md": {
+   "name": "網站部署檢查",
+   "does": "網站更新後，檢查每個檔案都完整抵達伺服器，再於手機、平板和桌機寬度下檢查版面。"
+  },
+  "booking-dry-run.md": {
+   "name": "預約演練",
+   "does": "將線上預約一路走到最後一步就停下，不必真的完成預約就能測試各個步驟。"
+  },
+  "animation-self-check.md": {
+   "name": "動畫檢查",
+   "does": "在動畫圖表播放時進行測量，檢查各部分是否對齊、互不重疊，精確到像素的幾分之一。"
+  }
+ }
+}

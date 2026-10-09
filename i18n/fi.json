@@ -1,0 +1,219 @@
+{
+ "title": "Automaattiset testikehykset Claudelle",
+ "intro": "Tapoja, joilla Claude Code voi tarkistaa oman työnsä: ajaa sovelluksen, tallentaa jotain, mitä se pystyy lukemaan, ja ratkaista, meneekö testi läpi vai ei, ennen kuin ihmisen tarvitsee katsoa. Jokainen nimi avaa sivun, jolla on koko ohje.",
+ "pages_english": "Itse testikehysten sivut ovat englanniksi.",
+ "languages": "Kieli",
+ "o_claude": "Clauden suosittelema",
+ "o_claude_d": "vakiotyökalu sellaisenaan",
+ "o_extended": "Clauden suosittelema, laajennettu",
+ "o_extended_d": "vakiotyökalu, jota meidän piti täydentää ennen kuin se toimi",
+ "o_built": "Meidän tekemämme",
+ "o_built_d": "menetelmä, joka meidän piti kehittää itse",
+ "t_yes": "toimii kyseisessä versiossa",
+ "t_unk": "ei vielä vahvistettu",
+ "t_no": "ei vielä toimi siinä",
+ "os_note": "Testikehykset, jotka eivät riipu käyttöjärjestelmän versiosta, lasketaan toimiviksi molemmissa. Muut on merkitty sen mukaan, milloin kutakin viimeksi käytettiin; tämä Mac siirtyi versioon 27 2. lokakuuta 2026, ja kunkin tarkistus yksi kerrallaan 27:n arkkitehtuuria vasten on vielä tekemättä.",
+ "from": "Lähtöisin",
+ "from_d": "sovellus, jossa kukin testikehys alun perin rakennettiin",
+ "h_harness": "Testikehys",
+ "h_capability": "Toiminto",
+ "h_from": "Lähtöisin",
+ "h_origin": "Alkuperä",
+ "project_specific": "Projektikohtaiset",
+ "footer": "Teknisempi versio, joka on kirjoitettu Claudeen ladattavaksi, on {README} GitHubissa.",
+ "categories": {
+  "Apps on simulators, Macs & devices": "Sovellukset simulaattoreissa, Maceissa & laitteissa",
+  "Graphics & games": "Grafiikka & pelit",
+  "Voice, language & data": "Puhe, kieli & data",
+  "Hardware, networks & services": "Laitteisto, verkot & palvelut",
+  "Web": "Verkko"
+ },
+ "apps": {
+  "All apps": "Kaikki sovellukset",
+  "Quake 3": "Quake 3",
+  "Throwdown": "Throwdown",
+  "Frictionless Coffee": "Frictionless Coffee",
+  "xwtool": "xwtool",
+  "Sign-language work": "Viittomakielityö",
+  "Big Top": "Big Top",
+  "Transcription app": "Litterointisovellus",
+  "Enc0der": "Enc0der",
+  "Dossier": "Dossier",
+  "Ranger Bluetooth bridge": "Ranger Bluetooth -silta",
+  "Web services": "Verkkopalvelut",
+  "All sites": "Kaikki sivustot",
+  "Reyal website": "Reyalin verkkosivusto",
+  "Booking portal": "Varausportaali",
+  "Map in Motion": "Map in Motion"
+ },
+ "rows": {
+  "headless-ios.md": {
+   "name": "Taustasimulaattori",
+   "does": "Claude rakentaa iPhone-sovelluksen, ajaa sitä simulaattorissa taustalla ja ottaa itse kuvakaappaukset ja lokit, joten se voi tarkistaa näkymän ottamatta sinun näyttöäsi haltuunsa."
+  },
+  "uikit-layout-probe.md": {
+   "name": "Asettelun mittaus",
+   "does": "Claude mittaa, mitä näytölle todella aseteltiin, kuten palkkien korkeudet ja vierityskohdat, hetki hetkeltä, kun siirryt näkymästä toiseen, jotta se voi selvittää arvaamatta, miksi jokin näyttää väärältä."
+  },
+  "launch-argument-test-hooks.md": {
+   "name": "Käynnistysargumenttikoukut",
+   "does": "Testiversioiden piilotetut kytkimet, jotka avaavat sovelluksen suoraan valittuun näkymään esimerkkidatalla, joten Claude pääsee mihin tahansa näkymään napauttelematta koko sovelluksen läpi."
+  },
+  "designed-for-ipad-on-mac.md": {
+   "name": "iPad-sovellus Macilla",
+   "does": "Ajaa sovelluksen iPad-version tavallisena Mac-sovelluksena, joten Claude voi testata sitä Macilla sen lokien ja ikkunan kuvakaappausten avulla."
+  },
+  "applescript-screencapture-fallback.md": {
+   "name": "AppleScript ja näytönkaappaus",
+   "does": "Kun Claude ei voi ohjata näyttöä suoraan, se ohjaa Mac-sovelluksia AppleScriptillä ja kuvaa vain niiden ikkunan nähdäkseen tuloksen."
+  },
+  "unit-test-suites.md": {
+   "name": "Yksikkötestit",
+   "does": "Automaattiset testit sovelluksen sisäiselle logiikalle, kuten pisteytykselle, reiteille ja jonoille; ne ajetaan sekunneissa avaamatta sovellusta."
+  },
+  "human-verify-queue.md": {
+   "name": "Tarkistuslista vain ihmiselle",
+   "does": "Yksi jatkuvasti päivittyvä lista tarkistuksista, jotka vain ihminen voi tehdä, kuten lasien pitäminen päässä tai oikean puhelimen käyttö, jotta muu työ ei jää odottamaan niitä."
+  },
+  "build-check-all-targets.md": {
+   "name": "Käännä kaikki kohteet",
+   "does": "Kääntää iPhone-, Mac- ja Vision Pro -versiot uudelleen yhdessä muutoksen jälkeen ja tarkistaa, ettei testiasetuksia koskaan tallenneta pelaajan omiin asetuksiin."
+  },
+  "swiftui-live-preview.md": {
+   "name": "SwiftUI:n live-esikatselu",
+   "does": "Näyttää yhden näkymän Xcoden live-esikatselussa ja kuvaa sen, joten Claude voi tarkistaa asettelumuutoksen kääntämättä ja ajamatta koko peliä."
+  },
+  "accessibility-tree-tapping.md": {
+   "name": "Napautus saavutettavuustietojen avulla",
+   "does": "Napauttaa simulaattorin painikkeita kohdista, jotka sovellus itse ilmoittaa, sen sijaan että arvaisi niiden paikan kuvakaappauksesta."
+  },
+  "two-simulator-peer-test.md": {
+   "name": "Kaksi simulaattoria kahtena ihmisenä",
+   "does": "Ajaa sovellusta kahdella simuloidulla iPhonella kahtena eri ihmisenä, joten kutsuja, haasteita ja synkronointia voi testata ilman kahta oikeaa puhelinta."
+  },
+  "localized-screens-contact-sheets.md": {
+   "name": "Jokainen näkymä joka kielellä",
+   "does": "Kuvaa jokaisen päänäkymän jokaisella kielellä sekä keksityllä kielellä, jossa on erityisen pitkiä sanoja, yhdelle arkille, joten tekstin, joka ei mahdu, huomaa helposti."
+  },
+  "device-crashlog-pull.md": {
+   "name": "Kaatumisraportit",
+   "does": "Hakee kaatumisraportin oikeasta iPhonesta ja lukee sen, joten vain puhelimessa tapahtuvalle kaatumiselle löytyy nimetty syy."
+  },
+  "stdlib-test-suite.md": {
+   "name": "Pieni testisarja",
+   "does": "Pieni, itsenäinen joukko automaattisia tarkistuksia Python-työkalulle; se toimii missä tahansa asentamatta mitään."
+  },
+  "game-console-driving.md": {
+   "name": "Pelikonsolin ohjaus",
+   "does": "Lähettää skriptistä komentoja pelin sisäänrakennettuun konsoliin ja lukee sen lokin jälkikäteen sen sijaan, että kirjoittaisi peli-ikkunaan."
+  },
+  "renderer-ab-on-demos.md": {
+   "name": "Ennen ja jälkeen -kuvat",
+   "does": "Toistaa saman tallennetun pelipätkän ennen grafiikkamuutosta ja sen jälkeen ja vertaa kuvia pikseli pikseliltä."
+  },
+  "realtime-raytracing-on-mac.md": {
+   "name": "Säteenseuranta Macilla",
+   "does": "Testinäkymät, jotka näyttävät säteenseurantavalaistuksen jokaisen vaiheen (varjot, heijastukset, ympäristövalo) erikseen, sekä itsetarkistukset, jotka tulostavat hyväksytty tai hylätty."
+  },
+  "vision-pro-screenshots.md": {
+   "name": "Vision Pro -kuvakaappaukset",
+   "does": "Tallentaa, mitä Vision Pro -sovellus näyttää, myös kummankin silmän näkymän 3D:nä, simulaattorissa ja laitteessa."
+  },
+  "plugin-test-cases.md": {
+   "name": "Pelimodit",
+   "does": "Lataa jokaisen suositun moninpelimodin meidän versioomme pelistä, käynnistää kentän ja etsii lokista virheitä."
+  },
+  "side-by-side-reference-engine.md": {
+   "name": "Rinnakkain alkuperäisen kanssa",
+   "does": "Tallentaa saman kohtauksen meidän versiossamme ja alkuperäisessä pelissä rinnakkain, jotta mahdolliset erot näkyvät."
+  },
+  "offline-shader-compile.md": {
+   "name": "Shaderien offline-käännös",
+   "does": "Kääntää säteenseurannan grafiikkakoodin Macilla, koska simulaattori ohittaa sen ja virheet näkyisivät muuten vasta laitteessa."
+  },
+  "gpu-frame-capture.md": {
+   "name": "GPU-kuvan kaappaus",
+   "does": "Kaappaa yhden kuvan grafiikkapiiriltä ja listaa, mitä kukin piirtovaihe maksoi, jotta hitaat kohdat löytyvät."
+  },
+  "levelshot-capture.md": {
+   "name": "Kenttäkuvat",
+   "does": "Ottaa kuvan jokaisesta kentästä kentän tekijän valitsemasta kamerakulmasta ja asettelee ne yhdelle arkille."
+  },
+  "shader-math-verifiers.md": {
+   "name": "Shaderien matematiikka",
+   "does": "Laskee Quake 3:n savu- ja tulitehosteet uudelleen hitaasti ja tarkasti ja tarkistaa, että nopea grafiikkaversio piirtää saman kuvan."
+  },
+  "motion-compare.md": {
+   "name": "Liikevertailu",
+   "does": "Toistaa tietokoneella tuotettua viittovaa kättä sen oikean viittojan rinnalla, jonka pohjalta se tehtiin, kuva kuvalta, ja tarkistaa, että liike vastaa."
+  },
+  "on-device-image-reduction.md": {
+   "name": "Kuvakaappauksista tekstiä",
+   "does": "Muuttaa kuvakaappaukset ja skannaukset tekstiksi Macilla ennen kuin Claude lukee ne, mikä pitää kuvat yksityisinä ja kuluttaa paljon vähemmän Clauden muistia."
+  },
+  "voice-bench.md": {
+   "name": "voice-bench",
+   "does": "Mac puhuu testilauseita synteettisillä äänillä sovelluksen puheentunnistimeen, joten äänikomentoja voi testata ilman, että kenenkään tarvitsee puhua."
+  },
+  "siri-phrasing-check.md": {
+   "name": "Siri-lauseet",
+   "does": "Tarkistaa, että sovellukseen Siriä varten rakennetut lauseet, kuten \"order my usual\", vastaavat sitä, mitä ihmiset sanovat; se, ohjaako Siri ne oikein, vaatii yhä puhelimen."
+  },
+  "golden-snapshot.md": {
+   "name": "Referenssitilannekuva",
+   "does": "Tallentaa sovelluksen koko tulosteen ennen uudelleenkirjoitusta ja tarkistaa sitten, että uudelleenkirjoitettu versio tuottaa täsmälleen saman tulosteen."
+  },
+  "transcription-accuracy-scoring.md": {
+   "name": "Litteroinnin tarkkuus",
+   "does": "Ajaa sovelluksen puheentunnistuksen julkisilla äänitteillä, joiden mukana on oikeat litteroinnit, ja laskee, kuinka monta merkkiä menee väärin."
+  },
+  "translation-lint.md": {
+   "name": "Käännöstarkistukset",
+   "does": "Tarkistaa, että jokainen käännös säilyttää nimet, numerot ja sovitut termit ja ettei mitään näytön tekstiä ole jäänyt kääntämättä. Käytössä myös Quake 3:ssa."
+  },
+  "real-data-fixtures.md": {
+   "name": "Oikeat tiedot",
+   "does": "Testaa reittien tunnistusta joukolla oikeita tallennettuja ajoja keksittyjen sijaan, ja näin löytyi virheitä, jotka keksityt testit olivat ohittaneet."
+  },
+  "baseline-parity.md": {
+   "name": "Vastaavuus alkuperäiseen sovellukseen",
+   "does": "Vertaa iPad-versiomme tietokantaa alkuperäisen Windows-sovelluksen tietokantaan taulu taululta ja rivi riviltä."
+  },
+  "document-value-verification.md": {
+   "name": "Lainattujen arvojen tarkistus",
+   "does": "Ennen kuin Claude lainaa päivämäärän tai luvun asiakirjasta, tarkistetaan, että täsmälleen sama teksti todella löytyy asiakirjasta."
+  },
+  "reference-device-benchmarking.md": {
+   "name": "Vertailu toimivaksi tiedettyyn laitteeseen",
+   "does": "Tallentaa, miten toimivaksi tiedetty kokoonpano käyttäytyy (iPhone suoraan yhteydessä nappikuulokkeisiin), ja vertaa siltamme tallennetta siihen."
+  },
+  "bridge-probes-dashboard.md": {
+   "name": "Sillan mittausohjelmat ja kojelauta",
+   "does": "Pieniä testiohjelmia ja reaaliaikainen kojelauta pyörän Bluetooth-äänisillalle; ne näyttävät äänipuskurit, signaalinvoimakkuuden ja yhteydet ajon aikana."
+  },
+  "bluetooth-packet-captures.md": {
+   "name": "Bluetooth-kaappaukset",
+   "does": "Tallentaa itse Bluetooth-liikenteen, jotta nähdään, mitä laitteet todella lähettivät eikä vain mitä ne ilmoittivat."
+  },
+  "health-endpoint-checks.md": {
+   "name": "Toimivuustarkistukset",
+   "does": "Tarkistaa, että jokainen verkkopalvelu vastaa internetistä ja että reitti, jonka pitäisi olla estetty, torjutaan."
+  },
+  "browser-driving.md": {
+   "name": "Selaimen ohjaus",
+   "does": "Claude avaa sivuja selaimessa, täyttää lomakkeita ja lukee tuloksen tarkistaakseen, että sivusto toimii ja näyttää oikealta."
+  },
+  "deploy-verification-breakpoint-sweep.md": {
+   "name": "Sivustopäivityksen tarkistus",
+   "does": "Sivustopäivityksen jälkeen tarkistaa, että jokainen tiedosto saapui palvelimelle ehjänä, ja sitten asettelun puhelimen, tabletin ja tietokoneen leveydellä."
+  },
+  "booking-dry-run.md": {
+   "name": "Varauksen kuivaharjoitus",
+   "does": "Käy verkkovarauksen läpi viimeiseen vaiheeseen asti ja pysähtyy, jotta vaiheet voi testata tekemättä oikeaa varausta."
+  },
+  "animation-self-check.md": {
+   "name": "Animaation tarkistus",
+   "does": "Mittaa animoitua kaaviota sen toistuessa ja tarkistaa, että osat ovat kohdallaan eivätkä mene päällekkäin, pikselin murto-osan tarkkuudella."
+  }
+ }
+}

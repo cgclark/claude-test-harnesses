@@ -1,0 +1,219 @@
+{
+ "title": "Geautomatiseerde testharnassen voor Claude",
+ "intro": "Manieren waarop Claude Code zijn eigen werk kan controleren: de app draaien, iets vastleggen dat het kan lezen en bepalen of het slaagt of faalt voordat iemand ernaar hoeft te kijken. Elke naam opent een pagina met het volledige recept.",
+ "pages_english": "De harnaspagina's zelf zijn in het Engels.",
+ "languages": "Taal",
+ "o_claude": "Aanbevolen door Claude",
+ "o_claude_d": "een standaardtool, ongewijzigd gebruikt",
+ "o_extended": "Aanbevolen door Claude, uitgebreid",
+ "o_extended_d": "een standaardtool die we moesten aanvullen voordat hij werkte",
+ "o_built": "Door ons gebouwd",
+ "o_built_d": "een methode die we zelf moesten uitzoeken",
+ "t_yes": "werkt op die versie",
+ "t_unk": "nog niet bevestigd",
+ "t_no": "werkt daar nog niet",
+ "os_note": "Testharnassen die niet van de OS-versie afhangen, tellen als werkend op beide. De rest is afgevinkt op basis van het laatste gebruik; deze Mac is op 2 oktober 2026 overgestapt op 27, en een controle per testharnas tegen de architectuur van 27 moet nog komen.",
+ "from": "Uit",
+ "from_d": "de app waarin elk testharnas het eerst is gebouwd",
+ "h_harness": "Testharnas",
+ "h_capability": "Functie",
+ "h_from": "Uit",
+ "h_origin": "Oorsprong",
+ "project_specific": "Projectspecifiek",
+ "footer": "Een technischere versie, geschreven om in Claude te laden, is de {README} op GitHub.",
+ "categories": {
+  "Apps on simulators, Macs & devices": "Apps op simulators, Macs & apparaten",
+  "Graphics & games": "Graphics & games",
+  "Voice, language & data": "Spraak, taal & data",
+  "Hardware, networks & services": "Hardware, netwerken & diensten",
+  "Web": "Web"
+ },
+ "apps": {
+  "All apps": "Alle apps",
+  "Quake 3": "Quake 3",
+  "Throwdown": "Throwdown",
+  "Frictionless Coffee": "Frictionless Coffee",
+  "xwtool": "xwtool",
+  "Sign-language work": "Gebarentaalwerk",
+  "Big Top": "Big Top",
+  "Transcription app": "Transcriptie-app",
+  "Enc0der": "Enc0der",
+  "Dossier": "Dossier",
+  "Ranger Bluetooth bridge": "Ranger Bluetooth-bridge",
+  "Web services": "Webservices",
+  "All sites": "Alle sites",
+  "Reyal website": "Reyal-website",
+  "Booking portal": "Boekingsportaal",
+  "Map in Motion": "Map in Motion"
+ },
+ "rows": {
+  "headless-ios.md": {
+   "name": "Simulator op de achtergrond",
+   "does": "Claude bouwt een iPhone-app, draait die op de achtergrond in de simulator en maakt zelf screenshots en logs, zodat het een scherm kan controleren zonder het jouwe over te nemen."
+  },
+  "uikit-layout-probe.md": {
+   "name": "Layoutmeting",
+   "does": "Claude meet wat er werkelijk op het scherm is opgebouwd, zoals balkhoogtes en scrollposities, moment voor moment terwijl je tussen schermen wisselt, zodat het kan vinden waarom iets er verkeerd uitziet in plaats van te gokken."
+  },
+  "launch-argument-test-hooks.md": {
+   "name": "Opstartschakelaars",
+   "does": "Verborgen schakelaars in testbuilds die een app direct op een gekozen scherm met voorbeeldgegevens openen, zodat Claude elk scherm kan bereiken zonder door de app te tikken."
+  },
+  "designed-for-ipad-on-mac.md": {
+   "name": "iPad-app op de Mac",
+   "does": "Draait de iPad-versie van een app als gewone Mac-app, zodat Claude die op de Mac kan testen met de logs en screenshots van het venster."
+  },
+  "applescript-screencapture-fallback.md": {
+   "name": "AppleScript en schermopname",
+   "does": "Als Claude het scherm niet rechtstreeks kan bedienen, stuurt het Mac-apps aan met AppleScript en fotografeert het alleen hun venster om het resultaat te zien."
+  },
+  "unit-test-suites.md": {
+   "name": "Unittests",
+   "does": "Automatische tests van de interne logica van een app, zoals scores, routes en wachtrijen, die in enkele seconden draaien zonder de app te openen."
+  },
+  "human-verify-queue.md": {
+   "name": "Checklist voor mensen",
+   "does": "Eén doorlopende lijst van de controles die alleen een mens kan doen, zoals de headset opzetten of een echte telefoon gebruiken, zodat de rest van het werk daar niet op hoeft te wachten."
+  },
+  "build-check-all-targets.md": {
+   "name": "Elk doel bouwen",
+   "does": "Bouwt na een wijziging de iPhone-, Mac- en Vision Pro-versie samen opnieuw, en controleert dat testinstellingen nooit in de eigen instellingen van een speler worden opgeslagen."
+  },
+  "swiftui-live-preview.md": {
+   "name": "SwiftUI-livevoorvertoning",
+   "does": "Toont één scherm in de livevoorvertoning van Xcode en fotografeert het, zodat Claude een layoutwijziging kan controleren zonder de hele game te bouwen en te starten."
+  },
+  "accessibility-tree-tapping.md": {
+   "name": "Tikken via toegankelijkheid",
+   "does": "Tikt in de simulator op knoppen op de posities die de app zelf doorgeeft, in plaats van aan de hand van een screenshot te raden waar ze zitten."
+  },
+  "two-simulator-peer-test.md": {
+   "name": "Twee simulators als twee mensen",
+   "does": "Draait de app op twee gesimuleerde iPhones als twee verschillende mensen, zodat uitnodigingen, uitdagingen en synchronisatie getest kunnen worden zonder twee echte telefoons."
+  },
+  "localized-screens-contact-sheets.md": {
+   "name": "Elk scherm in elke taal",
+   "does": "Fotografeert elk hoofdscherm in elke taal, plus een verzonnen taal met extra lange woorden, op één vel, zodat tekst die niet past makkelijk opvalt."
+  },
+  "device-crashlog-pull.md": {
+   "name": "Crashrapporten",
+   "does": "Haalt het crashrapport van een echte iPhone en leest het, zodat een crash die alleen op de telefoon gebeurt een benoemde oorzaak krijgt."
+  },
+  "stdlib-test-suite.md": {
+   "name": "Kleine testsuite",
+   "does": "Een kleine, zelfstandige set automatische controles voor een Python-tool, die overal draait zonder iets te installeren."
+  },
+  "game-console-driving.md": {
+   "name": "Gameconsole aansturen",
+   "does": "Stuurt vanuit een script opdrachten naar de ingebouwde console van de game en leest daarna het log, in plaats van in het gamevenster te typen."
+  },
+  "renderer-ab-on-demos.md": {
+   "name": "Frames voor en na",
+   "does": "Speelt dezelfde opgenomen gameclip af voor en na een grafische wijziging en vergelijkt de frames pixel voor pixel."
+  },
+  "realtime-raytracing-on-mac.md": {
+   "name": "Raytracing op de Mac",
+   "does": "Testweergaven die elke stap van de geraytracete belichting (schaduwen, reflecties, omgevingslicht) apart tonen, plus zelftests die geslaagd of mislukt melden."
+  },
+  "vision-pro-screenshots.md": {
+   "name": "Vision Pro-screenshots",
+   "does": "Legt vast wat de Vision Pro-app laat zien, inclusief het beeld van elk oog in 3D, in de simulator en op de headset."
+  },
+  "plugin-test-cases.md": {
+   "name": "Gamemods",
+   "does": "Laadt elke populaire multiplayermod in onze versie van de game, start een map en controleert het log op fouten."
+  },
+  "side-by-side-reference-engine.md": {
+   "name": "Naast het origineel",
+   "does": "Neemt dezelfde scène op in onze versie en in de originele game, naast elkaar, om elk verschil te laten zien."
+  },
+  "offline-shader-compile.md": {
+   "name": "Shaders offline compileren",
+   "does": "Compileert de grafische raytracingcode op de Mac, omdat de simulator die overslaat en fouten anders pas op een apparaat zouden opduiken."
+  },
+  "gpu-frame-capture.md": {
+   "name": "GPU-framecapture",
+   "does": "Legt één frame vast op de grafische chip en toont wat elke tekenstap kostte, om te vinden wat traag is."
+  },
+  "levelshot-capture.md": {
+   "name": "Levelscreenshots",
+   "does": "Maakt een afbeelding van elke map vanuit de camerahoek die de maker van de map koos, en zet ze samen op één vel."
+  },
+  "shader-math-verifiers.md": {
+   "name": "Shaderwiskunde",
+   "does": "Herberekent de rook- en vuureffecten van Quake 3 langzaam en exact, en controleert of de snelle grafische versie hetzelfde beeld tekent."
+  },
+  "motion-compare.md": {
+   "name": "Bewegingsvergelijking",
+   "does": "Speelt een computergegenereerde gebarende hand af naast de echte gebaarder op wie die is gebaseerd, frame voor frame, om te controleren of de beweging overeenkomt."
+  },
+  "on-device-image-reduction.md": {
+   "name": "Screenshots naar tekst",
+   "does": "Zet screenshots en scans op de Mac om in tekst voordat Claude ze leest, wat afbeeldingen privé houdt en veel minder van Claudes geheugen gebruikt."
+  },
+  "voice-bench.md": {
+   "name": "voice-bench",
+   "does": "De Mac spreekt testzinnen met synthetische stemmen in de spraakherkenning van de app in, zodat spraakopdrachten getest kunnen worden zonder dat iemand praat."
+  },
+  "siri-phrasing-check.md": {
+   "name": "Siri-formuleringen",
+   "does": "Controleert of de zinnen die voor Siri in de app zijn ingebouwd, zoals \"order my usual\", overeenkomen met wat mensen zeggen; of Siri ze goed doorstuurt, kan nog alleen op de telefoon worden gecontroleerd."
+  },
+  "golden-snapshot.md": {
+   "name": "Referentiesnapshot",
+   "does": "Slaat de volledige uitvoer van de app op vóór een herschrijving en controleert daarna of de herschreven versie precies dezelfde uitvoer geeft."
+  },
+  "transcription-accuracy-scoring.md": {
+   "name": "Transcriptienauwkeurigheid",
+   "does": "Laat de spraak-naar-tekst van de app los op openbare opnames met correcte transcripties en scoort hoeveel tekens er fout gaan."
+  },
+  "translation-lint.md": {
+   "name": "Vertaalcontroles",
+   "does": "Controleert of elke vertaling haar namen, getallen en afgesproken termen behoudt, en of er geen schermtekst onvertaald is gebleven. Ook gebruikt voor Quake 3."
+  },
+  "real-data-fixtures.md": {
+   "name": "Echte gegevens",
+   "does": "Test routeherkenning op een set echt opgenomen ritten in plaats van verzonnen ritten, wat bugs aan het licht bracht die de verzonnen tests hadden gemist."
+  },
+  "baseline-parity.md": {
+   "name": "Gelijk aan de originele app",
+   "does": "Vergelijkt de database in onze iPad-versie met die van de originele Windows-app, tabel voor tabel en rij voor rij."
+  },
+  "document-value-verification.md": {
+   "name": "Geciteerde waarden controleren",
+   "does": "Controleert, voordat Claude een datum of getal uit een document citeert, of de exacte tekst echt in dat document staat."
+  },
+  "reference-device-benchmarking.md": {
+   "name": "Vergelijken met een bewezen apparaat",
+   "does": "Legt vast hoe een bewezen goed werkende opstelling zich gedraagt (de iPhone die rechtstreeks met de oordopjes praat) en vergelijkt een opname van onze bridge daarmee."
+  },
+  "bridge-probes-dashboard.md": {
+   "name": "Bridge-tests en dashboard",
+   "does": "Kleine testprogramma's en een live dashboard voor de Bluetooth-audiobridge van de fiets, met geluidsbuffers, signaalsterkte en verbindingen tijdens het rijden."
+  },
+  "bluetooth-packet-captures.md": {
+   "name": "Bluetooth-opnames",
+   "does": "Neemt het Bluetooth-verkeer zelf op, om te zien wat de apparaten echt verstuurden in plaats van wat ze meldden."
+  },
+  "health-endpoint-checks.md": {
+   "name": "Statuscontroles",
+   "does": "Controleert of elke webservice vanaf het internet antwoordt, en of de route die geblokkeerd hoort te zijn wordt geweigerd."
+  },
+  "browser-driving.md": {
+   "name": "Browser aansturen",
+   "does": "Claude opent pagina's in een browser, vult formulieren in en leest het resultaat, om te controleren of een site werkt en er goed uitziet."
+  },
+  "deploy-verification-breakpoint-sweep.md": {
+   "name": "Controle na websiterelease",
+   "does": "Controleert na een website-update of elk bestand intact op de server is aangekomen, en daarna de layout op telefoon-, tablet- en desktopbreedte."
+  },
+  "booking-dry-run.md": {
+   "name": "Proefboeking",
+   "does": "Doorloopt een onlineboeking tot de laatste stap en stopt dan, zodat de stappen getest kunnen worden zonder een echte boeking te maken."
+  },
+  "animation-self-check.md": {
+   "name": "Animatiecontrole",
+   "does": "Meet een geanimeerd diagram terwijl het afspeelt en controleert tot op een fractie van een pixel of de onderdelen aansluiten en niet overlappen."
+  }
+ }
+}

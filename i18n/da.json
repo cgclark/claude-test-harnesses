@@ -1,0 +1,219 @@
+{
+ "title": "Automatiske testopstillinger til Claude",
+ "intro": "Måder, hvorpå Claude Code kan tjekke sit eget arbejde: køre appen, optage noget, den kan læse, og afgøre bestået eller ikke bestået, før et menneske behøver at se på det. Hvert navn åbner en side med hele opskriften.",
+ "pages_english": "Selve siderne om testopstillingerne er på engelsk.",
+ "languages": "Sprog",
+ "o_claude": "Anbefalet af Claude",
+ "o_claude_d": "et standardværktøj brugt, som det er",
+ "o_extended": "Anbefalet af Claude, udvidet",
+ "o_extended_d": "et standardværktøj, vi måtte bygge videre på, før det virkede",
+ "o_built": "Bygget af os",
+ "o_built_d": "en metode, vi selv måtte finde frem til",
+ "t_yes": "virker på den version",
+ "t_unk": "endnu ikke bekræftet",
+ "t_no": "virker ikke der endnu",
+ "os_note": "Testopstillinger, der ikke afhænger af OS-versionen, tæller som virkende på begge. Resten er markeret ud fra, hvornår hver enkelt sidst blev brugt; denne Mac skiftede til 27 den 2. oktober 2026, og en gennemgang én for én mod 27-arkitekturen mangler stadig.",
+ "from": "Fra",
+ "from_d": "den app, hver testopstilling først blev bygget i",
+ "h_harness": "Testopstilling",
+ "h_capability": "Funktion",
+ "h_from": "Fra",
+ "h_origin": "Oprindelse",
+ "project_specific": "Projektspecifikke",
+ "footer": "En mere teknisk version, skrevet til at blive indlæst i Claude, er {README} på GitHub.",
+ "categories": {
+  "Apps on simulators, Macs & devices": "Apps på simulatorer, Mac'er & enheder",
+  "Graphics & games": "Grafik & spil",
+  "Voice, language & data": "Stemme, sprog & data",
+  "Hardware, networks & services": "Hardware, netværk & tjenester",
+  "Web": "Web"
+ },
+ "apps": {
+  "All apps": "Alle apps",
+  "Quake 3": "Quake 3",
+  "Throwdown": "Throwdown",
+  "Frictionless Coffee": "Frictionless Coffee",
+  "xwtool": "xwtool",
+  "Sign-language work": "Tegnsprogsarbejde",
+  "Big Top": "Big Top",
+  "Transcription app": "Transskriptionsapp",
+  "Enc0der": "Enc0der",
+  "Dossier": "Dossier",
+  "Ranger Bluetooth bridge": "Ranger Bluetooth-bro",
+  "Web services": "Webtjenester",
+  "All sites": "Alle websteder",
+  "Reyal website": "Reyal-webstedet",
+  "Booking portal": "Bookingportal",
+  "Map in Motion": "Map in Motion"
+ },
+ "rows": {
+  "headless-ios.md": {
+   "name": "Simulator i baggrunden",
+   "does": "Claude bygger en iPhone-app, kører den i simulatoren i baggrunden og tager selv skærmbilleder og logs, så den kan tjekke en skærm uden at overtage din."
+  },
+  "uikit-layout-probe.md": {
+   "name": "Layoutsonde",
+   "does": "Claude måler, hvad skærmen faktisk lagde ud, såsom bjælkehøjder og rullepositioner, øjeblik for øjeblik, mens du skifter mellem skærme, så den kan finde ud af, hvorfor noget ser forkert ud, i stedet for at gætte."
+  },
+  "launch-argument-test-hooks.md": {
+   "name": "Startargument-hooks",
+   "does": "Skjulte kontakter i testbuilds, der åbner en app direkte på en valgt skærm med eksempeldata, så Claude kan nå enhver skærm uden at trykke sig gennem appen."
+  },
+  "designed-for-ipad-on-mac.md": {
+   "name": "iPad-app på Mac'en",
+   "does": "Kører iPad-versionen af en app som en almindelig Mac-app, så Claude kan teste den på Mac'en med dens logs og skærmbilleder af vinduet."
+  },
+  "applescript-screencapture-fallback.md": {
+   "name": "AppleScript og skærmoptagelse",
+   "does": "Når Claude ikke kan styre skærmen direkte, styrer den Mac-apps med AppleScript og fotograferer kun deres vindue for at se resultatet."
+  },
+  "unit-test-suites.md": {
+   "name": "Enhedstest",
+   "does": "Automatiske test af en apps interne logik, såsom pointberegning, ruter og køer, der kører på få sekunder uden at åbne appen."
+  },
+  "human-verify-queue.md": {
+   "name": "Tjekliste kun for mennesker",
+   "does": "Én løbende liste over de tjek, kun et menneske kan udføre, såsom at have headsettet på eller bruge en rigtig telefon, så resten af arbejdet ikke venter på dem."
+  },
+  "build-check-all-targets.md": {
+   "name": "Byg alle targets",
+   "does": "Genbygger iPhone-, Mac- og Vision Pro-versionerne samlet efter en ændring og tjekker, at testindstillinger aldrig bliver gemt i en spillers egne indstillinger."
+  },
+  "swiftui-live-preview.md": {
+   "name": "Live-forhåndsvisning i SwiftUI",
+   "does": "Viser én skærm i Xcodes live-forhåndsvisning og fotograferer den, så Claude kan tjekke en layoutændring uden at bygge og køre hele spillet."
+  },
+  "accessibility-tree-tapping.md": {
+   "name": "Tryk via tilgængelighed",
+   "does": "Trykker på knapper i simulatoren på de positioner, appen selv oplyser, i stedet for at gætte, hvor de er, ud fra et skærmbillede."
+  },
+  "two-simulator-peer-test.md": {
+   "name": "To simulatorer som to personer",
+   "does": "Kører appen på to simulerede iPhones som to forskellige personer, så invitationer, udfordringer og synkronisering kan testes uden to rigtige telefoner."
+  },
+  "localized-screens-contact-sheets.md": {
+   "name": "Alle skærme på alle sprog",
+   "does": "Fotograferer alle hovedskærme på alle sprog, plus et opdigtet sprog med ekstra lange ord, på ét ark, så tekst, der ikke passer, er let at få øje på."
+  },
+  "device-crashlog-pull.md": {
+   "name": "Nedbrudsrapporter",
+   "does": "Henter nedbrudsrapporten fra en rigtig iPhone og læser den, så et nedbrud, der kun sker på telefonen, får en navngivet årsag."
+  },
+  "stdlib-test-suite.md": {
+   "name": "Lille testsuite",
+   "does": "Et lille, selvstændigt sæt automatiske tjek til et Python-værktøj, der kører overalt uden at installere noget."
+  },
+  "game-console-driving.md": {
+   "name": "Styring af spilkonsollen",
+   "does": "Sender kommandoer til spillets indbyggede konsol fra et script og læser bagefter dens log i stedet for at skrive i spilvinduet."
+  },
+  "renderer-ab-on-demos.md": {
+   "name": "Før og efter-billeder",
+   "does": "Afspiller det samme optagede spilklip før og efter en grafikændring og sammenligner billederne pixel for pixel."
+  },
+  "realtime-raytracing-on-mac.md": {
+   "name": "Ray tracing på Mac'en",
+   "does": "Testvisninger, der viser hvert trin i den ray-tracede belysning (skygger, refleksioner, omgivende lys) for sig, plus selvtjek, der udskriver bestået eller ikke bestået."
+  },
+  "vision-pro-screenshots.md": {
+   "name": "Vision Pro-skærmbilleder",
+   "does": "Optager, hvad Vision Pro-appen viser, inklusive hvert øjes billede i 3D, i simulatoren og på headsettet."
+  },
+  "plugin-test-cases.md": {
+   "name": "Spilmods",
+   "does": "Indlæser hver populær multiplayer-mod i vores version af spillet, starter en bane og tjekker loggen for fejl."
+  },
+  "side-by-side-reference-engine.md": {
+   "name": "Side om side med originalen",
+   "does": "Optager den samme scene i vores version og i det originale spil, side om side, for at vise enhver forskel."
+  },
+  "offline-shader-compile.md": {
+   "name": "Offline shaderkompilering",
+   "does": "Kompilerer ray tracing-grafikkoden på Mac'en, fordi simulatoren springer den over, og fejl ellers først ville vise sig på en enhed."
+  },
+  "gpu-frame-capture.md": {
+   "name": "GPU-billedoptagelse",
+   "does": "Optager ét billede på grafikchippen og viser, hvad hvert tegnetrin kostede, for at finde det, der er langsomt."
+  },
+  "levelshot-capture.md": {
+   "name": "Skærmbilleder af baner",
+   "does": "Tager et billede af hver bane fra den kameravinkel, banens skaber valgte, og lægger dem ud på ét ark."
+  },
+  "shader-math-verifiers.md": {
+   "name": "Shadermatematik",
+   "does": "Genberegner Quake 3's røg- og ildeffekter langsomt og præcist og tjekker, at den hurtige grafikversion tegner det samme billede."
+  },
+  "motion-compare.md": {
+   "name": "Bevægelsessammenligning",
+   "does": "Afspiller en computergenereret tegnende hånd ved siden af den rigtige tegnsprogsbruger, den blev lavet ud fra, billede for billede, for at tjekke, at bevægelsen stemmer overens."
+  },
+  "on-device-image-reduction.md": {
+   "name": "Skærmbilleder til tekst",
+   "does": "Omdanner skærmbilleder og scanninger til tekst på Mac'en, før Claude læser dem, hvilket holder billederne private og bruger langt mindre af Claudes hukommelse."
+  },
+  "voice-bench.md": {
+   "name": "voice-bench",
+   "does": "Mac'en siger testfraser med syntetiske stemmer ind i appens talegenkendelse, så stemmekommandoer kan testes, uden at nogen taler."
+  },
+  "siri-phrasing-check.md": {
+   "name": "Siri-formuleringer",
+   "does": "Tjekker, at de fraser, der er bygget ind i appen til Siri, såsom \"order my usual\", svarer til det, folk siger; om Siri sender dem det rigtige sted hen, kræver stadig telefonen."
+  },
+  "golden-snapshot.md": {
+   "name": "Referencesnapshot",
+   "does": "Gemmer appens fulde output før en omskrivning og tjekker derefter, at den omskrevne version giver præcis det samme output."
+  },
+  "transcription-accuracy-scoring.md": {
+   "name": "Transskriptionsnøjagtighed",
+   "does": "Kører appens tale-til-tekst på offentlige optagelser, der følger med korrekte transskriptioner, og måler, hvor mange tegn den tager fejl af."
+  },
+  "translation-lint.md": {
+   "name": "Oversættelsestjek",
+   "does": "Tjekker, at hver oversættelse bevarer sine navne, tal og aftalte termer, og at ingen tekst på skærmen er efterladt uoversat. Bruges også til Quake 3."
+  },
+  "real-data-fixtures.md": {
+   "name": "Rigtige data",
+   "does": "Tester rutematchning på et sæt rigtige optagede ture i stedet for opdigtede, hvilket fandt fejl, som de opdigtede test havde overset."
+  },
+  "baseline-parity.md": {
+   "name": "Match den originale app",
+   "does": "Sammenligner databasen i vores iPad-version med den fra den originale Windows-app, tabel for tabel og række for række."
+  },
+  "document-value-verification.md": {
+   "name": "Tjek citerede værdier",
+   "does": "Før Claude citerer en dato eller et tal fra et dokument, tjekkes det, at den nøjagtige tekst virkelig står i dokumentet."
+  },
+  "reference-device-benchmarking.md": {
+   "name": "Sammenlign med en enhed, der virker",
+   "does": "Optager, hvordan en opsætning, der vides at virke, opfører sig (iPhonen, der taler direkte med øretelefonerne), og sammenligner en optagelse af vores bro med den."
+  },
+  "bridge-probes-dashboard.md": {
+   "name": "Brosonder og dashboard",
+   "does": "Små testprogrammer og et live-dashboard til cyklens Bluetooth-lydbro, der viser lydbuffere, signalstyrke og forbindelser under kørslen."
+  },
+  "bluetooth-packet-captures.md": {
+   "name": "Bluetooth-optagelser",
+   "does": "Optager selve Bluetooth-trafikken for at se, hvad enhederne faktisk sendte, frem for hvad de rapporterede."
+  },
+  "health-endpoint-checks.md": {
+   "name": "Sundhedstjek",
+   "does": "Tjekker, at hver webtjeneste svarer fra internettet, og at den rute, der skal være blokeret, bliver afvist."
+  },
+  "browser-driving.md": {
+   "name": "Browserstyring",
+   "does": "Claude åbner sider i en browser, udfylder formularer og læser resultatet for at tjekke, at et websted virker og ser rigtigt ud."
+  },
+  "deploy-verification-breakpoint-sweep.md": {
+   "name": "Tjek af webstedsudrulning",
+   "does": "Efter en opdatering af et websted tjekkes det, at hver fil kom intakt frem til serveren, og derefter tjekkes layoutet i telefon-, tablet- og desktopbredde."
+  },
+  "booking-dry-run.md": {
+   "name": "Prøvebooking",
+   "does": "Gennemgår en onlinebooking frem til det sidste trin og stopper, så trinene kan testes uden at lave en rigtig booking."
+  },
+  "animation-self-check.md": {
+   "name": "Animationstjek",
+   "does": "Måler et animeret diagram, mens det afspilles, og tjekker, at delene flugter og ikke overlapper, ned til en brøkdel af en pixel."
+  }
+ }
+}

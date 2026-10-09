@@ -1,0 +1,219 @@
+{
+ "title": "Claude automated testing harnesses",
+ "intro": "Ways for Claude Code to check its own work: run the app, capture something it can read, and decide pass or fail before a person has to look. Each name opens a page with the full recipe.",
+ "pages_english": "The harness pages themselves are in English.",
+ "languages": "Language",
+ "o_claude": "Claude recommended",
+ "o_claude_d": "a standard tool used as is",
+ "o_extended": "Claude recommended, extended",
+ "o_extended_d": "a standard tool we had to add to before it worked",
+ "o_built": "Built by us",
+ "o_built_d": "a method we had to work out",
+ "t_yes": "works on that version",
+ "t_unk": "not confirmed yet",
+ "t_no": "doesn't work there yet",
+ "os_note": "Harnesses that don't depend on the OS version count as working on both. The rest are ticked from when each was last used; this Mac moved to 27 on 2 October 2026, and a one-by-one check against the 27 architecture is still to come.",
+ "from": "From",
+ "from_d": "the app each harness was first built in",
+ "h_harness": "Harness",
+ "h_capability": "Capability",
+ "h_from": "From",
+ "h_origin": "Origin",
+ "project_specific": "Project-specific",
+ "footer": "A more technical version, written for loading into Claude, is the {README} on GitHub.",
+ "categories": {
+  "Apps on simulators, Macs & devices": "Apps on simulators, Macs & devices",
+  "Graphics & games": "Graphics & games",
+  "Voice, language & data": "Voice, language & data",
+  "Hardware, networks & services": "Hardware, networks & services",
+  "Web": "Web"
+ },
+ "apps": {
+  "All apps": "All apps",
+  "Quake 3": "Quake 3",
+  "Throwdown": "Throwdown",
+  "Frictionless Coffee": "Frictionless Coffee",
+  "xwtool": "xwtool",
+  "Sign-language work": "Sign-language work",
+  "Big Top": "Big Top",
+  "Transcription app": "Transcription app",
+  "Enc0der": "Enc0der",
+  "Dossier": "Dossier",
+  "Ranger Bluetooth bridge": "Ranger Bluetooth bridge",
+  "Web services": "Web services",
+  "All sites": "All sites",
+  "Reyal website": "Reyal website",
+  "Booking portal": "Booking portal",
+  "Map in Motion": "Map in Motion"
+ },
+ "rows": {
+  "headless-ios.md": {
+   "name": "Headless simulator",
+   "does": "Claude builds an iPhone app, runs it in the simulator in the background and takes its own screenshots and logs, so it can check a screen without taking over yours."
+  },
+  "uikit-layout-probe.md": {
+   "name": "Layout probe",
+   "does": "Claude measures what the screen actually laid out, such as bar heights and scroll positions, moment by moment as you move between screens, so it can find why something looks wrong instead of guessing."
+  },
+  "launch-argument-test-hooks.md": {
+   "name": "Launch-argument hooks",
+   "does": "Hidden switches in test builds that open an app straight on a chosen screen with sample data, so Claude can reach any screen without tapping through the app."
+  },
+  "designed-for-ipad-on-mac.md": {
+   "name": "iPad app on the Mac",
+   "does": "Runs the iPad version of an app as an ordinary Mac app, so Claude can test it on the Mac with its logs and window screenshots."
+  },
+  "applescript-screencapture-fallback.md": {
+   "name": "AppleScript and screen capture",
+   "does": "When Claude can't control the screen directly, it drives Mac apps with AppleScript and photographs just their window to see the result."
+  },
+  "unit-test-suites.md": {
+   "name": "Unit tests",
+   "does": "Automatic tests of an app's internal logic, such as scoring, routes and queues, that run in seconds without opening the app."
+  },
+  "human-verify-queue.md": {
+   "name": "Human-only checklist",
+   "does": "One running list of the checks only a person can make, such as wearing the headset or using a real phone, so the rest of the work doesn't wait for them."
+  },
+  "build-check-all-targets.md": {
+   "name": "Build every target",
+   "does": "Rebuilds the iPhone, Mac and Vision Pro versions together after a change, and checks that test settings never get saved into a player's own settings."
+  },
+  "swiftui-live-preview.md": {
+   "name": "SwiftUI live preview",
+   "does": "Shows one screen in Xcode's live preview and photographs it, so Claude can check a layout change without building and running the whole game."
+  },
+  "accessibility-tree-tapping.md": {
+   "name": "Tap by accessibility",
+   "does": "Taps buttons in the simulator at the positions the app itself reports, instead of guessing where they are from a screenshot."
+  },
+  "two-simulator-peer-test.md": {
+   "name": "Two simulators as two people",
+   "does": "Runs the app on two simulated iPhones as two different people, so invitations, challenges and syncing can be tested without two real phones."
+  },
+  "localized-screens-contact-sheets.md": {
+   "name": "Every screen in every language",
+   "does": "Photographs every main screen in every language, plus a made-up language with extra-long words, on one sheet, so text that doesn't fit is easy to spot."
+  },
+  "device-crashlog-pull.md": {
+   "name": "Crash reports",
+   "does": "Pulls the crash report off a real iPhone and reads it, so a crash that only happens on the phone gets a named cause."
+  },
+  "stdlib-test-suite.md": {
+   "name": "Small test suite",
+   "does": "A small, self-contained set of automatic checks for a Python tool, which runs anywhere without installing anything."
+  },
+  "game-console-driving.md": {
+   "name": "Game console driving",
+   "does": "Sends commands to the game's built-in console from a script and reads its log afterwards, instead of typing into the game window."
+  },
+  "renderer-ab-on-demos.md": {
+   "name": "Before-and-after frames",
+   "does": "Plays the same recorded game clip before and after a graphics change and compares the frames pixel by pixel."
+  },
+  "realtime-raytracing-on-mac.md": {
+   "name": "Ray tracing on the Mac",
+   "does": "Test views that show each step of the ray-traced lighting (shadows, reflections, ambient light) on its own, plus self-checks that print pass or fail."
+  },
+  "vision-pro-screenshots.md": {
+   "name": "Vision Pro screenshots",
+   "does": "Captures what the Vision Pro app shows, including each eye's view in 3D, in the simulator and on the headset."
+  },
+  "plugin-test-cases.md": {
+   "name": "Game mods",
+   "does": "Loads each popular multiplayer mod into our version of the game, starts a map, and checks the log for errors."
+  },
+  "side-by-side-reference-engine.md": {
+   "name": "Side by side with the original",
+   "does": "Records the same scene in our version and in the original game, side by side, to show any difference."
+  },
+  "offline-shader-compile.md": {
+   "name": "Offline shader compile",
+   "does": "Compiles the ray-tracing graphics code on the Mac, because the simulator skips it and mistakes would otherwise only show up on a device."
+  },
+  "gpu-frame-capture.md": {
+   "name": "GPU frame capture",
+   "does": "Captures one frame on the graphics chip and lists what each drawing step cost, to find what's slow."
+  },
+  "levelshot-capture.md": {
+   "name": "Level screenshots",
+   "does": "Takes a picture of each map from the camera angle the map's author chose, and lays them out on one sheet."
+  },
+  "shader-math-verifiers.md": {
+   "name": "Shader maths",
+   "does": "Recalculates Quake 3's smoke and fire effects slowly and exactly, and checks the fast graphics version draws the same picture."
+  },
+  "motion-compare.md": {
+   "name": "Motion compare",
+   "does": "Plays a computer-generated signing hand next to the real signer it was made from, frame by frame, to check the motion matches."
+  },
+  "on-device-image-reduction.md": {
+   "name": "Screenshots to text",
+   "does": "Turns screenshots and scans into text on the Mac before Claude reads them, which keeps images private and uses far less of Claude's memory."
+  },
+  "voice-bench.md": {
+   "name": "voice-bench",
+   "does": "The Mac speaks test phrases in synthetic voices into the app's speech recogniser, so voice commands can be tested without anyone talking."
+  },
+  "siri-phrasing-check.md": {
+   "name": "Siri phrasing",
+   "does": "Checks that the phrases built into the app for Siri, such as \"order my usual\", match what people say; whether Siri routes them correctly still needs the phone."
+  },
+  "golden-snapshot.md": {
+   "name": "Golden snapshot",
+   "does": "Saves the app's full output before a rewrite, then checks the rewritten version produces exactly the same output."
+  },
+  "transcription-accuracy-scoring.md": {
+   "name": "Transcription accuracy",
+   "does": "Runs the app's speech-to-text on public recordings that come with correct transcripts, and scores how many characters it gets wrong."
+  },
+  "translation-lint.md": {
+   "name": "Translation checks",
+   "does": "Checks that every translation keeps its names, numbers and agreed terms, and that no on-screen text was left untranslated. Used for Quake 3 too."
+  },
+  "real-data-fixtures.md": {
+   "name": "Real data",
+   "does": "Tests route matching on a set of real recorded rides instead of made-up ones, which found bugs the made-up tests had missed."
+  },
+  "baseline-parity.md": {
+   "name": "Match the original app",
+   "does": "Compares the database in our iPad version with the one from the original Windows app, table by table and row by row."
+  },
+  "document-value-verification.md": {
+   "name": "Check quoted values",
+   "does": "Before Claude quotes a date or figure from a document, checks that the exact text really appears in that document."
+  },
+  "reference-device-benchmarking.md": {
+   "name": "Compare with a known-good device",
+   "does": "Records how a known-good setup behaves (the iPhone talking straight to the earbuds) and compares a recording of our bridge against it."
+  },
+  "bridge-probes-dashboard.md": {
+   "name": "Bridge probes and dashboard",
+   "does": "Small test programs and a live dashboard for the bike's Bluetooth audio bridge, showing sound buffers, signal strength and connections while riding."
+  },
+  "bluetooth-packet-captures.md": {
+   "name": "Bluetooth captures",
+   "does": "Records the Bluetooth traffic itself, to see what the devices actually sent rather than what they reported."
+  },
+  "health-endpoint-checks.md": {
+   "name": "Health checks",
+   "does": "Checks that each web service answers from the internet, and that the route which should be blocked is refused."
+  },
+  "browser-driving.md": {
+   "name": "Browser driving",
+   "does": "Claude opens pages in a browser, fills in forms and reads the result, to check a site works and looks right."
+  },
+  "deploy-verification-breakpoint-sweep.md": {
+   "name": "Website deploy check",
+   "does": "After a website update, checks every file arrived intact on the server, then checks the layout at phone, tablet and desktop widths."
+  },
+  "booking-dry-run.md": {
+   "name": "Booking dry run",
+   "does": "Goes through an online booking up to the final step and stops, so the steps can be tested without making a real booking."
+  },
+  "animation-self-check.md": {
+   "name": "Animation check",
+   "does": "Measures an animated diagram while it plays, checking that pieces line up and don't overlap, to a fraction of a pixel."
+  }
+ }
+}

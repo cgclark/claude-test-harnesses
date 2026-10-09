@@ -1,0 +1,219 @@
+{
+ "title": "Các bộ khung kiểm thử tự động của Claude",
+ "intro": "Những cách để Claude Code tự kiểm tra công việc của mình: chạy ứng dụng, thu lại thứ nó đọc được và quyết định đạt hay không đạt trước khi cần đến người xem. Mỗi tên sẽ mở một trang có hướng dẫn đầy đủ.",
+ "pages_english": "Bản thân các trang về bộ khung kiểm thử được viết bằng tiếng Anh.",
+ "languages": "Ngôn ngữ",
+ "o_claude": "Claude đề xuất",
+ "o_claude_d": "một công cụ tiêu chuẩn dùng nguyên trạng",
+ "o_extended": "Claude đề xuất, có mở rộng",
+ "o_extended_d": "một công cụ tiêu chuẩn mà chúng tôi phải bổ sung thì mới hoạt động",
+ "o_built": "Do chúng tôi xây dựng",
+ "o_built_d": "một phương pháp chúng tôi phải tự tìm ra",
+ "t_yes": "hoạt động trên phiên bản đó",
+ "t_unk": "chưa được xác nhận",
+ "t_no": "chưa hoạt động trên đó",
+ "os_note": "Các bộ khung kiểm thử không phụ thuộc vào phiên bản hệ điều hành được tính là hoạt động trên cả hai. Số còn lại được đánh dấu theo lần sử dụng gần nhất; chiếc Mac này đã chuyển lên 27 vào ngày 2 tháng 10 năm 2026, và việc kiểm tra lần lượt từng cái trên kiến trúc 27 vẫn chưa được thực hiện.",
+ "from": "Nguồn",
+ "from_d": "ứng dụng mà mỗi bộ khung kiểm thử được xây dựng lần đầu",
+ "h_harness": "Bộ khung kiểm thử",
+ "h_capability": "Khả năng",
+ "h_from": "Nguồn",
+ "h_origin": "Xuất xứ",
+ "project_specific": "Theo từng dự án",
+ "footer": "Phiên bản kỹ thuật hơn, được viết để nạp vào Claude, là {README} trên GitHub.",
+ "categories": {
+  "Apps on simulators, Macs & devices": "Ứng dụng trên trình mô phỏng, Mac & thiết bị",
+  "Graphics & games": "Đồ họa & trò chơi",
+  "Voice, language & data": "Giọng nói, ngôn ngữ & dữ liệu",
+  "Hardware, networks & services": "Phần cứng, mạng & dịch vụ",
+  "Web": "Web"
+ },
+ "apps": {
+  "All apps": "Tất cả ứng dụng",
+  "Quake 3": "Quake 3",
+  "Throwdown": "Throwdown",
+  "Frictionless Coffee": "Frictionless Coffee",
+  "xwtool": "xwtool",
+  "Sign-language work": "Công việc về ngôn ngữ ký hiệu",
+  "Big Top": "Big Top",
+  "Transcription app": "Ứng dụng chép lời",
+  "Enc0der": "Enc0der",
+  "Dossier": "Dossier",
+  "Ranger Bluetooth bridge": "Cầu nối Bluetooth Ranger",
+  "Web services": "Dịch vụ web",
+  "All sites": "Tất cả trang web",
+  "Reyal website": "Trang web Reyal",
+  "Booking portal": "Cổng đặt chỗ",
+  "Map in Motion": "Map in Motion"
+ },
+ "rows": {
+  "headless-ios.md": {
+   "name": "Trình mô phỏng chạy nền",
+   "does": "Claude biên dịch một ứng dụng iPhone, chạy nó trong trình mô phỏng ở chế độ nền và tự chụp ảnh màn hình, lấy nhật ký, nên có thể kiểm tra một màn hình mà không chiếm màn hình của bạn."
+  },
+  "uikit-layout-probe.md": {
+   "name": "Đầu dò bố cục",
+   "does": "Claude đo những gì màn hình thực sự bố trí, như chiều cao các thanh và vị trí cuộn, theo từng khoảnh khắc khi bạn chuyển giữa các màn hình, nên có thể tìm ra vì sao có gì đó trông sai thay vì đoán."
+  },
+  "launch-argument-test-hooks.md": {
+   "name": "Móc tham số khởi chạy",
+   "does": "Các công tắc ẩn trong bản dựng thử nghiệm giúp mở ứng dụng thẳng vào một màn hình được chọn với dữ liệu mẫu, nên Claude có thể đến bất kỳ màn hình nào mà không phải chạm qua từng bước trong ứng dụng."
+  },
+  "designed-for-ipad-on-mac.md": {
+   "name": "Ứng dụng iPad trên Mac",
+   "does": "Chạy phiên bản iPad của một ứng dụng như một ứng dụng Mac bình thường, nên Claude có thể kiểm thử nó trên Mac cùng với nhật ký và ảnh chụp cửa sổ."
+  },
+  "applescript-screencapture-fallback.md": {
+   "name": "AppleScript và chụp màn hình",
+   "does": "Khi Claude không thể điều khiển màn hình trực tiếp, nó điều khiển các ứng dụng Mac bằng AppleScript và chỉ chụp riêng cửa sổ của chúng để xem kết quả."
+  },
+  "unit-test-suites.md": {
+   "name": "Kiểm thử đơn vị",
+   "does": "Các bài kiểm thử tự động cho logic bên trong của ứng dụng, như tính điểm, tuyến đường và hàng đợi, chạy trong vài giây mà không cần mở ứng dụng."
+  },
+  "human-verify-queue.md": {
+   "name": "Danh sách việc chỉ người làm được",
+   "does": "Một danh sách duy nhất, liên tục cập nhật, gồm các bước kiểm tra chỉ con người mới làm được, như đeo kính hay dùng điện thoại thật, để phần việc còn lại không phải chờ chúng."
+  },
+  "build-check-all-targets.md": {
+   "name": "Biên dịch mọi đích",
+   "does": "Biên dịch lại cùng lúc các phiên bản iPhone, Mac và Vision Pro sau một thay đổi, và kiểm tra rằng các thiết lập thử nghiệm không bao giờ bị lưu vào thiết lập riêng của người chơi."
+  },
+  "swiftui-live-preview.md": {
+   "name": "Xem trước trực tiếp SwiftUI",
+   "does": "Hiển thị một màn hình trong chế độ xem trước trực tiếp của Xcode và chụp lại, nên Claude có thể kiểm tra một thay đổi bố cục mà không cần biên dịch và chạy cả trò chơi."
+  },
+  "accessibility-tree-tapping.md": {
+   "name": "Chạm theo dữ liệu trợ năng",
+   "does": "Chạm vào các nút trong trình mô phỏng tại vị trí mà chính ứng dụng báo cáo, thay vì đoán vị trí của chúng từ ảnh chụp màn hình."
+  },
+  "two-simulator-peer-test.md": {
+   "name": "Hai trình mô phỏng như hai người",
+   "does": "Chạy ứng dụng trên hai iPhone mô phỏng như hai người khác nhau, nên có thể kiểm thử lời mời, thử thách và đồng bộ mà không cần hai điện thoại thật."
+  },
+  "localized-screens-contact-sheets.md": {
+   "name": "Mọi màn hình bằng mọi ngôn ngữ",
+   "does": "Chụp mọi màn hình chính bằng mọi ngôn ngữ, cùng một ngôn ngữ giả lập có từ cực dài, trên một trang, nên dễ phát hiện chữ bị tràn."
+  },
+  "device-crashlog-pull.md": {
+   "name": "Báo cáo sự cố",
+   "does": "Lấy báo cáo sự cố từ một iPhone thật và đọc nó, nên một sự cố chỉ xảy ra trên điện thoại sẽ có nguyên nhân được gọi tên cụ thể."
+  },
+  "stdlib-test-suite.md": {
+   "name": "Bộ kiểm thử nhỏ",
+   "does": "Một tập nhỏ, khép kín các bước kiểm tra tự động cho một công cụ Python, chạy được ở bất cứ đâu mà không cần cài đặt gì."
+  },
+  "game-console-driving.md": {
+   "name": "Điều khiển console trò chơi",
+   "does": "Gửi lệnh vào console tích hợp của trò chơi từ một script rồi đọc nhật ký của nó sau đó, thay vì gõ vào cửa sổ trò chơi."
+  },
+  "renderer-ab-on-demos.md": {
+   "name": "Khung hình trước và sau",
+   "does": "Phát cùng một đoạn trò chơi đã ghi trước và sau một thay đổi đồ họa, rồi so sánh các khung hình theo từng điểm ảnh."
+  },
+  "realtime-raytracing-on-mac.md": {
+   "name": "Dò tia trên Mac",
+   "does": "Các chế độ xem thử nghiệm hiển thị riêng từng bước của ánh sáng dò tia (bóng đổ, phản chiếu, ánh sáng môi trường), cùng các bước tự kiểm tra in ra đạt hoặc không đạt."
+  },
+  "vision-pro-screenshots.md": {
+   "name": "Ảnh chụp màn hình Vision Pro",
+   "does": "Ghi lại những gì ứng dụng Vision Pro hiển thị, bao gồm hình ảnh 3D của từng mắt, trên trình mô phỏng và trên kính."
+  },
+  "plugin-test-cases.md": {
+   "name": "Bản mod trò chơi",
+   "does": "Nạp từng bản mod nhiều người chơi phổ biến vào phiên bản trò chơi của chúng tôi, khởi động một bản đồ và kiểm tra nhật ký xem có lỗi không."
+  },
+  "side-by-side-reference-engine.md": {
+   "name": "Song song với bản gốc",
+   "does": "Ghi cùng một cảnh trong phiên bản của chúng tôi và trong trò chơi gốc, đặt cạnh nhau, để thấy mọi khác biệt."
+  },
+  "offline-shader-compile.md": {
+   "name": "Biên dịch shader ngoại tuyến",
+   "does": "Biên dịch mã đồ họa dò tia trên Mac, vì trình mô phỏng bỏ qua phần này và nếu không thì lỗi chỉ lộ ra trên thiết bị."
+  },
+  "gpu-frame-capture.md": {
+   "name": "Chụp khung hình GPU",
+   "does": "Chụp một khung hình trên chip đồ họa và liệt kê chi phí của từng bước vẽ, để tìm ra phần nào chậm."
+  },
+  "levelshot-capture.md": {
+   "name": "Ảnh chụp màn chơi",
+   "does": "Chụp ảnh từng bản đồ từ góc máy mà tác giả bản đồ đã chọn, rồi xếp chúng lên một trang."
+  },
+  "shader-math-verifiers.md": {
+   "name": "Toán shader",
+   "does": "Tính lại chậm rãi và chính xác các hiệu ứng khói và lửa của Quake 3, rồi kiểm tra phiên bản đồ họa nhanh có vẽ ra đúng hình ảnh đó không."
+  },
+  "motion-compare.md": {
+   "name": "So sánh chuyển động",
+   "does": "Phát một bàn tay ra dấu do máy tính tạo cạnh người ra dấu thật đã làm mẫu cho nó, theo từng khung hình, để kiểm tra chuyển động có khớp không."
+  },
+  "on-device-image-reduction.md": {
+   "name": "Ảnh chụp màn hình thành văn bản",
+   "does": "Chuyển ảnh chụp màn hình và bản quét thành văn bản ngay trên Mac trước khi Claude đọc, giúp giữ hình ảnh riêng tư và dùng ít bộ nhớ của Claude hơn nhiều."
+  },
+  "voice-bench.md": {
+   "name": "voice-bench",
+   "does": "Mac đọc các câu thử bằng giọng tổng hợp vào bộ nhận dạng giọng nói của ứng dụng, nên có thể kiểm thử lệnh thoại mà không cần ai nói."
+  },
+  "siri-phrasing-check.md": {
+   "name": "Câu lệnh Siri",
+   "does": "Kiểm tra rằng các câu dành cho Siri được tích hợp trong ứng dụng, như “order my usual”, khớp với cách mọi người nói; còn Siri có chuyển chúng đúng chỗ hay không thì vẫn cần đến điện thoại."
+  },
+  "golden-snapshot.md": {
+   "name": "Bản chụp tham chiếu",
+   "does": "Lưu toàn bộ đầu ra của ứng dụng trước khi viết lại, rồi kiểm tra phiên bản viết lại cho ra đầu ra y hệt."
+  },
+  "transcription-accuracy-scoring.md": {
+   "name": "Độ chính xác chép lời",
+   "does": "Chạy tính năng chuyển giọng nói thành văn bản của ứng dụng trên các bản ghi âm công khai có kèm bản chép lời đúng, và chấm điểm theo số ký tự bị sai."
+  },
+  "translation-lint.md": {
+   "name": "Kiểm tra bản dịch",
+   "does": "Kiểm tra rằng mỗi bản dịch giữ nguyên tên, con số và các thuật ngữ đã thống nhất, và không có chữ nào trên màn hình bị bỏ sót chưa dịch. Cũng được dùng cho Quake 3."
+  },
+  "real-data-fixtures.md": {
+   "name": "Dữ liệu thật",
+   "does": "Kiểm thử việc khớp tuyến đường trên một tập các chuyến đi thật đã ghi lại thay vì các chuyến bịa ra, và đã tìm ra những lỗi mà các bài kiểm thử bịa ra bỏ sót."
+  },
+  "baseline-parity.md": {
+   "name": "Khớp với ứng dụng gốc",
+   "does": "So sánh cơ sở dữ liệu trong phiên bản iPad của chúng tôi với cơ sở dữ liệu của ứng dụng Windows gốc, từng bảng và từng hàng."
+  },
+  "document-value-verification.md": {
+   "name": "Kiểm tra giá trị trích dẫn",
+   "does": "Trước khi Claude trích dẫn một ngày hoặc con số từ tài liệu, kiểm tra rằng đúng đoạn văn bản đó thực sự có trong tài liệu ấy."
+  },
+  "reference-device-benchmarking.md": {
+   "name": "So sánh với thiết bị chuẩn",
+   "does": "Ghi lại cách một hệ thống đã biết là hoạt động tốt vận hành (iPhone kết nối thẳng với tai nghe) và so sánh bản ghi của cầu nối của chúng tôi với nó."
+  },
+  "bridge-probes-dashboard.md": {
+   "name": "Đầu dò và bảng điều khiển cầu nối",
+   "does": "Các chương trình thử nghiệm nhỏ và một bảng điều khiển trực tiếp cho cầu nối âm thanh Bluetooth trên xe đạp, hiển thị bộ đệm âm thanh, cường độ tín hiệu và kết nối khi đang đạp xe."
+  },
+  "bluetooth-packet-captures.md": {
+   "name": "Bắt gói Bluetooth",
+   "does": "Ghi lại chính lưu lượng Bluetooth, để thấy các thiết bị thực sự đã gửi gì thay vì những gì chúng báo cáo."
+  },
+  "health-endpoint-checks.md": {
+   "name": "Kiểm tra tình trạng",
+   "does": "Kiểm tra rằng mỗi dịch vụ web đều phản hồi từ internet, và đường dẫn lẽ ra phải bị chặn thì bị từ chối."
+  },
+  "browser-driving.md": {
+   "name": "Điều khiển trình duyệt",
+   "does": "Claude mở các trang trong trình duyệt, điền biểu mẫu và đọc kết quả, để kiểm tra trang web hoạt động và hiển thị đúng."
+  },
+  "deploy-verification-breakpoint-sweep.md": {
+   "name": "Kiểm tra triển khai trang web",
+   "does": "Sau khi cập nhật trang web, kiểm tra mọi tệp đã đến máy chủ nguyên vẹn, rồi kiểm tra bố cục ở độ rộng của điện thoại, máy tính bảng và máy tính để bàn."
+  },
+  "booking-dry-run.md": {
+   "name": "Chạy thử đặt chỗ",
+   "does": "Đi qua quy trình đặt chỗ trực tuyến đến bước cuối cùng rồi dừng lại, nên có thể kiểm thử các bước mà không tạo một lượt đặt thật."
+  },
+  "animation-self-check.md": {
+   "name": "Kiểm tra hoạt ảnh",
+   "does": "Đo một sơ đồ động trong khi nó chạy, kiểm tra các phần thẳng hàng và không chồng lên nhau, chính xác đến một phần nhỏ của điểm ảnh."
+  }
+ }
+}

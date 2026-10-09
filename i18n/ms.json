@@ -1,0 +1,219 @@
+{
+ "title": "Kerangka ujian automatik Claude",
+ "intro": "Cara untuk Claude Code menyemak kerjanya sendiri: menjalankan aplikasi, merakam sesuatu yang boleh dibacanya, dan memutuskan lulus atau gagal sebelum seseorang perlu melihatnya. Setiap nama membuka halaman dengan resipi penuh.",
+ "pages_english": "Halaman kerangka ujian itu sendiri dalam bahasa Inggeris.",
+ "languages": "Bahasa",
+ "o_claude": "Disyorkan oleh Claude",
+ "o_claude_d": "alat standard yang digunakan seadanya",
+ "o_extended": "Disyorkan oleh Claude, dilanjutkan",
+ "o_extended_d": "alat standard yang perlu kami tambah sebelum ia berfungsi",
+ "o_built": "Dibina oleh kami",
+ "o_built_d": "kaedah yang perlu kami cari sendiri",
+ "t_yes": "berfungsi pada versi itu",
+ "t_unk": "belum disahkan",
+ "t_no": "belum berfungsi di situ",
+ "os_note": "Kerangka ujian yang tidak bergantung pada versi OS dikira berfungsi pada kedua-duanya. Selebihnya ditanda berdasarkan bila setiap satu terakhir digunakan; Mac ini beralih ke 27 pada 2 Oktober 2026, dan semakan satu per satu terhadap seni bina 27 masih belum dibuat.",
+ "from": "Dari",
+ "from_d": "aplikasi tempat setiap kerangka ujian mula-mula dibina",
+ "h_harness": "Kerangka ujian",
+ "h_capability": "Keupayaan",
+ "h_from": "Dari",
+ "h_origin": "Asal",
+ "project_specific": "Khusus projek",
+ "footer": "Versi yang lebih teknikal, ditulis untuk dimuatkan ke dalam Claude, ialah {README} di GitHub.",
+ "categories": {
+  "Apps on simulators, Macs & devices": "Aplikasi pada simulator, Mac & peranti",
+  "Graphics & games": "Grafik & permainan",
+  "Voice, language & data": "Suara, bahasa & data",
+  "Hardware, networks & services": "Perkakasan, rangkaian & perkhidmatan",
+  "Web": "Web"
+ },
+ "apps": {
+  "All apps": "Semua aplikasi",
+  "Quake 3": "Quake 3",
+  "Throwdown": "Throwdown",
+  "Frictionless Coffee": "Frictionless Coffee",
+  "xwtool": "xwtool",
+  "Sign-language work": "Kerja bahasa isyarat",
+  "Big Top": "Big Top",
+  "Transcription app": "Aplikasi transkripsi",
+  "Enc0der": "Enc0der",
+  "Dossier": "Dossier",
+  "Ranger Bluetooth bridge": "Jambatan Bluetooth Ranger",
+  "Web services": "Perkhidmatan web",
+  "All sites": "Semua laman",
+  "Reyal website": "Laman web Reyal",
+  "Booking portal": "Portal tempahan",
+  "Map in Motion": "Map in Motion"
+ },
+ "rows": {
+  "headless-ios.md": {
+   "name": "Simulator latar belakang",
+   "does": "Claude membina aplikasi iPhone, menjalankannya dalam simulator di latar belakang dan mengambil tangkapan skrin serta log sendiri, supaya ia boleh menyemak skrin tanpa mengambil alih skrin anda."
+  },
+  "uikit-layout-probe.md": {
+   "name": "Pengukur susun atur",
+   "does": "Claude mengukur apa yang sebenarnya disusun pada skrin, seperti ketinggian bar dan kedudukan tatal, dari saat ke saat semasa anda beralih antara skrin, supaya ia boleh mencari sebab sesuatu kelihatan salah dan bukan meneka."
+  },
+  "launch-argument-test-hooks.md": {
+   "name": "Cangkuk argumen pelancaran",
+   "does": "Suis tersembunyi dalam binaan ujian yang membuka aplikasi terus pada skrin pilihan dengan data contoh, supaya Claude boleh sampai ke mana-mana skrin tanpa mengetik melalui aplikasi."
+  },
+  "designed-for-ipad-on-mac.md": {
+   "name": "Aplikasi iPad pada Mac",
+   "does": "Menjalankan versi iPad sesebuah aplikasi sebagai aplikasi Mac biasa, supaya Claude boleh mengujinya pada Mac dengan log dan tangkapan skrin tetingkapnya."
+  },
+  "applescript-screencapture-fallback.md": {
+   "name": "AppleScript dan tangkapan skrin",
+   "does": "Apabila Claude tidak dapat mengawal skrin secara langsung, ia mengendalikan aplikasi Mac dengan AppleScript dan mengambil gambar tetingkapnya sahaja untuk melihat hasilnya."
+  },
+  "unit-test-suites.md": {
+   "name": "Ujian unit",
+   "does": "Ujian automatik untuk logik dalaman aplikasi, seperti pemarkahan, laluan dan baris gilir, yang berjalan dalam beberapa saat tanpa membuka aplikasi."
+  },
+  "human-verify-queue.md": {
+   "name": "Senarai semak untuk manusia sahaja",
+   "does": "Satu senarai berterusan bagi semakan yang hanya boleh dibuat oleh manusia, seperti memakai set kepala atau menggunakan telefon sebenar, supaya kerja lain tidak perlu menunggunya."
+  },
+  "build-check-all-targets.md": {
+   "name": "Bina setiap sasaran",
+   "does": "Membina semula versi iPhone, Mac dan Vision Pro bersama-sama selepas sesuatu perubahan, dan menyemak bahawa tetapan ujian tidak pernah disimpan ke dalam tetapan pemain sendiri."
+  },
+  "swiftui-live-preview.md": {
+   "name": "Pratonton langsung SwiftUI",
+   "does": "Memaparkan satu skrin dalam pratonton langsung Xcode dan mengambil gambarnya, supaya Claude boleh menyemak perubahan susun atur tanpa membina dan menjalankan keseluruhan permainan."
+  },
+  "accessibility-tree-tapping.md": {
+   "name": "Ketik melalui kebolehcapaian",
+   "does": "Mengetik butang dalam simulator pada kedudukan yang dilaporkan oleh aplikasi itu sendiri, dan bukan meneka kedudukannya daripada tangkapan skrin."
+  },
+  "two-simulator-peer-test.md": {
+   "name": "Dua simulator sebagai dua orang",
+   "does": "Menjalankan aplikasi pada dua iPhone simulasi sebagai dua orang berbeza, supaya jemputan, cabaran dan penyegerakan boleh diuji tanpa dua telefon sebenar."
+  },
+  "localized-screens-contact-sheets.md": {
+   "name": "Setiap skrin dalam setiap bahasa",
+   "does": "Mengambil gambar setiap skrin utama dalam setiap bahasa, serta satu bahasa rekaan dengan perkataan yang sangat panjang, pada satu helaian, supaya teks yang tidak muat mudah dikesan."
+  },
+  "device-crashlog-pull.md": {
+   "name": "Laporan ranap",
+   "does": "Menarik laporan ranap daripada iPhone sebenar dan membacanya, supaya ranap yang hanya berlaku pada telefon mendapat punca yang jelas."
+  },
+  "stdlib-test-suite.md": {
+   "name": "Suite ujian kecil",
+   "does": "Satu set kecil semakan automatik yang lengkap sendiri untuk alat Python, yang boleh berjalan di mana-mana tanpa memasang apa-apa."
+  },
+  "game-console-driving.md": {
+   "name": "Mengendalikan konsol permainan",
+   "does": "Menghantar arahan ke konsol terbina dalam permainan daripada skrip dan membaca lognya selepas itu, dan bukan menaip ke dalam tetingkap permainan."
+  },
+  "renderer-ab-on-demos.md": {
+   "name": "Bingkai sebelum dan selepas",
+   "does": "Memainkan klip permainan rakaman yang sama sebelum dan selepas perubahan grafik dan membandingkan bingkainya piksel demi piksel."
+  },
+  "realtime-raytracing-on-mac.md": {
+   "name": "Penjejakan sinar pada Mac",
+   "does": "Paparan ujian yang menunjukkan setiap langkah pencahayaan penjejakan sinar (bayang-bayang, pantulan, cahaya ambien) secara berasingan, serta semakan kendiri yang mencetak lulus atau gagal."
+  },
+  "vision-pro-screenshots.md": {
+   "name": "Tangkapan skrin Vision Pro",
+   "does": "Merakam apa yang dipaparkan oleh aplikasi Vision Pro, termasuk pandangan setiap mata dalam 3D, dalam simulator dan pada set kepala."
+  },
+  "plugin-test-cases.md": {
+   "name": "Mod permainan",
+   "does": "Memuatkan setiap mod berbilang pemain yang popular ke dalam versi permainan kami, memulakan peta dan menyemak log untuk ralat."
+  },
+  "side-by-side-reference-engine.md": {
+   "name": "Bersebelahan dengan yang asal",
+   "does": "Merakam adegan yang sama dalam versi kami dan dalam permainan asal, bersebelahan, untuk menunjukkan sebarang perbezaan."
+  },
+  "offline-shader-compile.md": {
+   "name": "Kompilasi shader luar talian",
+   "does": "Mengkompil kod grafik penjejakan sinar pada Mac, kerana simulator melangkauinya dan jika tidak, kesilapan hanya akan kelihatan pada peranti."
+  },
+  "gpu-frame-capture.md": {
+   "name": "Tangkapan bingkai GPU",
+   "does": "Menangkap satu bingkai pada cip grafik dan menyenaraikan kos setiap langkah lukisan, untuk mencari apa yang perlahan."
+  },
+  "levelshot-capture.md": {
+   "name": "Tangkapan skrin peta",
+   "does": "Mengambil gambar setiap peta dari sudut kamera yang dipilih oleh pencipta peta, dan menyusunnya pada satu helaian."
+  },
+  "shader-math-verifiers.md": {
+   "name": "Matematik shader",
+   "does": "Mengira semula kesan asap dan api Quake 3 secara perlahan dan tepat, dan menyemak bahawa versi grafik yang pantas melukis gambar yang sama."
+  },
+  "motion-compare.md": {
+   "name": "Perbandingan gerakan",
+   "does": "Memainkan tangan berisyarat janaan komputer di sebelah pengisyarat sebenar yang menjadi asasnya, bingkai demi bingkai, untuk menyemak bahawa gerakannya sepadan."
+  },
+  "on-device-image-reduction.md": {
+   "name": "Tangkapan skrin kepada teks",
+   "does": "Menukar tangkapan skrin dan imbasan kepada teks pada Mac sebelum Claude membacanya, yang memastikan imej kekal peribadi dan menggunakan jauh kurang memori Claude."
+  },
+  "voice-bench.md": {
+   "name": "voice-bench",
+   "does": "Mac menuturkan frasa ujian dengan suara sintetik ke dalam pengecam pertuturan aplikasi, supaya arahan suara boleh diuji tanpa sesiapa bercakap."
+  },
+  "siri-phrasing-check.md": {
+   "name": "Frasa Siri",
+   "does": "Menyemak bahawa frasa yang terbina dalam aplikasi untuk Siri, seperti \"order my usual\", sepadan dengan apa yang orang katakan; sama ada Siri menghalakannya dengan betul masih memerlukan telefon."
+  },
+  "golden-snapshot.md": {
+   "name": "Syot kilat rujukan",
+   "does": "Menyimpan output penuh aplikasi sebelum penulisan semula, kemudian menyemak bahawa versi yang ditulis semula menghasilkan output yang sama persis."
+  },
+  "transcription-accuracy-scoring.md": {
+   "name": "Ketepatan transkripsi",
+   "does": "Menjalankan fungsi pertuturan-ke-teks aplikasi pada rakaman awam yang disertakan dengan transkrip yang betul, dan mengira berapa banyak aksara yang salah."
+  },
+  "translation-lint.md": {
+   "name": "Semakan terjemahan",
+   "does": "Menyemak bahawa setiap terjemahan mengekalkan nama, nombor dan istilah yang dipersetujui, dan tiada teks pada skrin yang tertinggal tanpa diterjemah. Digunakan untuk Quake 3 juga."
+  },
+  "real-data-fixtures.md": {
+   "name": "Data sebenar",
+   "does": "Menguji padanan laluan pada satu set kayuhan sebenar yang dirakam dan bukan yang direka, dan ini menemui pepijat yang terlepas oleh ujian rekaan."
+  },
+  "baseline-parity.md": {
+   "name": "Padankan aplikasi asal",
+   "does": "Membandingkan pangkalan data dalam versi iPad kami dengan pangkalan data daripada aplikasi Windows asal, jadual demi jadual dan baris demi baris."
+  },
+  "document-value-verification.md": {
+   "name": "Semak nilai yang dipetik",
+   "does": "Sebelum Claude memetik tarikh atau angka daripada dokumen, ia menyemak bahawa teks yang tepat itu benar-benar terdapat dalam dokumen tersebut."
+  },
+  "reference-device-benchmarking.md": {
+   "name": "Bandingkan dengan peranti yang diketahui baik",
+   "does": "Merakam kelakuan persediaan yang diketahui berfungsi dengan baik (iPhone yang berhubung terus dengan fon telinga) dan membandingkan rakaman jambatan kami dengannya."
+  },
+  "bridge-probes-dashboard.md": {
+   "name": "Probe jambatan dan papan pemuka",
+   "does": "Program ujian kecil dan papan pemuka langsung untuk jambatan audio Bluetooth basikal, yang menunjukkan penimbal bunyi, kekuatan isyarat dan sambungan semasa berkayuh."
+  },
+  "bluetooth-packet-captures.md": {
+   "name": "Rakaman Bluetooth",
+   "does": "Merakam trafik Bluetooth itu sendiri, untuk melihat apa yang benar-benar dihantar oleh peranti dan bukan apa yang dilaporkannya."
+  },
+  "health-endpoint-checks.md": {
+   "name": "Semakan kesihatan",
+   "does": "Menyemak bahawa setiap perkhidmatan web menjawab dari internet, dan laluan yang sepatutnya disekat ditolak."
+  },
+  "browser-driving.md": {
+   "name": "Mengendalikan pelayar",
+   "does": "Claude membuka halaman dalam pelayar, mengisi borang dan membaca hasilnya, untuk menyemak bahawa laman berfungsi dan kelihatan betul."
+  },
+  "deploy-verification-breakpoint-sweep.md": {
+   "name": "Semakan kemas kini laman web",
+   "does": "Selepas laman web dikemas kini, menyemak bahawa setiap fail tiba di pelayan dengan utuh, kemudian menyemak susun atur pada lebar telefon, tablet dan desktop."
+  },
+  "booking-dry-run.md": {
+   "name": "Tempahan percubaan",
+   "does": "Melalui tempahan dalam talian sehingga langkah terakhir dan berhenti, supaya langkah-langkah boleh diuji tanpa membuat tempahan sebenar."
+  },
+  "animation-self-check.md": {
+   "name": "Semakan animasi",
+   "does": "Mengukur rajah animasi semasa ia dimainkan, menyemak bahawa bahagiannya sejajar dan tidak bertindih, hingga ketepatan pecahan piksel."
+  }
+ }
+}

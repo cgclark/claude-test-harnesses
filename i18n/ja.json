@@ -1,0 +1,219 @@
+{
+ "title": "Claudeの自動テストハーネス",
+ "intro": "Claude Codeが自分の作業を自ら確かめる方法です。アプリを実行し、読み取れる形で記録を取り、人が確認する前に合格か不合格かを判定します。各名前から、手順をすべて載せたページが開きます。",
+ "pages_english": "各ハーネスのページ自体は英語です。",
+ "languages": "言語",
+ "o_claude": "Claude推奨",
+ "o_claude_d": "標準ツールをそのまま使用",
+ "o_extended": "Claude推奨・拡張あり",
+ "o_extended_d": "動かすために手を加える必要があった標準ツール",
+ "o_built": "独自開発",
+ "o_built_d": "自分たちで編み出す必要があった手法",
+ "t_yes": "そのバージョンで動作",
+ "t_unk": "未確認",
+ "t_no": "そこではまだ動作しない",
+ "os_note": "OSのバージョンに依存しないハーネスは、両方で動作するものとして扱います。それ以外は、それぞれ最後に使ったときの結果でチェックを付けています。このMacは2026年10月2日に27へ移行しており、27のアーキテクチャに対する1つずつの確認はこれからです。",
+ "from": "初出",
+ "from_d": "各ハーネスを最初に作ったアプリ",
+ "h_harness": "ハーネス",
+ "h_capability": "機能",
+ "h_from": "初出",
+ "h_origin": "由来",
+ "project_specific": "プロジェクト固有",
+ "footer": "Claudeに読み込ませる用に書いた、より技術的なバージョンは、GitHubの{README}です。",
+ "categories": {
+  "Apps on simulators, Macs & devices": "シミュレータ・Mac・デバイス上のアプリ",
+  "Graphics & games": "グラフィックスとゲーム",
+  "Voice, language & data": "音声・言語・データ",
+  "Hardware, networks & services": "ハードウェア・ネットワーク・サービス",
+  "Web": "Web"
+ },
+ "apps": {
+  "All apps": "すべてのアプリ",
+  "Quake 3": "Quake 3",
+  "Throwdown": "Throwdown",
+  "Frictionless Coffee": "Frictionless Coffee",
+  "xwtool": "xwtool",
+  "Sign-language work": "手話の取り組み",
+  "Big Top": "Big Top",
+  "Transcription app": "文字起こしアプリ",
+  "Enc0der": "Enc0der",
+  "Dossier": "Dossier",
+  "Ranger Bluetooth bridge": "Ranger Bluetoothブリッジ",
+  "Web services": "Webサービス",
+  "All sites": "すべてのサイト",
+  "Reyal website": "ReyalのWebサイト",
+  "Booking portal": "予約ポータル",
+  "Map in Motion": "Map in Motion"
+ },
+ "rows": {
+  "headless-ios.md": {
+   "name": "ヘッドレスシミュレータ",
+   "does": "ClaudeがiPhoneアプリをビルドし、バックグラウンドのシミュレータで実行して、スクリーンショットとログを自分で取ります。あなたの画面を占有せずに画面を確認できます。"
+  },
+  "uikit-layout-probe.md": {
+   "name": "レイアウト計測",
+   "does": "バーの高さやスクロール位置など、画面に実際にレイアウトされた値を、画面を移動するあいだ刻々とClaudeが測ります。推測ではなく、見た目がおかしい原因を突き止められます。"
+  },
+  "launch-argument-test-hooks.md": {
+   "name": "起動引数フック",
+   "does": "テストビルドに仕込んだ隠しスイッチで、サンプルデータ入りの指定画面からアプリを直接開きます。Claudeはアプリ内をタップでたどらずに、どの画面にも行けます。"
+  },
+  "designed-for-ipad-on-mac.md": {
+   "name": "MacでiPadアプリ",
+   "does": "アプリのiPad版を通常のMacアプリとして実行し、ClaudeがMac上でログやウインドウのスクリーンショットを使ってテストできるようにします。"
+  },
+  "applescript-screencapture-fallback.md": {
+   "name": "AppleScriptと画面キャプチャ",
+   "does": "Claudeが画面を直接操作できないときは、AppleScriptでMacアプリを動かし、そのウインドウだけを撮影して結果を確かめます。"
+  },
+  "unit-test-suites.md": {
+   "name": "ユニットテスト",
+   "does": "スコア、ルート、キューなど、アプリ内部のロジックを確かめる自動テストです。アプリを開かずに数秒で実行できます。"
+  },
+  "human-verify-queue.md": {
+   "name": "人が行う確認リスト",
+   "does": "ヘッドセットを装着する、実際のスマートフォンを使うなど、人にしかできない確認を1つのリストにまとめ続けます。それ以外の作業はその確認を待たずに進められます。"
+  },
+  "build-check-all-targets.md": {
+   "name": "全ターゲットのビルド",
+   "does": "変更後にiPhone版、Mac版、Vision Pro版をまとめてビルドし直し、テスト用の設定がプレイヤー自身の設定に決して保存されないことを確かめます。"
+  },
+  "swiftui-live-preview.md": {
+   "name": "SwiftUIライブプレビュー",
+   "does": "1つの画面をXcodeのライブプレビューに表示して撮影します。ゲーム全体をビルドして実行しなくても、Claudeがレイアウトの変更を確認できます。"
+  },
+  "accessibility-tree-tapping.md": {
+   "name": "アクセシビリティ情報でタップ",
+   "does": "スクリーンショットから位置を推測せず、アプリ自身が報告する位置でシミュレータのボタンをタップします。"
+  },
+  "two-simulator-peer-test.md": {
+   "name": "2台のシミュレータで2人を再現",
+   "does": "シミュレートした2台のiPhoneで、別々の2人としてアプリを動かします。実際のスマートフォン2台なしで、招待、チャレンジ、同期をテストできます。"
+  },
+  "localized-screens-contact-sheets.md": {
+   "name": "全画面を全言語で",
+   "does": "主要な画面をすべての言語で撮影し、極端に長い単語を使った架空の言語も加えて1枚にまとめます。収まらないテキストがすぐに見つかります。"
+  },
+  "device-crashlog-pull.md": {
+   "name": "クラッシュレポート",
+   "does": "実機のiPhoneからクラッシュレポートを取り出して読みます。実機でしか起きないクラッシュにも、具体的な原因を特定できます。"
+  },
+  "stdlib-test-suite.md": {
+   "name": "小さなテストスイート",
+   "does": "Pythonツール用の、自己完結した小さな自動チェック一式です。何もインストールせずにどこでも実行できます。"
+  },
+  "game-console-driving.md": {
+   "name": "ゲームコンソールの操作",
+   "does": "ゲームのウインドウに入力する代わりに、スクリプトからゲーム内蔵のコンソールにコマンドを送り、あとでログを読みます。"
+  },
+  "renderer-ab-on-demos.md": {
+   "name": "変更前後のフレーム",
+   "does": "グラフィックスの変更前と変更後に同じ録画済みのゲーム映像を再生し、フレームを1ピクセルずつ比較します。"
+  },
+  "realtime-raytracing-on-mac.md": {
+   "name": "Macでのレイトレーシング",
+   "does": "レイトレーシングによるライティングの各段階（影、反射、環境光）を個別に表示するテスト用ビューと、合格か不合格かを出力するセルフチェックです。"
+  },
+  "vision-pro-screenshots.md": {
+   "name": "Vision Proのスクリーンショット",
+   "does": "シミュレータとヘッドセットの両方で、Vision Proアプリの表示内容を、左右それぞれの目の3D映像も含めて取り込みます。"
+  },
+  "plugin-test-cases.md": {
+   "name": "ゲームMOD",
+   "does": "人気のマルチプレイヤーMODを1つずつ自分たちのバージョンのゲームに読み込み、マップを開始して、ログにエラーがないか確かめます。"
+  },
+  "side-by-side-reference-engine.md": {
+   "name": "オリジナルと並べて比較",
+   "does": "同じシーンを自分たちのバージョンとオリジナルのゲームで録画して並べ、違いがあれば見えるようにします。"
+  },
+  "offline-shader-compile.md": {
+   "name": "シェーダーのオフラインコンパイル",
+   "does": "レイトレーシングのグラフィックスコードをMac上でコンパイルします。シミュレータではこの処理が省かれるため、そうしないと誤りが実機で初めて表面化します。"
+  },
+  "gpu-frame-capture.md": {
+   "name": "GPUフレームキャプチャ",
+   "does": "グラフィックスチップ上の1フレームを取り込み、描画の各ステップにかかったコストを一覧にして、遅い部分を見つけます。"
+  },
+  "levelshot-capture.md": {
+   "name": "レベルのスクリーンショット",
+   "does": "各マップを、そのマップの作者が選んだカメラアングルから撮影し、1枚にまとめて並べます。"
+  },
+  "shader-math-verifiers.md": {
+   "name": "シェーダーの数学",
+   "does": "Quake 3の煙や炎のエフェクトを時間をかけて厳密に計算し直し、高速なグラフィックス版が同じ絵を描くことを確かめます。"
+  },
+  "motion-compare.md": {
+   "name": "動きの比較",
+   "does": "コンピュータで生成した手話の手を、その元になった実際の手話者の隣で1フレームずつ再生し、動きが一致するか確かめます。"
+  },
+  "on-device-image-reduction.md": {
+   "name": "スクリーンショットをテキストに",
+   "does": "Claudeが読む前に、スクリーンショットやスキャンをMac上でテキストに変換します。画像を外に出さずに済み、Claudeのメモリ使用量も大幅に減ります。"
+  },
+  "voice-bench.md": {
+   "name": "voice-bench",
+   "does": "Macが合成音声でテストフレーズを話し、アプリの音声認識に聞かせます。誰も話さなくても音声コマンドをテストできます。"
+  },
+  "siri-phrasing-check.md": {
+   "name": "Siriのフレーズ",
+   "does": "「order my usual」など、アプリにSiri用として組み込んだフレーズが、人が実際に言う言い方と合っているか確かめます。Siriがそれを正しく振り分けるかは、まだ実機での確認が必要です。"
+  },
+  "golden-snapshot.md": {
+   "name": "リファレンススナップショット",
+   "does": "書き直しの前にアプリの出力をすべて保存し、書き直したバージョンがまったく同じ出力を生むかを確かめます。"
+  },
+  "transcription-accuracy-scoring.md": {
+   "name": "文字起こしの精度",
+   "does": "正しい書き起こし付きの公開録音でアプリの音声テキスト変換を実行し、誤った文字の数をスコア化します。"
+  },
+  "translation-lint.md": {
+   "name": "翻訳チェック",
+   "does": "各翻訳で名前、数値、取り決めた用語が保たれていること、画面上のテキストが未翻訳のまま残っていないことを確かめます。Quake 3でも使用しています。"
+  },
+  "real-data-fixtures.md": {
+   "name": "実データ",
+   "does": "作り物ではなく、実際に記録した走行データ一式でルート照合をテストします。作り物のテストでは見逃していたバグが見つかりました。"
+  },
+  "baseline-parity.md": {
+   "name": "元のアプリとの一致",
+   "does": "自分たちのiPad版のデータベースを、元のWindowsアプリのデータベースと、テーブルごと、行ごとに比較します。"
+  },
+  "document-value-verification.md": {
+   "name": "引用値の確認",
+   "does": "Claudeが文書から日付や数値を引用する前に、その文言が本当にその文書に含まれているか確かめます。"
+  },
+  "reference-device-benchmarking.md": {
+   "name": "正常な機器との比較",
+   "does": "正常に動作するとわかっている構成（iPhoneがイヤホンと直接通信する状態）の動きを記録し、自分たちのブリッジの記録と比較します。"
+  },
+  "bridge-probes-dashboard.md": {
+   "name": "ブリッジのプローブとダッシュボード",
+   "does": "自転車用Bluetoothオーディオブリッジ向けの小さなテストプログラムとライブダッシュボードです。走行中に、音声バッファ、信号強度、接続状況を表示します。"
+  },
+  "bluetooth-packet-captures.md": {
+   "name": "Bluetoothキャプチャ",
+   "does": "Bluetoothの通信そのものを記録し、機器が報告した内容ではなく、実際に送った内容を確かめます。"
+  },
+  "health-endpoint-checks.md": {
+   "name": "ヘルスチェック",
+   "does": "各Webサービスがインターネットから応答すること、そしてブロックされるべきルートが拒否されることを確かめます。"
+  },
+  "browser-driving.md": {
+   "name": "ブラウザ操作",
+   "does": "Claudeがブラウザでページを開き、フォームに入力して結果を読み取り、サイトが正しく動作し、正しく表示されるか確かめます。"
+  },
+  "deploy-verification-breakpoint-sweep.md": {
+   "name": "Webサイトのデプロイ確認",
+   "does": "Webサイトの更新後、すべてのファイルが欠けることなくサーバに届いたかを確かめ、続いてスマートフォン、タブレット、デスクトップの幅でレイアウトを確認します。"
+  },
+  "booking-dry-run.md": {
+   "name": "予約の予行演習",
+   "does": "オンライン予約を最終ステップまで進めて、そこで止めます。実際に予約することなく、各ステップをテストできます。"
+  },
+  "animation-self-check.md": {
+   "name": "アニメーションのチェック",
+   "does": "アニメーション図を再生しながら計測し、各パーツがずれずに揃い、重ならないことを1ピクセル未満の精度で確かめます。"
+  }
+ }
+}

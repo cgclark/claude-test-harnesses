@@ -1,0 +1,219 @@
+{
+ "title": "Banchi di prova automatici per Claude",
+ "intro": "Modi in cui Claude Code può controllare il proprio lavoro: avviare l'app, catturare qualcosa che sa leggere e decidere se il test è superato o fallito prima che una persona debba guardare. Ogni nome apre una pagina con la procedura completa.",
+ "pages_english": "Le pagine dei singoli banchi di prova sono in inglese.",
+ "languages": "Lingua",
+ "o_claude": "Consigliato da Claude",
+ "o_claude_d": "uno strumento standard usato così com'è",
+ "o_extended": "Consigliato da Claude, esteso",
+ "o_extended_d": "uno strumento standard che abbiamo dovuto integrare perché funzionasse",
+ "o_built": "Creato da noi",
+ "o_built_d": "un metodo che abbiamo dovuto ideare",
+ "t_yes": "funziona su quella versione",
+ "t_unk": "non ancora confermato",
+ "t_no": "lì non funziona ancora",
+ "os_note": "I banchi di prova che non dipendono dalla versione del sistema operativo contano come funzionanti su entrambe. Gli altri sono spuntati in base all'ultimo utilizzo; questo Mac è passato a 27 il 2 ottobre 2026, e manca ancora una verifica uno per uno sull'architettura di 27.",
+ "from": "Da",
+ "from_d": "l'app in cui ogni banco di prova è stato creato per la prima volta",
+ "h_harness": "Banco di prova",
+ "h_capability": "Funzione",
+ "h_from": "Da",
+ "h_origin": "Origine",
+ "project_specific": "Specifici di un progetto",
+ "footer": "Una versione più tecnica, scritta per essere caricata in Claude, è il {README} su GitHub.",
+ "categories": {
+  "Apps on simulators, Macs & devices": "App su simulatori, Mac & dispositivi",
+  "Graphics & games": "Grafica & giochi",
+  "Voice, language & data": "Voce, lingue & dati",
+  "Hardware, networks & services": "Hardware, reti & servizi",
+  "Web": "Web"
+ },
+ "apps": {
+  "All apps": "Tutte le app",
+  "Quake 3": "Quake 3",
+  "Throwdown": "Throwdown",
+  "Frictionless Coffee": "Frictionless Coffee",
+  "xwtool": "xwtool",
+  "Sign-language work": "Progetto sulla lingua dei segni",
+  "Big Top": "Big Top",
+  "Transcription app": "App di trascrizione",
+  "Enc0der": "Enc0der",
+  "Dossier": "Dossier",
+  "Ranger Bluetooth bridge": "Ponte Bluetooth Ranger",
+  "Web services": "Servizi web",
+  "All sites": "Tutti i siti",
+  "Reyal website": "Sito web Reyal",
+  "Booking portal": "Portale di prenotazione",
+  "Map in Motion": "Map in Motion"
+ },
+ "rows": {
+  "headless-ios.md": {
+   "name": "Simulatore in background",
+   "does": "Claude compila un'app per iPhone, la esegue nel simulatore in background e fa da sé screenshot e log, così può controllare una schermata senza occupare la tua."
+  },
+  "uikit-layout-probe.md": {
+   "name": "Sonda di layout",
+   "does": "Claude misura ciò che la schermata ha davvero disposto, come l'altezza delle barre e le posizioni di scorrimento, istante per istante mentre passi da una schermata all'altra, così trova perché qualcosa appare sbagliato invece di tirare a indovinare."
+  },
+  "launch-argument-test-hooks.md": {
+   "name": "Hook da argomenti di avvio",
+   "does": "Interruttori nascosti nelle build di test che aprono un'app direttamente su una schermata scelta con dati di esempio, così Claude raggiunge qualsiasi schermata senza attraversare l'app a forza di tocchi."
+  },
+  "designed-for-ipad-on-mac.md": {
+   "name": "App per iPad sul Mac",
+   "does": "Esegue la versione per iPad di un'app come una normale app per Mac, così Claude può testarla sul Mac con i suoi log e gli screenshot della finestra."
+  },
+  "applescript-screencapture-fallback.md": {
+   "name": "AppleScript e cattura dello schermo",
+   "does": "Quando Claude non può controllare direttamente lo schermo, guida le app del Mac con AppleScript e fotografa solo la loro finestra per vedere il risultato."
+  },
+  "unit-test-suites.md": {
+   "name": "Test unitari",
+   "does": "Test automatici della logica interna di un'app, come punteggi, percorsi e code, che girano in pochi secondi senza aprire l'app."
+  },
+  "human-verify-queue.md": {
+   "name": "Lista solo per persone",
+   "does": "Un elenco aggiornato dei controlli che solo una persona può fare, come indossare il visore o usare un telefono vero, così il resto del lavoro non deve aspettarli."
+  },
+  "build-check-all-targets.md": {
+   "name": "Compilare ogni target",
+   "does": "Ricompila insieme le versioni per iPhone, Mac e Vision Pro dopo una modifica, e verifica che le impostazioni di test non finiscano mai salvate nelle impostazioni di un giocatore."
+  },
+  "swiftui-live-preview.md": {
+   "name": "Anteprima dal vivo SwiftUI",
+   "does": "Mostra una schermata nell'anteprima dal vivo di Xcode e la fotografa, così Claude può controllare una modifica al layout senza compilare ed eseguire l'intero gioco."
+  },
+  "accessibility-tree-tapping.md": {
+   "name": "Tocchi tramite accessibilità",
+   "does": "Tocca i pulsanti nel simulatore nelle posizioni indicate dall'app stessa, invece di indovinare dove sono da uno screenshot."
+  },
+  "two-simulator-peer-test.md": {
+   "name": "Due simulatori come due persone",
+   "does": "Esegue l'app su due iPhone simulati come due persone diverse, così inviti, sfide e sincronizzazione si possono testare senza due telefoni veri."
+  },
+  "localized-screens-contact-sheets.md": {
+   "name": "Ogni schermata in ogni lingua",
+   "does": "Fotografa ogni schermata principale in ogni lingua, più una lingua inventata con parole lunghissime, su un unico foglio, così il testo che non ci sta salta all'occhio."
+  },
+  "device-crashlog-pull.md": {
+   "name": "Report di arresto anomalo",
+   "does": "Scarica il report di arresto anomalo da un iPhone vero e lo legge, così un crash che avviene solo sul telefono ha una causa precisa."
+  },
+  "stdlib-test-suite.md": {
+   "name": "Piccola suite di test",
+   "does": "Un piccolo insieme autonomo di controlli automatici per uno strumento Python, che gira ovunque senza installare nulla."
+  },
+  "game-console-driving.md": {
+   "name": "Guida della console di gioco",
+   "does": "Invia comandi alla console integrata del gioco da uno script e poi ne legge il log, invece di scrivere nella finestra del gioco."
+  },
+  "renderer-ab-on-demos.md": {
+   "name": "Fotogrammi prima e dopo",
+   "does": "Riproduce la stessa clip di gioco registrata prima e dopo una modifica grafica e confronta i fotogrammi pixel per pixel."
+  },
+  "realtime-raytracing-on-mac.md": {
+   "name": "Ray tracing sul Mac",
+   "does": "Viste di test che mostrano separatamente ogni passaggio dell'illuminazione in ray tracing (ombre, riflessi, luce ambientale), più autoverifiche che stampano superato o fallito."
+  },
+  "vision-pro-screenshots.md": {
+   "name": "Screenshot di Vision Pro",
+   "does": "Cattura ciò che mostra l'app per Vision Pro, compresa la vista di ciascun occhio in 3D, nel simulatore e sul visore."
+  },
+  "plugin-test-cases.md": {
+   "name": "Mod del gioco",
+   "does": "Carica ogni mod multigiocatore popolare nella nostra versione del gioco, avvia una mappa e cerca errori nel log."
+  },
+  "side-by-side-reference-engine.md": {
+   "name": "Fianco a fianco con l'originale",
+   "does": "Registra la stessa scena nella nostra versione e nel gioco originale, fianco a fianco, per mostrare qualsiasi differenza."
+  },
+  "offline-shader-compile.md": {
+   "name": "Compilazione shader offline",
+   "does": "Compila sul Mac il codice grafico del ray tracing, perché il simulatore lo salta e gli errori altrimenti emergerebbero solo su un dispositivo."
+  },
+  "gpu-frame-capture.md": {
+   "name": "Cattura di frame GPU",
+   "does": "Cattura un fotogramma sul chip grafico ed elenca quanto è costato ogni passaggio di disegno, per trovare cosa è lento."
+  },
+  "levelshot-capture.md": {
+   "name": "Screenshot dei livelli",
+   "does": "Scatta un'immagine di ogni mappa dall'angolazione scelta dal suo autore e le dispone su un unico foglio."
+  },
+  "shader-math-verifiers.md": {
+   "name": "Calcoli degli shader",
+   "does": "Ricalcola in modo lento ed esatto gli effetti di fumo e fuoco di Quake 3, e verifica che la versione grafica veloce disegni la stessa immagine."
+  },
+  "motion-compare.md": {
+   "name": "Confronto del movimento",
+   "does": "Riproduce una mano che segna generata al computer accanto alla persona segnante reale da cui è stata ricavata, fotogramma per fotogramma, per verificare che il movimento corrisponda."
+  },
+  "on-device-image-reduction.md": {
+   "name": "Da screenshot a testo",
+   "does": "Trasforma screenshot e scansioni in testo sul Mac prima che Claude li legga, il che mantiene private le immagini e usa molta meno memoria di Claude."
+  },
+  "voice-bench.md": {
+   "name": "voice-bench",
+   "does": "Il Mac pronuncia frasi di prova con voci sintetiche nel riconoscimento vocale dell'app, così i comandi vocali si possono testare senza che nessuno parli."
+  },
+  "siri-phrasing-check.md": {
+   "name": "Frasi per Siri",
+   "does": "Verifica che le frasi integrate nell'app per Siri, come «order my usual», corrispondano a ciò che dice la gente; se Siri le instrada correttamente richiede ancora il telefono."
+  },
+  "golden-snapshot.md": {
+   "name": "Snapshot di riferimento",
+   "does": "Salva l'output completo dell'app prima di una riscrittura, poi verifica che la versione riscritta produca esattamente lo stesso output."
+  },
+  "transcription-accuracy-scoring.md": {
+   "name": "Precisione della trascrizione",
+   "does": "Fa girare la trascrizione vocale dell'app su registrazioni pubbliche corredate di trascrizioni corrette, e conta quanti caratteri sbaglia."
+  },
+  "translation-lint.md": {
+   "name": "Controlli sulle traduzioni",
+   "does": "Verifica che ogni traduzione mantenga nomi, numeri e termini concordati, e che nessun testo sullo schermo sia rimasto non tradotto. Usato anche per Quake 3."
+  },
+  "real-data-fixtures.md": {
+   "name": "Dati reali",
+   "does": "Testa il riconoscimento dei percorsi su una serie di uscite reali registrate invece che inventate, e ha trovato bug sfuggiti ai test inventati."
+  },
+  "baseline-parity.md": {
+   "name": "Come l'app originale",
+   "does": "Confronta il database della nostra versione per iPad con quello dell'app Windows originale, tabella per tabella e riga per riga."
+  },
+  "document-value-verification.md": {
+   "name": "Verifica dei valori citati",
+   "does": "Prima che Claude citi una data o una cifra da un documento, verifica che quel testo esatto compaia davvero nel documento."
+  },
+  "reference-device-benchmarking.md": {
+   "name": "Confronto con un dispositivo affidabile",
+   "does": "Registra il comportamento di una configurazione che funziona (l'iPhone collegato direttamente agli auricolari) e la confronta con una registrazione del nostro ponte."
+  },
+  "bridge-probes-dashboard.md": {
+   "name": "Sonde e dashboard del ponte",
+   "does": "Piccoli programmi di test e una dashboard dal vivo per il ponte audio Bluetooth della bici, che mostrano buffer audio, potenza del segnale e connessioni mentre si pedala."
+  },
+  "bluetooth-packet-captures.md": {
+   "name": "Catture Bluetooth",
+   "does": "Registra il traffico Bluetooth vero e proprio, per vedere cosa hanno davvero inviato i dispositivi invece di cosa hanno dichiarato."
+  },
+  "health-endpoint-checks.md": {
+   "name": "Controlli di stato",
+   "does": "Verifica che ogni servizio web risponda da internet e che il percorso che dovrebbe essere bloccato venga rifiutato."
+  },
+  "browser-driving.md": {
+   "name": "Guida del browser",
+   "does": "Claude apre pagine in un browser, compila moduli e legge il risultato, per verificare che un sito funzioni e appaia correttamente."
+  },
+  "deploy-verification-breakpoint-sweep.md": {
+   "name": "Verifica della pubblicazione del sito",
+   "does": "Dopo un aggiornamento del sito, verifica che ogni file sia arrivato integro sul server, poi controlla il layout alle larghezze di telefono, tablet e desktop."
+  },
+  "booking-dry-run.md": {
+   "name": "Prenotazione di prova",
+   "does": "Percorre una prenotazione online fino all'ultimo passaggio e si ferma, così i passaggi si possono testare senza fare una prenotazione vera."
+  },
+  "animation-self-check.md": {
+   "name": "Controllo dell'animazione",
+   "does": "Misura un diagramma animato mentre viene riprodotto, verificando con precisione di una frazione di pixel che i pezzi siano allineati e non si sovrappongano."
+  }
+ }
+}

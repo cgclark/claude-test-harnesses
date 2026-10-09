@@ -1,0 +1,219 @@
+{
+ "title": "Claude otomatik test düzenekleri",
+ "intro": "Claude Code'un kendi işini denetlemesinin yolları: uygulamayı çalıştırmak, okuyabileceği bir çıktı yakalamak ve bir insanın bakmasına gerek kalmadan geçti ya da kaldı kararı vermek. Her ad, tarifin tamamını içeren bir sayfa açar.",
+ "pages_english": "Test düzeneği sayfalarının kendisi İngilizcedir.",
+ "languages": "Dil",
+ "o_claude": "Claude'un önerisi",
+ "o_claude_d": "olduğu gibi kullanılan standart bir araç",
+ "o_extended": "Claude'un önerisi, genişletilmiş",
+ "o_extended_d": "çalışması için eklemeler yapmamız gereken standart bir araç",
+ "o_built": "Bizim geliştirdiğimiz",
+ "o_built_d": "kendimizin bulması gereken bir yöntem",
+ "t_yes": "bu sürümde çalışıyor",
+ "t_unk": "henüz doğrulanmadı",
+ "t_no": "orada henüz çalışmıyor",
+ "os_note": "İşletim sistemi sürümüne bağlı olmayan test düzenekleri her ikisinde de çalışıyor sayılır. Diğerleri en son kullanıldıkları zamana göre işaretlenmiştir; bu Mac 2 Ekim 2026'da 27'ye geçti ve 27 mimarisine karşı tek tek kontrol henüz yapılmadı.",
+ "from": "Kaynak",
+ "from_d": "her test düzeneğinin ilk geliştirildiği uygulama",
+ "h_harness": "Test düzeneği",
+ "h_capability": "Yetenek",
+ "h_from": "Kaynak",
+ "h_origin": "Köken",
+ "project_specific": "Projeye özel",
+ "footer": "Claude'a yüklenmek üzere yazılmış daha teknik bir sürüm, GitHub'daki {README} dosyasıdır.",
+ "categories": {
+  "Apps on simulators, Macs & devices": "Simülatörlerde, Mac'lerde & cihazlarda uygulamalar",
+  "Graphics & games": "Grafik & oyunlar",
+  "Voice, language & data": "Ses, dil & veri",
+  "Hardware, networks & services": "Donanım, ağlar & hizmetler",
+  "Web": "Web"
+ },
+ "apps": {
+  "All apps": "Tüm uygulamalar",
+  "Quake 3": "Quake 3",
+  "Throwdown": "Throwdown",
+  "Frictionless Coffee": "Frictionless Coffee",
+  "xwtool": "xwtool",
+  "Sign-language work": "İşaret dili çalışması",
+  "Big Top": "Big Top",
+  "Transcription app": "Transkripsiyon uygulaması",
+  "Enc0der": "Enc0der",
+  "Dossier": "Dossier",
+  "Ranger Bluetooth bridge": "Ranger Bluetooth köprüsü",
+  "Web services": "Web hizmetleri",
+  "All sites": "Tüm siteler",
+  "Reyal website": "Reyal web sitesi",
+  "Booking portal": "Rezervasyon portalı",
+  "Map in Motion": "Map in Motion"
+ },
+ "rows": {
+  "headless-ios.md": {
+   "name": "Arka planda simülatör",
+   "does": "Claude bir iPhone uygulamasını derler, simülatörde arka planda çalıştırır ve kendi ekran görüntülerini ve günlüklerini alır; böylece sizin ekranınızı ele geçirmeden bir ekranı kontrol edebilir."
+  },
+  "uikit-layout-probe.md": {
+   "name": "Yerleşim sondası",
+   "does": "Claude, siz ekranlar arasında geçerken ekranın gerçekte nasıl yerleştiğini, örneğin çubuk yüksekliklerini ve kaydırma konumlarını, an be an ölçer; böylece bir şeyin neden yanlış göründüğünü tahmin etmek yerine bulabilir."
+  },
+  "launch-argument-test-hooks.md": {
+   "name": "Başlatma argümanı kancaları",
+   "does": "Test derlemelerindeki gizli anahtarlar, uygulamayı örnek verilerle doğrudan seçilen bir ekranda açar; böylece Claude uygulamada dokuna dokuna ilerlemeden herhangi bir ekrana ulaşabilir."
+  },
+  "designed-for-ipad-on-mac.md": {
+   "name": "Mac'te iPad uygulaması",
+   "does": "Bir uygulamanın iPad sürümünü sıradan bir Mac uygulaması olarak çalıştırır; böylece Claude onu Mac'te, günlükleri ve pencere ekran görüntüleriyle test edebilir."
+  },
+  "applescript-screencapture-fallback.md": {
+   "name": "AppleScript ve ekran yakalama",
+   "does": "Claude ekranı doğrudan kontrol edemediğinde Mac uygulamalarını AppleScript ile yönetir ve sonucu görmek için yalnızca pencerelerinin fotoğrafını çeker."
+  },
+  "unit-test-suites.md": {
+   "name": "Birim testleri",
+   "does": "Bir uygulamanın puanlama, rotalar ve kuyruklar gibi iç mantığına yönelik, uygulamayı açmadan saniyeler içinde çalışan otomatik testler."
+  },
+  "human-verify-queue.md": {
+   "name": "Yalnızca insanın yapabileceği kontroller",
+   "does": "Başlığı takmak ya da gerçek bir telefon kullanmak gibi yalnızca bir insanın yapabileceği kontrollerin tek bir güncel listesi; böylece işin geri kalanı onları beklemez."
+  },
+  "build-check-all-targets.md": {
+   "name": "Her hedefi derle",
+   "does": "Bir değişiklikten sonra iPhone, Mac ve Vision Pro sürümlerini birlikte yeniden derler ve test ayarlarının hiçbir zaman bir oyuncunun kendi ayarlarına kaydedilmediğini kontrol eder."
+  },
+  "swiftui-live-preview.md": {
+   "name": "SwiftUI canlı önizleme",
+   "does": "Tek bir ekranı Xcode'un canlı önizlemesinde gösterip fotoğrafını çeker; böylece Claude tüm oyunu derleyip çalıştırmadan bir yerleşim değişikliğini kontrol edebilir."
+  },
+  "accessibility-tree-tapping.md": {
+   "name": "Erişilebilirlik bilgisiyle dokunma",
+   "does": "Simülatördeki düğmelere, yerlerini bir ekran görüntüsünden tahmin etmek yerine uygulamanın kendisinin bildirdiği konumlardan dokunur."
+  },
+  "two-simulator-peer-test.md": {
+   "name": "İki kişi olarak iki simülatör",
+   "does": "Uygulamayı iki simüle iPhone'da iki farklı kişi olarak çalıştırır; böylece davetler, meydan okumalar ve eşitleme iki gerçek telefon olmadan test edilebilir."
+  },
+  "localized-screens-contact-sheets.md": {
+   "name": "Her dilde her ekran",
+   "does": "Her ana ekranın her dildeki hâlini, ayrıca çok uzun kelimeler içeren uydurma bir dildeki hâlini tek bir sayfada fotoğraflar; böylece sığmayan metin kolayca fark edilir."
+  },
+  "device-crashlog-pull.md": {
+   "name": "Çökme raporları",
+   "does": "Çökme raporunu gerçek bir iPhone'dan çekip okur; böylece yalnızca telefonda yaşanan bir çökmenin adı konmuş bir nedeni olur."
+  },
+  "stdlib-test-suite.md": {
+   "name": "Küçük test paketi",
+   "does": "Bir Python aracı için, hiçbir şey kurmadan her yerde çalışan, kendi içinde eksiksiz küçük bir otomatik kontrol kümesi."
+  },
+  "game-console-driving.md": {
+   "name": "Oyun konsolunu yönetme",
+   "does": "Oyun penceresine yazmak yerine oyunun yerleşik konsoluna bir betikten komutlar gönderir ve ardından günlüğünü okur."
+  },
+  "renderer-ab-on-demos.md": {
+   "name": "Önce ve sonra kareleri",
+   "does": "Aynı kayıtlı oyun klibini bir grafik değişikliğinden önce ve sonra oynatır ve kareleri piksel piksel karşılaştırır."
+  },
+  "realtime-raytracing-on-mac.md": {
+   "name": "Mac'te ışın izleme",
+   "does": "Işın izlemeli aydınlatmanın her adımını (gölgeler, yansımalar, ortam ışığı) ayrı ayrı gösteren test görünümleri ve geçti ya da kaldı yazdıran öz denetimler."
+  },
+  "vision-pro-screenshots.md": {
+   "name": "Vision Pro ekran görüntüleri",
+   "does": "Vision Pro uygulamasının gösterdiğini, her gözün 3D görüntüsü dahil, simülatörde ve başlıkta yakalar."
+  },
+  "plugin-test-cases.md": {
+   "name": "Oyun modları",
+   "does": "Her popüler çok oyunculu modu oyunun bizim sürümümüze yükler, bir harita başlatır ve günlükte hata olup olmadığını kontrol eder."
+  },
+  "side-by-side-reference-engine.md": {
+   "name": "Orijinaliyle yan yana",
+   "does": "Olası farkları göstermek için aynı sahneyi bizim sürümümüzde ve orijinal oyunda yan yana kaydeder."
+  },
+  "offline-shader-compile.md": {
+   "name": "Çevrimdışı gölgelendirici derleme",
+   "does": "Işın izleme grafik kodunu Mac'te derler; çünkü simülatör bu kodu atlar ve hatalar aksi hâlde yalnızca bir cihazda ortaya çıkar."
+  },
+  "gpu-frame-capture.md": {
+   "name": "GPU kare yakalama",
+   "does": "Grafik çipinde tek bir kareyi yakalar ve neyin yavaş olduğunu bulmak için her çizim adımının maliyetini listeler."
+  },
+  "levelshot-capture.md": {
+   "name": "Seviye ekran görüntüleri",
+   "does": "Her haritanın, haritanın yazarının seçtiği kamera açısından bir resmini çeker ve hepsini tek bir sayfaya dizer."
+  },
+  "shader-math-verifiers.md": {
+   "name": "Gölgelendirici matematiği",
+   "does": "Quake 3'ün duman ve ateş efektlerini yavaşça ve tam olarak yeniden hesaplar ve hızlı grafik sürümünün aynı resmi çizdiğini kontrol eder."
+  },
+  "motion-compare.md": {
+   "name": "Hareket karşılaştırma",
+   "does": "Bilgisayarla üretilmiş, işaret yapan bir eli, üretildiği gerçek işaretçinin yanında kare kare oynatarak hareketin eşleştiğini kontrol eder."
+  },
+  "on-device-image-reduction.md": {
+   "name": "Ekran görüntülerinden metne",
+   "does": "Ekran görüntülerini ve taramaları Claude okumadan önce Mac'te metne dönüştürür; bu, görüntüleri gizli tutar ve Claude'un belleğinden çok daha azını kullanır."
+  },
+  "voice-bench.md": {
+   "name": "voice-bench",
+   "does": "Mac, test ifadelerini sentetik seslerle uygulamanın konuşma tanıyıcısına söyler; böylece sesli komutlar kimse konuşmadan test edilebilir."
+  },
+  "siri-phrasing-check.md": {
+   "name": "Siri ifadeleri",
+   "does": "Uygulamaya Siri için yerleştirilmiş “order my usual” gibi ifadelerin insanların söyledikleriyle eşleştiğini kontrol eder; Siri'nin bunları doğru yönlendirip yönlendirmediği için hâlâ telefon gerekir."
+  },
+  "golden-snapshot.md": {
+   "name": "Referans anlık görüntü",
+   "does": "Bir yeniden yazımdan önce uygulamanın tüm çıktısını kaydeder, ardından yeniden yazılmış sürümün tam olarak aynı çıktıyı ürettiğini kontrol eder."
+  },
+  "transcription-accuracy-scoring.md": {
+   "name": "Transkripsiyon doğruluğu",
+   "does": "Uygulamanın konuşmayı metne dönüştürme özelliğini, doğru transkriptleriyle birlikte gelen herkese açık kayıtlarda çalıştırır ve kaç karakteri yanlış yaptığını puanlar."
+  },
+  "translation-lint.md": {
+   "name": "Çeviri kontrolleri",
+   "does": "Her çevirinin adları, sayıları ve üzerinde anlaşılan terimleri koruduğunu ve ekrandaki hiçbir metnin çevrilmeden kalmadığını kontrol eder. Quake 3 için de kullanılır."
+  },
+  "real-data-fixtures.md": {
+   "name": "Gerçek veriler",
+   "does": "Rota eşleştirmeyi uydurma sürüşler yerine gerçek kayıtlı sürüşlerden oluşan bir küme üzerinde test eder; bu yöntem, uydurma testlerin kaçırdığı hataları buldu."
+  },
+  "baseline-parity.md": {
+   "name": "Orijinal uygulamayla eşleşme",
+   "does": "iPad sürümümüzdeki veritabanını orijinal Windows uygulamasındakiyle tablo tablo ve satır satır karşılaştırır."
+  },
+  "document-value-verification.md": {
+   "name": "Alıntılanan değerleri kontrol etme",
+   "does": "Claude bir belgeden bir tarih ya da rakam alıntılamadan önce, tam metnin gerçekten o belgede geçtiğini kontrol eder."
+  },
+  "reference-device-benchmarking.md": {
+   "name": "Sorunsuz çalışan bir cihazla karşılaştırma",
+   "does": "Sorunsuz çalıştığı bilinen bir düzenin (iPhone'un doğrudan kulaklıklarla konuşması) nasıl davrandığını kaydeder ve köprümüzün bir kaydını bununla karşılaştırır."
+  },
+  "bridge-probes-dashboard.md": {
+   "name": "Köprü sondaları ve pano",
+   "does": "Bisikletin Bluetooth ses köprüsü için küçük test programları ve sürüş sırasında ses arabelleklerini, sinyal gücünü ve bağlantıları gösteren canlı bir pano."
+  },
+  "bluetooth-packet-captures.md": {
+   "name": "Bluetooth yakalamaları",
+   "does": "Cihazların bildirdiklerini değil, gerçekte ne gönderdiklerini görmek için Bluetooth trafiğinin kendisini kaydeder."
+  },
+  "health-endpoint-checks.md": {
+   "name": "Sağlık kontrolleri",
+   "does": "Her web hizmetinin internetten yanıt verdiğini ve engellenmesi gereken yolun reddedildiğini kontrol eder."
+  },
+  "browser-driving.md": {
+   "name": "Tarayıcıyı yönetme",
+   "does": "Claude, bir sitenin çalıştığını ve doğru göründüğünü kontrol etmek için sayfaları bir tarayıcıda açar, formları doldurur ve sonucu okur."
+  },
+  "deploy-verification-breakpoint-sweep.md": {
+   "name": "Web sitesi yayın kontrolü",
+   "does": "Bir web sitesi güncellemesinden sonra her dosyanın sunucuya eksiksiz ulaştığını, ardından yerleşimi telefon, tablet ve masaüstü genişliklerinde kontrol eder."
+  },
+  "booking-dry-run.md": {
+   "name": "Rezervasyon provası",
+   "does": "Çevrimiçi bir rezervasyonu son adıma kadar götürür ve durur; böylece adımlar gerçek bir rezervasyon yapmadan test edilebilir."
+  },
+  "animation-self-check.md": {
+   "name": "Animasyon kontrolü",
+   "does": "Animasyonlu bir diyagramı oynarken ölçer ve parçaların hizalandığını ve üst üste binmediğini pikselin bir kesrine kadar kontrol eder."
+  }
+ }
+}
