@@ -63,7 +63,7 @@ Two more gaps sit behind that one. The simulator presents **one view**, so even 
    xcrun simctl io <udid> screenshot --type=png shot.png
    ```
    Check for real content before reading the image: a black capture is about 150 KB, a real one several MB, or check a histogram.
-7. **Capture each eye in the app.** Add a command that, on the frame each eye finishes, copies that eye's colour texture (or array slice, when amplified) to the CPU and writes `<tag>_L` / `<tag>_R` into the app's data directory. In the simulator, read the files from `get_app_container … data`. Then compare the eyes per region by the horizontal shift that best maps left onto right:
+7. **Capture each eye in the app.** The renderer must actually be drawing two eyes: if the app's stereo path is a latched engine switch, set it at launch and restart the renderer before loading content (for example `set <stereo switch> 1; vid_restart; <load map>; <wait>; <capture command>`), using `set`, never the archiving form. With it off, the capture command runs and writes nothing. Add a command that, on the frame each eye finishes, copies that eye's colour texture (or array slice, when amplified) to the CPU and writes `<tag>_L` / `<tag>_R` into the app's data directory. In the simulator, read the files from `get_app_container … data`. Then compare the eyes per region by the horizontal shift that best maps left onto right:
    - near geometry: large shift, in the right direction (near objects sit further left in the right eye);
    - far geometry and reflections: small shift;
    - screen-space HUD: zero shift, a depth conflict worth flagging;

@@ -199,7 +199,7 @@
       "file": "vision-pro-screenshots.md",
       "does": "Captures what the Vision Pro app shows, including each eye's view in 3D, in the simulator and on the headset.",
       "v26": "☑",
-      "v27": "☐",
+      "v27": "☑",
       "origin": "extended",
       "tech": "What a visionOS app actually shows, in the simulator and on the headset, including immersive and two-eye views"
      },
