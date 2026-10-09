@@ -13,9 +13,12 @@ guess looks plausible and none of them tests anything.
 Built for Throwdown. In Arabic only, the first screen pushed after launch opened with its large title
 collapsed into the bar. Five guessed fixes in a row did nothing: warming the title font, warming a separate
 navigation controller, the digit locale, the typesetting language, and the bar's appearance attributes. A
-probe found the cause in two runs. The bar gives a large title containing Arabic letters a 46.3 pt label
-instead of 42.7 pt, and keeps the tallest it has laid out. The Latin-only brand title on Home was the short
-one, so the first push from it was the first time the bar had to grow, and that left the pushed screen collapsed.
+probe found the cause in two runs. The bar gives some large titles a taller label (46.3 pt for Arabic, and
+also for Polish "Własny" and Vietnamese "Tuỳ chỉnh"; 42.7 pt for English; 40.7 pt for the brand name in
+Polish), and keeps the tallest it has laid out. So the first push between heights was the first time the bar
+had to grow, and that left the pushed screen collapsed, in Polish and Vietnamese as well as Arabic. The fix:
+one shared large-title modifier adds the invisible Arabic letter mark (U+061C) to every title in every
+language, so they all share the tall line.
 
 ## What it does
 
