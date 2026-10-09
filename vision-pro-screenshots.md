@@ -66,10 +66,10 @@ Two more gaps sit behind that one. The simulator presents **one view**, so even 
 7. **Capture each eye in the app.** The renderer must actually be drawing two eyes: if the app's stereo path is a latched engine switch, set it at launch and restart the renderer before loading content (for example `set <stereo switch> 1; vid_restart; <load map>; <wait>; <capture command>`), using `set`, never the archiving form. With it off, the capture command runs and writes nothing. Add a command that, on the frame each eye finishes, copies that eye's colour texture (or array slice, when amplified) to the CPU and writes `<tag>_L` / `<tag>_R` into the app's data directory. In the simulator, read the files from `get_app_container … data`. Then compare the eyes per region by the horizontal shift that best maps left onto right:
    - near geometry: large shift, in the right direction (near objects sit further left in the right eye);
    - far geometry and reflections: small shift;
-   - screen-space HUD: zero shift, a depth conflict worth flagging;
+   - HUD: a small shift if the app places it at a depth; zero shift means it is still screen-space, a depth conflict worth flagging;
    - a sign flip: swapped eyes.
 
-   In the project this was built for: about 84 px at near pillars, 10–14 px in a mirror's reflection, and 0 on the HUD, at 3840×2160 per eye. A debug flag that paints the depth sent to the compositor as grey (near white, far black, sky black) checks depth orientation the same way.
+   In the project this was built for: about 84 px at near pillars and 10–14 px in a mirror's reflection, at 3840×2160 per eye. The HUD measured 0 before it was given a depth; once it was, zero became the warning sign. A HUD region that overlaps a view weapon measures badly (the weapon dominates), so pick a HUD area clear of it. A debug flag that paints the depth sent to the compositor as grey (near white, far black, sky black) checks depth orientation the same way.
 8. **On a headset** (marked (*) above):
    ```bash
    xcrun devicectl device install app --device <device> <path to device .app>
@@ -101,4 +101,4 @@ Wearing the headset: depth and comfort, lens distortion, reprojection and judder
 
 ## Loading this into Claude
 
-> visionOS output is checked from captures, not from code. Launch into the space under test with `SIMCTL_CHILD_` flags. Drive state through the app's drive file, never synthetic input. Wait for the render marker in `simctl spawn … log stream`. Then bring another app forward and run `xcrun simctl io <udid> screenshot`, and check the PNG isn't black before reading it. A simulator screenshot shows one view only: for stereo, use the in-app per-eye capture and compare left/right disparity per region (HUD at zero shift is a finding, a sign flip means swapped eyes). On a headset, pull the same captures with `devicectl device copy from`. Comfort, tracking and anything seen through the lenses is reported as needing the human in the headset.
+> visionOS output is checked from captures, not from code. Launch into the space under test with `SIMCTL_CHILD_` flags. Drive state through the app's drive file, never synthetic input. Wait for the render marker in `simctl spawn … log stream`. Then bring another app forward and run `xcrun simctl io <udid> screenshot`, and check the PNG isn't black before reading it. A simulator screenshot shows one view only: for stereo, use the in-app per-eye capture and compare left/right disparity per region (a HUD at zero shift when it should sit at a depth is a finding, a sign flip means swapped eyes). On a headset, pull the same captures with `devicectl device copy from`. Comfort, tracking and anything seen through the lenses is reported as needing the human in the headset.
