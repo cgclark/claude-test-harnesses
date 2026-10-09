@@ -133,12 +133,11 @@ tools/screenshots.sh en,de,ar     # a subset while fixing
 - **Some strings escape the catalog.** `Text("a" + "b")` and string-producing `.formatted()` calls didn't
   follow the in-app language; keyed `String(localized: "key", defaultValue:)` isn't extracted. The sheet shows
   them as English in translated columns. A string-check script that fails on those forms stops them coming back.
-- **Arabic large titles are taller.** The navigation bar gives a large title containing Arabic letters a taller
-  line (46.3 pt against 42.7 pt) and keeps the tallest it has laid out. A Latin-only title such as a brand name
-  is shorter, so the first push from it opened collapsed, and so did the pop back. Hebrew, Devanagari and Thai
-  measured the same as Latin. The fix is one shared large-title modifier that adds the invisible Arabic letter
-  mark (U+061C) to a title with no Arabic letters when the app's language is in Arabic script. Found with
-  `uikit-layout-probe.md`.
+- **Large titles differ in height by language.** The navigation bar gives some large titles a taller line
+  (46.3 pt for Arabic, Polish "Własny" and Vietnamese "Tuỳ chỉnh"; 42.7 pt for English; 40.7 pt for the brand
+  name in Polish) and keeps the tallest it has laid out, so the first push between heights opened collapsed.
+  One shared large-title modifier adds the invisible Arabic letter mark (U+061C) to every title in every
+  language, so they all share the tall line. Found with `uikit-layout-probe.md`.
 - **Right-to-left needs more than the language.** Direction was set on the root view and on every window;
   sheets don't inherit the root's. Images, custom `Shape`/`Path` drawing and UIKit gesture translations don't
   mirror by themselves. `-NSForceRightToLeftWritingDirection YES` checks layout direction in any language.
