@@ -8,14 +8,14 @@
 
 Run while the Simulator is the frontmost app, `xcrun simctl io <udid> screenshot` returns a solid black image for immersive content, byte-identical every time. Claude concluded immersive views could not be captured. It shipped changes as "code-reasoned, unverified", guessed blind for hours, and asked the human to look.
 
-Two more gaps sit behind that one. The simulator presents **one view**, so even a good screenshot says nothing about the second eye: disparity, swapped eyes, and HUD depth conflicts are all invisible. And synthetic host input mostly does not reach a visionOS guest, so Claude could not get the app into the state worth capturing.
+Two more gaps sit behind that one. The simulator presents **one view**, so even a good screenshot shows only one eye, and Claude had no way to see the other. And synthetic host input mostly does not reach a visionOS guest, so Claude could not get the app into the state worth capturing.
 
 ## What it does
 
 1. Launch the app straight into the space under test with environment flags. Steer it with a command file the app polls, not with synthetic input.
 2. Wait for a log line proving the content has rendered.
 3. Bring another macOS app to the front, then `simctl io … screenshot`. Check the PNG is not black, then read it.
-4. For stereo, an in-app command writes each eye's finished frame to its own file. Compare the two images region by region.
+4. For both eyes, an in-app command writes each eye's finished frame to its own file. Check both files exist, aren't black, and differ from each other.
 5. On a headset, use the same in-app capture and pull the files with `devicectl`. Anything only seen through the lenses stays with the human.
 
 **What works where:**
@@ -63,13 +63,9 @@ Two more gaps sit behind that one. The simulator presents **one view**, so even 
    xcrun simctl io <udid> screenshot --type=png shot.png
    ```
    Check for real content before reading the image: a black capture is about 150 KB, a real one several MB, or check a histogram.
-7. **Capture each eye in the app.** The renderer must actually be drawing two eyes: if the app's stereo path is a latched engine switch, set it at launch and restart the renderer before loading content (for example `set <stereo switch> 1; vid_restart; <load map>; <wait>; <capture command>`), using `set`, never the archiving form. With it off, the capture command runs and writes nothing. Add a command that, on the frame each eye finishes, copies that eye's colour texture (or array slice, when amplified) to the CPU and writes `<tag>_L` / `<tag>_R` into the app's data directory. In the simulator, read the files from `get_app_container … data`. Then compare the eyes per region by the horizontal shift that best maps left onto right:
-   - near geometry: large shift, in the right direction (near objects sit further left in the right eye);
-   - far geometry and reflections: small shift;
-   - HUD: a small shift if the app places it at a depth; zero shift means it is still screen-space, a depth conflict worth flagging;
-   - a sign flip: swapped eyes.
+7. **Capture each eye in the app.** Add a command that, on the frame each eye finishes, copies that eye's colour texture (or array slice, when amplified) to the CPU and writes `<tag>_L` / `<tag>_R` into the app's data directory. In the simulator, read the files from `get_app_container … data`. The renderer must actually be drawing two eyes: if the app's stereo path is a latched engine switch, set it at launch and restart the renderer before loading content (for example `set <stereo switch> 1; vid_restart; <load map>; <wait>; <capture command>`), using `set`, never the archiving form. With it off, the capture command runs and writes nothing.
 
-   In the project this was built for: about 84 px at near pillars and 10–14 px in a mirror's reflection, at 3840×2160 per eye. The HUD measured 0 before it was given a depth; once it was, zero became the warning sign. A HUD region that overlaps a view weapon measures badly (the weapon dominates), so pick a HUD area clear of it. A debug flag that paints the depth sent to the compositor as grey (near white, far black, sky black) checks depth orientation the same way.
+   Then check the pair is real: both files present and the expected size, neither black, and the two images not identical (a quick mean pixel difference between left and right is enough; identical files mean the same eye was written twice).
 8. **On a headset** (marked (*) above):
    ```bash
    xcrun devicectl device install app --device <device> <path to device .app>
@@ -101,4 +97,4 @@ Wearing the headset: depth and comfort, lens distortion, reprojection and judder
 
 ## Loading this into Claude
 
-> visionOS output is checked from captures, not from code. Launch into the space under test with `SIMCTL_CHILD_` flags. Drive state through the app's drive file, never synthetic input. Wait for the render marker in `simctl spawn … log stream`. Then bring another app forward and run `xcrun simctl io <udid> screenshot`, and check the PNG isn't black before reading it. A simulator screenshot shows one view only: for stereo, use the in-app per-eye capture and compare left/right disparity per region (a HUD at zero shift when it should sit at a depth is a finding, a sign flip means swapped eyes). On a headset, pull the same captures with `devicectl device copy from`. Comfort, tracking and anything seen through the lenses is reported as needing the human in the headset.
+> visionOS output is checked from captures, not from code. Launch into the space under test with `SIMCTL_CHILD_` flags. Drive state through the app's drive file, never synthetic input. Wait for the render marker in `simctl spawn … log stream`. Then bring another app forward and run `xcrun simctl io <udid> screenshot`, and check the PNG isn't black before reading it. A simulator screenshot shows one view only: for both eyes, use the in-app per-eye capture, with the app's stereo switch on, and check both files exist, aren't black and differ. On a headset, pull the same captures with `devicectl device copy from`. Comfort, tracking and anything seen through the lenses is reported as needing the human in the headset.
