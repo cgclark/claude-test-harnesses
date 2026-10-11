@@ -32,7 +32,7 @@ mirrored phone needs.
 **1. Build the tools once**, into a scratch folder, each from its own file:
 
 ```swift
-// tap.swift: tap <x> <y> [hold seconds]   screen points; hold ~1 s or more for a long-press
+// tap.swift: tap <x> <y> [hold seconds]   screen points; a 1.2 s hold is a long-press
 import CoreGraphics
 import Foundation
 let a = CommandLine.arguments
@@ -159,7 +159,8 @@ shows `devicectl device copy from`); it is stronger proof than a picture.
 
 - **System Events clicks don't reach the phone.** `click at` and AppleScript UI clicks hit the Mac window only. Post CGEvents at `.cghidEventTap`.
 - **The scroll wheel barely moves the phone.** Wheel events scroll a few points at most. Scroll with a drag, as a finger would.
-- **The events move the real pointer.** Each tap takes the Mac's mouse for a moment. Tell the human before a run of actions, and keep runs short.
+- **The events move the real pointer.** Each tap takes the Mac's mouse for a moment. Tell the human before a run of actions, and keep runs short. A click posted only to the Mirroring app's process, without moving the pointer and with the window behind, has no effect: the window must be in front and the pointer must really move.
+- **Drag-to-scroll doesn't work on every screen.** It scrolls most lists, but some views ignore it (a share sheet's row of apps didn't move). If a drag doesn't scroll, confirm with a capture and find another way to reach the item, such as search.
 - **Mirroring connects only while the phone is locked**, and drops as soon as someone uses the phone. Ask the human to lock it and leave it; if the capture shows a placeholder, wait for them to put it down and reconnect.
 - **An alarm or timer going off on the phone ends mirroring.** Reconnect, then re-run `winid`.
 - **Safari in Private mode asks for the Mac's password** in the mirroring window to unlock private tabs. Claude never types it; switch to a normal tab, or ask the human.
