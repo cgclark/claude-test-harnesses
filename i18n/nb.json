@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Animasjonssjekk",
    "does": "Måler et animert diagram mens det spilles av, og sjekker at delene står på linje og ikke overlapper, ned til en brøkdel av en piksel."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Styring via iPhone-speiling",
+   "does": "Claude trykker, ruller, skriver på og tar skjermbilder av din ekte iPhone gjennom vinduet for iPhone-speiling på Macen, og fotograferer bare det vinduet, slik at den kan gjøre trinn på selve telefonen i stedet for å be deg om det."
   }
  }
 }

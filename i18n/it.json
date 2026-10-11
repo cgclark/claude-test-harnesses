@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Controllo dell'animazione",
    "does": "Misura un diagramma animato mentre viene riprodotto, verificando con precisione di una frazione di pixel che i pezzi siano allineati e non si sovrappongano."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Controllo con Duplica iPhone",
+   "does": "Claude tocca, scorre, digita e fa screenshot del tuo vero iPhone tramite la finestra di Duplica iPhone sul Mac, fotografando solo quella finestra, così può svolgere i passaggi direttamente sul telefono invece di chiederli a te."
   }
  }
 }

@@ -157,6 +157,21 @@
       "tech": "A Python toolkit's behaviour with one check helper and an exit-code gate"
      }
     ]
+   },
+   {
+    "app": "Circus",
+    "icon": "circus",
+    "rows": [
+     {
+      "name": "iPhone Mirroring driving",
+      "file": "iphone-mirroring-driving.md",
+      "does": "Claude taps, scrolls, types on and screenshots your real iPhone through the iPhone Mirroring window on the Mac, capturing only that window, so it can do steps on the phone itself instead of asking you to.",
+      "tech": "CGEvent tap / long-press / drag / type tools at the HID tap, screencapture -o -l of the Mirroring window ID, devicectl app launch, pixel-to-point mapping",
+      "v26": "☐",
+      "v27": "☑",
+      "origin": "built"
+     }
+    ]
    }
   ]
  },

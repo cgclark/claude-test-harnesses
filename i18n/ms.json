@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Semakan animasi",
    "does": "Mengukur rajah animasi semasa ia dimainkan, menyemak bahawa bahagiannya sejajar dan tidak bertindih, hingga ketepatan pecahan piksel."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Kawalan melalui Pencerminan iPhone",
+   "does": "Claude mengetik, menatal, menaip dan mengambil tangkapan skrin iPhone sebenar anda melalui tetingkap Pencerminan iPhone pada Mac, dengan mengambil gambar tetingkap itu sahaja, supaya ia boleh melakukan langkah pada telefon itu sendiri dan bukannya meminta anda."
   }
  }
 }

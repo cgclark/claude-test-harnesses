@@ -34,8 +34,8 @@
   "Throwdown": "Throwdown",
   "Frictionless Coffee": "Frictionless Coffee",
   "xwtool": "xwtool",
-  "Sign-language work": "Sign-language work",
   "Circus": "Circus",
+  "Sign-language work": "Sign-language work",
   "Transcription app": "Transcription app",
   "Enc0der": "Enc0der",
   "Dossier": "Dossier",
@@ -102,6 +102,10 @@
   "stdlib-test-suite.md": {
    "name": "Small test suite",
    "does": "A small, self-contained set of automatic checks for a Python tool, which runs anywhere without installing anything."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "iPhone Mirroring driving",
+   "does": "Claude taps, scrolls, types on and screenshots your real iPhone through the iPhone Mirroring window on the Mac, capturing only that window, so it can do steps on the phone itself instead of asking you to."
   },
   "game-console-driving.md": {
    "name": "Game console driving",

@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Pemeriksaan animasi",
    "does": "Mengukur diagram animasi selagi diputar, memeriksa bahwa bagian-bagiannya sejajar dan tidak bertumpuk, hingga ketelitian sepersekian piksel."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Kendali lewat Pencerminan iPhone",
+   "does": "Claude mengetuk, menggulir, mengetik, dan mengambil tangkapan layar iPhone asli Anda melalui jendela Pencerminan iPhone di Mac, dengan memotret jendela itu saja, sehingga bisa menjalankan langkah di ponsel itu sendiri tanpa meminta Anda."
   }
  }
 }

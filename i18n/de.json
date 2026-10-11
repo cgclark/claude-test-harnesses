@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Animationsprüfung",
    "does": "Vermisst ein animiertes Diagramm, während es abläuft, und prüft auf Bruchteile eines Pixels genau, dass Teile bündig sind und sich nicht überlappen."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Steuerung per iPhone-Synchronisierung",
+   "does": "Claude tippt, scrollt und schreibt auf Ihrem echten iPhone und erstellt Screenshots davon über das Fenster „iPhone-Synchronisierung“ auf dem Mac. Es fotografiert nur dieses Fenster und kann so Schritte selbst auf dem Telefon erledigen, statt Sie darum zu bitten."
   }
  }
 }

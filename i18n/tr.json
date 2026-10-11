@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Animasyon kontrolü",
    "does": "Animasyonlu bir diyagramı oynarken ölçer ve parçaların hizalandığını ve üst üste binmediğini pikselin bir kesrine kadar kontrol eder."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "iPhone Yansıtma ile kontrol",
+   "does": "Claude, Mac'teki iPhone Yansıtma penceresi üzerinden gerçek iPhone'unuza dokunur, kaydırır, yazar ve ekran görüntülerini alır; yalnızca o pencerenin fotoğrafını çeker. Böylece sizden istemek yerine adımları telefonda kendisi yapabilir."
   }
  }
 }

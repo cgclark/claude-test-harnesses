@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Animaation tarkistus",
    "does": "Mittaa animoitua kaaviota sen toistuessa ja tarkistaa, että osat ovat kohdallaan eivätkä mene päällekkäin, pikselin murto-osan tarkkuudella."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Ohjaus iPhone-peilauksella",
+   "does": "Claude napauttaa, vierittää, kirjoittaa ja ottaa kuvakaappauksia oikeasta iPhonestasi Macin iPhone-peilauksen ikkunan kautta ja kuvaa vain sen ikkunan, joten se voi tehdä vaiheet itse puhelimessa sen sijaan, että pyytäisi sinua tekemään ne."
   }
  }
 }

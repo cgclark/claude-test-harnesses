@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "动画检查",
    "does": "在动画图表播放时进行测量，检查各部分是否对齐、互不重叠，精度达到像素的几分之一。"
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "通过 iPhone镜像操控",
+   "does": "Claude 通过 Mac 上的“iPhone镜像”窗口，在你的真实 iPhone 上轻点、滚动、输入并截屏，只拍下这个窗口，因此能自己在手机上完成步骤，而不必请你动手。"
   }
  }
 }

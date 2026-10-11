@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Kiểm tra hoạt ảnh",
    "does": "Đo một sơ đồ động trong khi nó chạy, kiểm tra các phần thẳng hàng và không chồng lên nhau, chính xác đến một phần nhỏ của điểm ảnh."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Điều khiển qua Phản chiếu iPhone",
+   "does": "Claude chạm, cuộn, nhập và chụp ảnh màn hình iPhone thật của bạn qua cửa sổ Phản chiếu iPhone trên Mac, chỉ chụp riêng cửa sổ đó, nên có thể tự làm các bước trên điện thoại thay vì nhờ bạn."
   }
  }
 }

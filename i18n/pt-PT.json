@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Verificação de animação",
    "does": "Mede um diagrama animado enquanto é reproduzido, verificando que as peças se alinham e não se sobrepõem, com precisão de uma fração de píxel."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Controlo pela Replicação do iPhone",
+   "does": "O Claude toca, desloca, escreve e faz capturas de ecrã do seu iPhone real através da janela da Replicação do iPhone no Mac, fotografando apenas essa janela, para poder fazer os passos no próprio telemóvel em vez de lhe pedir."
   }
  }
 }

@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Verificação de animação",
    "does": "Mede um diagrama animado enquanto ele roda, verificando se as peças se alinham e não se sobrepõem, com precisão de fração de pixel."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Controle pelo Espelhamento do iPhone",
+   "does": "O Claude toca, rola, digita e faz capturas de tela do seu iPhone de verdade pela janela do Espelhamento do iPhone no Mac, fotografando só essa janela, para fazer os passos no próprio celular em vez de pedir a você."
   }
  }
 }

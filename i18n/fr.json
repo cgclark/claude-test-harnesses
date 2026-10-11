@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Contrôle d'animation",
    "does": "Mesure un diagramme animé pendant sa lecture et vérifie, à une fraction de pixel près, que les éléments s'alignent et ne se chevauchent pas."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Pilotage par Recopie de l'iPhone",
+   "does": "Claude touche, fait défiler, saisit du texte et prend des captures de votre vrai iPhone via la fenêtre Recopie de l'iPhone sur le Mac, en photographiant uniquement cette fenêtre, pour faire lui-même les étapes sur le téléphone au lieu de vous les demander."
   }
  }
 }

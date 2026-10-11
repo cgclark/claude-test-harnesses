@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Kontrola animacji",
    "does": "Mierzy animowany diagram w trakcie odtwarzania, sprawdzając z dokładnością do ułamka piksela, czy elementy są wyrównane i nie nachodzą na siebie."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Sterowanie przez Klonowanie iPhone’a",
+   "does": "Claude stuka, przewija, pisze i robi zrzuty ekranu na Twoim prawdziwym urządzeniu iPhone przez okno aplikacji Klonowanie iPhone’a na Macu, fotografując tylko to okno, więc może sam wykonywać kroki na telefonie, zamiast prosić o to Ciebie."
   }
  }
 }

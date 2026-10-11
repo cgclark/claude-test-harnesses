@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Animationskontroll",
    "does": "Mäter ett animerat diagram medan det spelas upp och kontrollerar att delarna linjerar och inte överlappar, ner till en bråkdel av en pixel."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Styrning via iPhone-dubblering",
+   "does": "Claude trycker, scrollar, skriver på och tar skärmbilder av din riktiga iPhone via fönstret iPhone-dubblering på Macen och fotograferar bara det fönstret, så att den kan utföra steg på själva telefonen i stället för att be dig."
   }
  }
 }

@@ -218,6 +218,10 @@
   "animation-self-check.md": {
    "name": "Animatiecontrole",
    "does": "Meet een geanimeerd diagram terwijl het afspeelt en controleert tot op een fractie van een pixel of de onderdelen aansluiten en niet overlappen."
+  },
+  "iphone-mirroring-driving.md": {
+   "name": "Bediening via Synchrone iPhone-weergave",
+   "does": "Claude tikt, scrolt, typt op en maakt screenshots van je echte iPhone via het venster van Synchrone iPhone-weergave op de Mac, en fotografeert alleen dat venster, zodat het stappen op de telefoon zelf kan doen in plaats van het jou te vragen."
   }
  }
 }
