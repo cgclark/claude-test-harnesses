@@ -107,6 +107,10 @@
    "name": "iPhone Mirroring driving",
    "does": "Claude taps, scrolls, types on and screenshots your real iPhone through the iPhone Mirroring window on the Mac, capturing only that window, so it can do steps on the phone itself instead of asking you to."
   },
+  "in-app-strategy-probe.md": {
+   "name": "In-app strategy probe",
+   "does": "When a test needs something only you can do, like pressing your headphones, the app tries several fixes one after another from that single press and notes which one worked, so you only do it once instead of once per guess."
+  },
   "game-console-driving.md": {
    "name": "Game console driving",
    "does": "Sends commands to the game's built-in console from a script and reads its log afterwards, instead of typing into the game window."
@@ -162,6 +166,10 @@
   "device-audio-replay.md": {
    "name": "Audio replay on a device",
    "does": "The Mac turns each test conversation into an audio file and the phone app listens to it instead of the microphone, so voice features can be tested on the real phone without anyone talking."
+  },
+  "audio-route-logging.md": {
+   "name": "Audio route logging",
+   "does": "The app writes down where its sound is going at every step, so Claude can tell whether you heard it in your headphones or somewhere else without hearing it itself."
   },
   "siri-phrasing-check.md": {
    "name": "Siri phrasing",

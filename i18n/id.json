@@ -159,6 +159,10 @@
    "name": "Pemutaran ulang audio di perangkat",
    "does": "Mac mengubah setiap percakapan uji menjadi file audio, lalu aplikasi di ponsel mendengarkannya sebagai ganti mikrofon, sehingga fitur suara bisa diuji di ponsel sungguhan tanpa ada yang berbicara."
   },
+  "audio-route-logging.md": {
+   "name": "Pencatatan rute audio",
+   "does": "Aplikasi mencatat di setiap langkah ke mana suaranya pergi, sehingga Claude bisa tahu apakah Anda mendengarnya di headphone Anda atau di tempat lain tanpa mendengarnya sendiri."
+  },
   "siri-phrasing-check.md": {
    "name": "Frasa Siri",
    "does": "Memeriksa bahwa frasa yang tertanam di aplikasi untuk Siri, seperti \"order my usual\", sesuai dengan yang diucapkan orang; apakah Siri meneruskannya dengan benar masih memerlukan ponsel."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "Kendali lewat Pencerminan iPhone",
    "does": "Claude mengetuk, menggulir, mengetik, dan mengambil tangkapan layar iPhone asli Anda melalui jendela Pencerminan iPhone di Mac, dengan memotret jendela itu saja, sehingga bisa menjalankan langkah di ponsel itu sendiri tanpa meminta Anda."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Uji strategi di dalam aplikasi",
+   "does": "Saat sebuah uji membutuhkan sesuatu yang hanya bisa Anda lakukan, seperti menekan headphone Anda, aplikasi mencoba beberapa perbaikan satu per satu dari satu tekanan itu dan mencatat mana yang berhasil, sehingga Anda cukup melakukannya sekali, bukan sekali untuk setiap tebakan."
   }
  }
 }

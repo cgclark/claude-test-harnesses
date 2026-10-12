@@ -159,6 +159,10 @@
    "name": "Lecture audio sur un appareil",
    "does": "Le Mac transforme chaque conversation de test en fichier audio, que l'app du téléphone écoute à la place du micro, pour tester les fonctions vocales sur le vrai téléphone sans que personne ne parle."
   },
+  "audio-route-logging.md": {
+   "name": "Journal du trajet audio",
+   "does": "L'app note à chaque étape vers où elle envoie le son, pour que Claude puisse savoir si vous l'avez entendu dans vos écouteurs ou ailleurs, sans l'entendre lui-même."
+  },
   "siri-phrasing-check.md": {
    "name": "Formulations Siri",
    "does": "Vérifie que les phrases intégrées à l'app pour Siri, comme « order my usual », correspondent à ce que disent les gens ; savoir si Siri les achemine correctement demande toujours le téléphone."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "Pilotage par Recopie de l'iPhone",
    "does": "Claude touche, fait défiler, saisit du texte et prend des captures de votre vrai iPhone via la fenêtre Recopie de l'iPhone sur le Mac, en photographiant uniquement cette fenêtre, pour faire lui-même les étapes sur le téléphone au lieu de vous les demander."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Sonde de stratégies dans l'app",
+   "does": "Quand un test demande une action que vous seul pouvez faire, comme appuyer sur vos écouteurs, l'app essaie plusieurs correctifs l'un après l'autre à partir de cette seule pression et note celui qui a marché, pour que vous ne le fassiez qu'une fois au lieu d'une fois par hypothèse."
   }
  }
 }

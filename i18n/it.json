@@ -159,6 +159,10 @@
    "name": "Riproduzione audio su un dispositivo",
    "does": "Il Mac trasforma ogni conversazione di prova in un file audio che l'app sul telefono ascolta al posto del microfono, così le funzioni vocali si possono testare sul telefono vero senza che nessuno parli."
   },
+  "audio-route-logging.md": {
+   "name": "Registro del percorso audio",
+   "does": "L'app annota a ogni passaggio dove va il suo audio, così Claude può capire se l'hai sentito nelle tue cuffie o altrove senza sentirlo da sé."
+  },
   "siri-phrasing-check.md": {
    "name": "Frasi per Siri",
    "does": "Verifica che le frasi integrate nell'app per Siri, come «order my usual», corrispondano a ciò che dice la gente; se Siri le instrada correttamente richiede ancora il telefono."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "Controllo con Duplica iPhone",
    "does": "Claude tocca, scorre, digita e fa screenshot del tuo vero iPhone tramite la finestra di Duplica iPhone sul Mac, fotografando solo quella finestra, così può svolgere i passaggi direttamente sul telefono invece di chiederli a te."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Sonda di strategie nell'app",
+   "does": "Quando un test richiede qualcosa che solo tu puoi fare, come premere le cuffie, l'app tenta più soluzioni una dopo l'altra da quella sola pressione e annota quale ha funzionato, così lo fai una volta sola invece di una per ogni tentativo."
   }
  }
 }

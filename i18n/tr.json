@@ -159,6 +159,10 @@
    "name": "Cihazda ses oynatma",
    "does": "Mac, her test konuşmasını bir ses dosyasına dönüştürür ve telefondaki uygulama mikrofon yerine onu dinler; böylece sesli özellikler kimse konuşmadan gerçek telefonda test edilebilir."
   },
+  "audio-route-logging.md": {
+   "name": "Ses yolu günlüğü",
+   "does": "Uygulama sesinin her adımda nereye gittiğini kaydeder; böylece Claude, sesi kendisi duymadan, sizin onu kulaklığınızda mı yoksa başka bir yerde mi duyduğunuzu anlayabilir."
+  },
   "siri-phrasing-check.md": {
    "name": "Siri ifadeleri",
    "does": "Uygulamaya Siri için yerleştirilmiş “order my usual” gibi ifadelerin insanların söyledikleriyle eşleştiğini kontrol eder; Siri'nin bunları doğru yönlendirip yönlendirmediği için hâlâ telefon gerekir."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "iPhone Yansıtma ile kontrol",
    "does": "Claude, Mac'teki iPhone Yansıtma penceresi üzerinden gerçek iPhone'unuza dokunur, kaydırır, yazar ve ekran görüntülerini alır; yalnızca o pencerenin fotoğrafını çeker. Böylece sizden istemek yerine adımları telefonda kendisi yapabilir."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Uygulama içi strateji denemesi",
+   "does": "Bir test, kulaklığınıza basmak gibi yalnızca sizin yapabileceğiniz bir şey gerektirdiğinde, uygulama o tek basıştan art arda birkaç çözüm dener ve hangisinin işe yaradığını not eder; böylece bunu her tahmin için bir kez değil, yalnızca bir kez yaparsınız."
   }
  }
 }

@@ -123,6 +123,23 @@ xcrun xcresulttool export attachments --path <out>/siri.xcresult --output-path <
 
 Read the screenshots. Do not report App Shortcut routing from this test; see Traps.
 
+**6. Hit rate per phrase from the app's log, without hearing Siri.** When a person says a phrase to the
+phone (for example after a headphone press, which only a human can make), the app's log can say whether
+Siri ran the shortcut. Make each App Intent in the shortcut log one line when it runs, and make the app
+log when its audio session is interrupted:
+
+```swift
+EventLog.write("shortcut: <Intent name> → \(result == nil ? "none ready" : "ok")")   // in perform()
+EventLog.write("interrupted (…)")                                                   // in the interruption handler
+```
+
+Pull the log after a run (`xcrun devicectl device copy from --domain-type appDataContainer …`) and count
+per press: an `interrupted` followed by `shortcut: … → ok` is a hit (Siri took the audio and ran the
+shortcut); an `interrupted` with no `shortcut:` line before the next press is a miss (Siri heard
+something else). Hits over presses is the phrase's hit rate. The person reports only how many times
+they pressed and what they said; the counts come from the log. Device log stamps are often UTC: convert
+them to the person's local time before matching presses or reporting times.
+
 ## Traps
 
 - **Possessive primary phrase.** "`${person}`'s `<thing>`" was taken as a Messages search. Lead with an action form
@@ -138,6 +155,7 @@ Read the screenshots. Do not report App Shortcut routing from this test; see Tra
 - **Stale shortcut index.** After a rename or many cabled installs the device kept old phrases. Delete the app,
   restart the phone, reinstall, launch once. Adding a roster value needs no restart if the app calls
   `updateAppShortcutParameters()` after changing it.
+- **A renamed shortcut isn't matched reliably for a while.** Siri did worse with a shortcut's new name than with the old one it had learned from use. Don't judge a new name on the first few presses, and compare hit rates over the same number of presses.
 - **`XCUISiriService` is not a routing oracle.** It uses the legacy Siri path; custom phrases fail there even when
   they work by voice. A FAIL from it says nothing about the feature.
 - **Device UI-test prerequisites.** The phone must stay unlocked (Auto-Lock Never while testing), or
@@ -161,4 +179,6 @@ the app's own speech input, use [voice-bench](voice-bench.md).
 > phrases from `<App>.app/Metadata.appintents/extract.actionsdata` and must print PASSED. When the phone shows a
 > phrasing failure, add a rule or routing case for it first. Intent behaviour is covered by `-only-testing:<App>Tests`.
 > No automated test can confirm Siri routing: do not report a phrase as working from the `XCUISiriService` UI test.
-> Ask for a spoken check on the device, and list the phrases that changed.
+> Ask for a spoken check on the device, and list the phrases that changed. For the spoken check, read the
+> hit rate from the app's log (an `interrupted` plus `shortcut: … → ok` per press is a hit), not from
+> what the person heard.

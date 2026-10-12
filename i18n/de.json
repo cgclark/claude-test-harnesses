@@ -159,6 +159,10 @@
    "name": "Audiowiedergabe auf einem Gerät",
    "does": "Der Mac macht aus jedem Testgespräch eine Audiodatei, und die App auf dem Telefon hört statt des Mikrofons diese Datei, damit Sprachfunktionen auf dem echten Telefon getestet werden können, ohne dass jemand spricht."
   },
+  "audio-route-logging.md": {
+   "name": "Protokoll des Audiowegs",
+   "does": "Die App schreibt bei jedem Schritt auf, wohin ihr Ton geht, damit Claude erkennen kann, ob Sie ihn in Ihren Kopfhörern oder woanders gehört haben, ohne ihn selbst zu hören."
+  },
   "siri-phrasing-check.md": {
    "name": "Siri-Formulierungen",
    "does": "Prüft, dass die in die App eingebauten Sätze für Siri, etwa „order my usual“, dem entsprechen, was Menschen sagen; ob Siri sie richtig weiterleitet, braucht weiterhin das Telefon."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "Steuerung per iPhone-Synchronisierung",
    "does": "Claude tippt, scrollt und schreibt auf Ihrem echten iPhone und erstellt Screenshots davon über das Fenster „iPhone-Synchronisierung“ auf dem Mac. Es fotografiert nur dieses Fenster und kann so Schritte selbst auf dem Telefon erledigen, statt Sie darum zu bitten."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Strategietest in der App",
+   "does": "Wenn ein Test etwas braucht, das nur Sie tun können, etwa auf Ihre Kopfhörer drücken, probiert die App mit diesem einen Druck mehrere Lösungen nacheinander aus und notiert, welche funktioniert hat, sodass Sie es nur einmal tun müssen statt einmal pro Vermutung."
   }
  }
 }

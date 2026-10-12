@@ -159,6 +159,10 @@
    "name": "Äänen toisto laitteella",
    "does": "Mac muuntaa jokaisen testikeskustelun äänitiedostoksi, ja puhelimen sovellus kuuntelee sitä mikrofonin sijaan, joten äänitoimintoja voi testata oikealla puhelimella ilman, että kenenkään tarvitsee puhua."
   },
+  "audio-route-logging.md": {
+   "name": "Äänireitin lokitus",
+   "does": "Sovellus kirjaa joka vaiheessa, minne sen ääni menee, joten Claude voi päätellä, kuulitko sen kuulokkeistasi vai jostain muualta, kuulematta sitä itse."
+  },
   "siri-phrasing-check.md": {
    "name": "Siri-lauseet",
    "does": "Tarkistaa, että sovellukseen Siriä varten rakennetut lauseet, kuten \"order my usual\", vastaavat sitä, mitä ihmiset sanovat; se, ohjaako Siri ne oikein, vaatii yhä puhelimen."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "Ohjaus iPhone-peilauksella",
    "does": "Claude napauttaa, vierittää, kirjoittaa ja ottaa kuvakaappauksia oikeasta iPhonestasi Macin iPhone-peilauksen ikkunan kautta ja kuvaa vain sen ikkunan, joten se voi tehdä vaiheet itse puhelimessa sen sijaan, että pyytäisi sinua tekemään ne."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Strategiakoe sovelluksessa",
+   "does": "Kun testi vaatii jotain, minkä vain sinä voit tehdä, kuten kuulokkeiden painamisen, sovellus kokeilee siitä yhdestä painalluksesta useita korjauksia peräkkäin ja kirjaa, mikä toimi, joten teet sen vain kerran etkä kerran jokaista arvausta kohden."
   }
  }
 }

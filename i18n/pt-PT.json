@@ -159,6 +159,10 @@
    "name": "Reprodução de áudio num dispositivo",
    "does": "O Mac transforma cada conversa de teste num ficheiro de áudio, que a aplicação do telemóvel ouve em vez do microfone, para que as funcionalidades de voz possam ser testadas no telemóvel real sem ninguém falar."
   },
+  "audio-route-logging.md": {
+   "name": "Registo da rota de áudio",
+   "does": "A aplicação regista a cada passo para onde vai o som, para que o Claude saiba se chegou aos seus auscultadores ou a outro lado, sem o ouvir ele próprio."
+  },
   "siri-phrasing-check.md": {
    "name": "Frases para a Siri",
    "does": "Verifica se as frases integradas na aplicação para a Siri, como «order my usual», correspondem ao que as pessoas dizem; saber se a Siri as encaminha corretamente ainda exige o telemóvel."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "Controlo pela Replicação do iPhone",
    "does": "O Claude toca, desloca, escreve e faz capturas de ecrã do seu iPhone real através da janela da Replicação do iPhone no Mac, fotografando apenas essa janela, para poder fazer os passos no próprio telemóvel em vez de lhe pedir."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Sonda de estratégias na aplicação",
+   "does": "Quando um teste precisa de algo que só pode ser feito por si, como carregar nos auscultadores, a aplicação tenta várias correções seguidas a partir desse único toque e regista qual resultou, para que só tenha de o fazer uma vez em vez de uma vez por palpite."
   }
  }
 }

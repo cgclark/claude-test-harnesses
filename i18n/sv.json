@@ -159,6 +159,10 @@
    "name": "Ljuduppspelning på en enhet",
    "does": "Macen gör om varje testsamtal till en ljudfil som appen på telefonen lyssnar på i stället för mikrofonen, så att röstfunktioner kan testas på den riktiga telefonen utan att någon pratar."
   },
+  "audio-route-logging.md": {
+   "name": "Logg över ljudvägen",
+   "does": "Appen skriver ner vid varje steg vart ljudet tar vägen, så att Claude kan avgöra om du hörde det i hörlurarna eller någon annanstans utan att höra det själv."
+  },
   "siri-phrasing-check.md": {
    "name": "Siri-fraser",
    "does": "Kontrollerar att fraserna som är inbyggda i appen för Siri, som \"order my usual\", stämmer med vad folk säger; om Siri dirigerar dem rätt kräver fortfarande telefonen."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "Styrning via iPhone-dubblering",
    "does": "Claude trycker, scrollar, skriver på och tar skärmbilder av din riktiga iPhone via fönstret iPhone-dubblering på Macen och fotograferar bara det fönstret, så att den kan utföra steg på själva telefonen i stället för att be dig."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Strategitest i appen",
+   "does": "När ett test kräver något bara du kan göra, som att trycka på hörlurarna, provar appen flera lösningar efter varandra utifrån det enda trycket och noterar vilken som fungerade, så att du bara behöver göra det en gång i stället för en gång per gissning."
   }
  }
 }

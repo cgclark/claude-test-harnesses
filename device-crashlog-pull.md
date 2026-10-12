@@ -94,6 +94,7 @@ The first frame in your own module usually names the closure or view at fault.
 - **A green Simulator does not prove the app launches.** Any change to the launch path (root view wiring, new root `@StateObject`, `TabView` structure) needs a device launch before TestFlight.
 - **Patching off-main closures one at a time is whack-a-mole**: the crash moves to the next callback. Fix the isolation of the owning class.
 - **A dev install over the TestFlight build can muddy App Shortcut / Siri registration.** For those tests, delete and reinstall the TestFlight build.
+- **Device times are not always the human's time.** App logs are often stamped in UTC (Swift's ISO 8601 format defaults to it); check the offset on each stamp, match a crash to "it crashed just now" by converted time, and report times in the human's local time.
 - **Device locked or not trusted:** install and launch fail with pairing or "locked" errors. The human unlocks it.
 
 ## What it does not cover

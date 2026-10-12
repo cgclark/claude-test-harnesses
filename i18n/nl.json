@@ -159,6 +159,10 @@
    "name": "Audio afspelen op een apparaat",
    "does": "De Mac zet elk testgesprek om in een audiobestand en de app op de telefoon luistert daarnaar in plaats van naar de microfoon, zodat spraakfuncties op de echte telefoon getest kunnen worden zonder dat iemand praat."
   },
+  "audio-route-logging.md": {
+   "name": "Log van de audioroute",
+   "does": "De app noteert bij elke stap waar het geluid naartoe gaat, zodat Claude kan zien of je het in je koptelefoon of ergens anders hoorde, zonder het zelf te horen."
+  },
   "siri-phrasing-check.md": {
    "name": "Siri-formuleringen",
    "does": "Controleert of de zinnen die voor Siri in de app zijn ingebouwd, zoals \"order my usual\", overeenkomen met wat mensen zeggen; of Siri ze goed doorstuurt, kan nog alleen op de telefoon worden gecontroleerd."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "Bediening via Synchrone iPhone-weergave",
    "does": "Claude tikt, scrolt, typt op en maakt screenshots van je echte iPhone via het venster van Synchrone iPhone-weergave op de Mac, en fotografeert alleen dat venster, zodat het stappen op de telefoon zelf kan doen in plaats van het jou te vragen."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Strategietest in de app",
+   "does": "Als een test iets nodig heeft dat alleen jij kunt doen, zoals op je koptelefoon drukken, probeert de app met die ene druk meerdere oplossingen na elkaar en noteert welke werkte, zodat je het maar één keer hoeft te doen in plaats van één keer per gok."
   }
  }
 }

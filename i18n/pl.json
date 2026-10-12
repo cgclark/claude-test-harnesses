@@ -159,6 +159,10 @@
    "name": "Odtwarzanie dźwięku na urządzeniu",
    "does": "Mac zamienia każdą rozmowę testową w plik dźwiękowy, a aplikacja na telefonie słucha go zamiast mikrofonu, więc funkcje głosowe można testować na prawdziwym telefonie bez niczyjego mówienia."
   },
+  "audio-route-logging.md": {
+   "name": "Logowanie ścieżki dźwięku",
+   "does": "Aplikacja na każdym kroku zapisuje, dokąd trafia jej dźwięk, więc Claude może stwierdzić, czy był słyszalny w Twoich słuchawkach, czy gdzie indziej, choć sam go nie słyszy."
+  },
   "siri-phrasing-check.md": {
    "name": "Frazy dla Siri",
    "does": "Sprawdza, czy frazy wbudowane w aplikację dla Siri, np. „order my usual”, odpowiadają temu, co mówią ludzie; to, czy Siri poprawnie je kieruje, nadal wymaga telefonu."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "Sterowanie przez Klonowanie iPhone’a",
    "does": "Claude stuka, przewija, pisze i robi zrzuty ekranu na Twoim prawdziwym urządzeniu iPhone przez okno aplikacji Klonowanie iPhone’a na Macu, fotografując tylko to okno, więc może sam wykonywać kroki na telefonie, zamiast prosić o to Ciebie."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Próba strategii w aplikacji",
+   "does": "Gdy test wymaga czegoś, co możesz zrobić tylko Ty, np. naciśnięcia słuchawek, aplikacja po tym jednym naciśnięciu próbuje kolejno kilku poprawek i zapisuje, która zadziałała, więc robisz to raz, a nie raz na każdy domysł."
   }
  }
 }

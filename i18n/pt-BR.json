@@ -159,6 +159,10 @@
    "name": "Reprodução de áudio em um dispositivo",
    "does": "O Mac transforma cada conversa de teste em um arquivo de áudio, e o app do celular o ouve no lugar do microfone, para testar os recursos de voz no celular de verdade sem ninguém falar."
   },
+  "audio-route-logging.md": {
+   "name": "Registro da rota de áudio",
+   "does": "O app anota a cada passo para onde o som está indo, para que o Claude saiba se você ouviu nos seus fones de ouvido ou em outro lugar sem ele mesmo ouvir."
+  },
   "siri-phrasing-check.md": {
    "name": "Frases para a Siri",
    "does": "Verifica se as frases embutidas no app para a Siri, como “order my usual”, correspondem ao que as pessoas dizem; se a Siri as encaminha corretamente ainda precisa ser testado no celular."
@@ -222,6 +226,10 @@
   "iphone-mirroring-driving.md": {
    "name": "Controle pelo Espelhamento do iPhone",
    "does": "O Claude toca, rola, digita e faz capturas de tela do seu iPhone de verdade pela janela do Espelhamento do iPhone no Mac, fotografando só essa janela, para fazer os passos no próprio celular em vez de pedir a você."
+  },
+  "in-app-strategy-probe.md": {
+   "name": "Sonda de estratégias no app",
+   "does": "Quando um teste precisa de algo que só você pode fazer, como apertar seus fones de ouvido, o app tenta várias correções uma após a outra a partir desse único toque e anota qual funcionou, para você fazer isso uma vez só em vez de uma vez por palpite."
   }
  }
 }

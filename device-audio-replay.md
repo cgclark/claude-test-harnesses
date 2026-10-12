@@ -141,6 +141,7 @@ scenario and the audio that was played, so a failure can be heard as well as rea
 - **A locked phone can't launch the app.** Unlock it before the run; `devicectl` fails the launch otherwise.
 - **Location reads "unknown"** until location access has been allowed on that phone. Allow it once by hand, or don't check location in device runs.
 - **Mishearings should stay failing.** One synthetic voice gave "bread" → "bred" and "oat" → "old". Don't add recogniser hints or loosen the checks just to pass; report them separately from logic failures (as voice-bench does).
+- **Device log times are often UTC; the human is in local time.** An app log stamped with Swift's ISO 8601 format is in UTC by default. Convert before reporting a time, or before matching a log line to something the human says happened "at ten past three".
 - **No permission prompt in replay mode.** If the replay path still asks for the microphone, a fresh install waits on the prompt and the run times out with no done line.
 
 ## What it does not cover
