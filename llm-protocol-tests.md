@@ -85,7 +85,8 @@ person for nothing, so it can run after every change to the router, the gate or 
 **4. Read why, not only whether.** For each test, pull `log.txt` and read the lines after the test's start:
 
 - the route line says whether the model got the turn at all;
-- each `gate:` line says which rule blocked which attempt and why;
+- each `gate:` line says which rule blocked which attempt and why, and a `gate: <model> call failed: <error>` line
+  says the call itself failed (network, rate limit, no credit) — read both;
 - the count of model-usage lines says how many calls the turn cost, retries included;
 - the `replied` line is what was spoken.
 
@@ -93,7 +94,18 @@ A PASS where the gate blocked every attempt and the app spoke its fixed fallback
 not of the model's instructions. Report it as that.
 
 **5. Repeat before calling a result.** Run the set three times (or more for a test that flipped). Call a
-protocol fixed only when it passes every run, and say how many runs a result is from.
+protocol fixed only when it passes every run, and say how many runs a result is from. Script the repeats: a
+small runner launches `<APP>_RUN_TEST=protocol` N times, waits for each `test run done`, and prints a pass
+rate per test with its failure lines. The app's log has no dates, so the runner notes where the log ended
+before each launch and counts only the lines after that point, never by time.
+
+**6. Three outcomes, not two.** A test that never reached the model reports `SKIP: <model> unreachable
+(<reason>)`, not PASS or FAIL. List skips beside the pass rate but don't count them either way: an offline or
+out-of-credit run otherwise turns the app's offline line into a pass.
+
+**7. Start every case from a clean state.** Begin each test with the turn that clears whatever a previous test
+may have left open (for example a delete of any pending message). A case that leaves a half-finished request
+open changes how the next case's turns are read.
 
 ## Traps
 
@@ -104,6 +116,9 @@ protocol fixed only when it passes every run, and say how many runs a result is 
 - **Waiting a fixed time from the injected turn is too short.** The follow-up window restarts when the app finishes speaking. Wait from the end of the reply.
 - **A check written in the test drifts from the app's.** Call the app's own rule; a re-implemented regex tests itself.
 - **Every run costs model calls.** Count them from the usage lines, and keep the set small enough to run after each change.
+- **Running out of API credit looks like a model failure.** Check for the call-failed line first; a batch run with no credit is a SKIP run, not a set of failures. Topping up is a person's step.
+- **One test's leftovers poison the next.** A request left open (an empty message waiting for its text) made later tests treat their turns as dictation. Clear state at the start of every case.
+- **The phone must stay unlocked and awake for a batch.** A launch onto a locked phone fails (see [the in-app test harness](in-app-test-harness.md)), and a phone that sleeps mid-batch stops the run.
 
 ## What it does not cover
 
