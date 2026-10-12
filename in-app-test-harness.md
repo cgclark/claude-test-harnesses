@@ -177,6 +177,8 @@ Run a test that needs a body three times before calling it fixed, as with [the s
 - **A wait without a timeout never reports.** If the person never presses, the test must still end in a FAIL that says which step it was waiting for.
 - **The listener stays set after a test.** Clear it in `finish` on every path, or the next test sees lines from the last one.
 
+- **An open microphone contaminates injected turns.** With the mic live during a test, the app hears its own spoken verdict and room sound and treats them as turns. Drop mic input (and log it) while a test injects turns.
+
 ## What it does not cover
 
 The body steps themselves: someone still locks the phone, presses the stem and says the phrase. It doesn't

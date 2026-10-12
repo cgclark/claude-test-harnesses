@@ -88,16 +88,30 @@ person for nothing, so it can run after every change to the router, the gate or 
 - each `gate:` line says which rule blocked which attempt and why, and a `gate: <model> call failed: <error>` line
   says the call itself failed (network, rate limit, no credit) — read both;
 - the count of model-usage lines says how many calls the turn cost, retries included;
-- the `replied` line is what was spoken.
+- the `replied` line is what was spoken, but it may be cut short (one app's log line stops at 160 characters), so
+  judge the reply from the app's in-memory turn list, never from the log copy;
+- a gate block line that quotes the blocked sentence (`gate: attempt N blocked by <rule>: <reason>: "<sentence>"`)
+  tells a wrong rule from a wrong reply.
 
 A PASS where the gate blocked every attempt and the app spoke its fixed fallback line is a pass of the gate,
 not of the model's instructions. Report it as that.
 
-**5. Repeat before calling a result.** Run the set three times (or more for a test that flipped). Call a
-protocol fixed only when it passes every run, and say how many runs a result is from. Script the repeats: a
-small runner launches `<APP>_RUN_TEST=protocol` N times, waits for each `test run done`, and prints a pass
-rate per test with its failure lines. The app's log has no dates, so the runner notes where the log ended
-before each launch and counts only the lines after that point, never by time.
+**5. Repeat before calling a result.** Model results flip: one case went 2/5, then 6/6 with no change. Run 15
+or more rounds before calling a pass rate, and say how many rounds a result is from. Run them in one launch:
+`<APP>_RUN_TEST=protocol*N` (or `<case>*N`) runs N rounds and logs `test run done: K tests (round i of N)` after
+each. The phone only has to be unlocked to start; after that it can lock or switch apps and the rounds carry on.
+A small runner launches once, prints each round as it ends, then tallies a pass rate per test with its failure
+and SKIP lines. The app's log has no dates, so the runner notes where the log ended before the launch and counts
+only the lines after that point, never by time.
+
+**Run silent by default, voiced sometimes.** In silent mode the app logs each line it would say without speaking
+it, which skips the wait for speech (a round went from about 4.8 to 1.9 minutes). A voiced switch
+(`<APP>_VOICED=1`) speaks them, to exercise the speech queue. Run at both paces: the faster one brought turns
+inside the follow-up window and exposed a timing bug that voiced runs had passed 3 out of 3.
+
+**Typed turns only.** While protocol tests run, the app drops microphone input and logs each dropped turn. An
+open mic picks up the app's own voice and room sound, sends stray turns to the model, and makes timing tests fail
+at random.
 
 **6. Three outcomes, not two.** A test that never reached the model reports `SKIP: <model> unreachable
 (<reason>)`, not PASS or FAIL. List skips beside the pass rate but don't count them either way: an offline or
@@ -118,7 +132,10 @@ open changes how the next case's turns are read.
 - **Every run costs model calls.** Count them from the usage lines, and keep the set small enough to run after each change.
 - **Running out of API credit looks like a model failure.** Check for the call-failed line first; a batch run with no credit is a SKIP run, not a set of failures. Topping up is a person's step.
 - **One test's leftovers poison the next.** A request left open (an empty message waiting for its text) made later tests treat their turns as dictation. Clear state at the start of every case.
-- **The phone must stay unlocked and awake for a batch.** A launch onto a locked phone fails (see [the in-app test harness](in-app-test-harness.md)), and a phone that sleeps mid-batch stops the run.
+- **A launch onto a locked phone fails** (see [the in-app test harness](in-app-test-harness.md)). Unlock to start; with all rounds in one launch, the phone can lock afterwards. Locking cuts the audio for a few seconds, so expect an interruption line in the log.
+- **An open microphone contaminates injected-turn tests.** It hears the app's own "Test passed" and room sound, and turns them into extra turns. Drop mic input while tests run.
+- **A log line is not the whole reply.** Log lines can be truncated; a check on the truncated copy flagged a claim that wasn't there. Check the full reply.
+- **Timing bugs hide at one pace.** Run silent and voiced; a bug can pass every voiced run and fail the faster silent one.
 
 ## What it does not cover
 
