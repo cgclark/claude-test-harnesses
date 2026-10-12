@@ -111,6 +111,10 @@
    "name": "In-app strategy probe",
    "does": "When a test needs something only you can do, like pressing your headphones, the app tries several fixes one after another from that single press and notes which one worked, so you only do it once instead of once per guess."
   },
+  "in-app-test-harness.md": {
+   "name": "In-app test harness",
+   "does": "The app runs a test on the phone by itself and only asks you, through your earbuds, to do the parts that need a person, such as locking the phone or pressing the stem, then writes a pass or fail that Claude reads from the Mac."
+  },
   "game-console-driving.md": {
    "name": "Game console driving",
    "does": "Sends commands to the game's built-in console from a script and reads its log afterwards, instead of typing into the game window."
@@ -170,6 +174,10 @@
   "audio-route-logging.md": {
    "name": "Audio route logging",
    "does": "The app writes down where its sound is going at every step, so Claude can tell whether you heard it in your headphones or somewhere else without hearing it itself."
+  },
+  "llm-protocol-tests.md": {
+   "name": "LLM protocol tests",
+   "does": "The app has scripted conversations with the real AI model and checks its own log after each one, so Claude can confirm which requests the app handles itself and what the model is allowed to say, without anyone talking."
   },
   "siri-phrasing-check.md": {
    "name": "Siri phrasing",

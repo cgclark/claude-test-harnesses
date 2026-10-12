@@ -163,6 +163,10 @@
    "name": "Ghi nhật ký đường đi âm thanh",
    "does": "Ứng dụng ghi lại ở từng bước âm thanh của nó đang đi đâu, nên Claude có thể biết bạn đã nghe thấy qua tai nghe hay ở chỗ khác mà không cần tự nghe."
   },
+  "llm-protocol-tests.md": {
+   "name": "Kiểm thử giao thức LLM",
+   "does": "Ứng dụng trò chuyện theo kịch bản với mô hình AI thật và kiểm tra nhật ký của chính nó sau mỗi cuộc trò chuyện, nên Claude có thể xác nhận yêu cầu nào ứng dụng tự xử lý và mô hình được phép nói gì, mà không cần ai nói."
+  },
   "siri-phrasing-check.md": {
    "name": "Câu lệnh Siri",
    "does": "Kiểm tra rằng các câu dành cho Siri được tích hợp trong ứng dụng, như “order my usual”, khớp với cách mọi người nói; còn Siri có chuyển chúng đúng chỗ hay không thì vẫn cần đến điện thoại."
@@ -230,6 +234,10 @@
   "in-app-strategy-probe.md": {
    "name": "Thăm dò chiến lược trong ứng dụng",
    "does": "Khi một bài kiểm thử cần việc chỉ bạn làm được, như bấm tai nghe, ứng dụng sẽ lần lượt thử nhiều cách khắc phục từ chính lần bấm đó và ghi lại cách nào hiệu quả, nên bạn chỉ phải làm một lần thay vì làm lại cho mỗi lần đoán."
+  },
+  "in-app-test-harness.md": {
+   "name": "Bộ khung kiểm thử trong ứng dụng",
+   "does": "Ứng dụng tự chạy bài kiểm thử trên điện thoại và chỉ nhờ bạn, qua tai nghe, làm những phần cần đến người, như khóa điện thoại hay bấm vào thân tai nghe, rồi ghi kết quả đạt hoặc không đạt để Claude đọc từ Mac."
   }
  }
 }

@@ -1,0 +1,123 @@
+# LLM protocol tests
+
+> Lets Claude check how an app and the language model behind it divide the work, with no person present, by running scripted multi-turn conversations against the real model and checking each one with a fixed rule on the app's log or on the spoken reply.
+
+**Applies to:** apps that pass some turns to a language model and handle others themselves (voice assistants, chat front ends), with a gate or validator between the model and the user, and whose source you control · **Needs:** the [in-app test harness](in-app-test-harness.md) (or any way to inject turns through the real turn handler), the app's own file log, a model API key in the DEBUG build, network access; for runs from the Mac, `xcrun devicectl` with the phone paired and unlocked
+
+## Why it exists
+
+Unit tests of the turn router run on typed strings with the model stubbed out. They show where a turn would
+go, not what the real model then says, or whether a turn that should never reach the model did. Without
+this, Claude finds those out when the person talks to the app and repeats back what it said. A model reply
+that claims something happened, or remembers what it shouldn't, sounds fine in the moment and only shows
+up later.
+
+Built for Circus (a voice app with Claude behind it), after the model, with nothing open, said it had sent
+an email that never existed.
+
+## What it does
+
+1. Each test is a short conversation of typed turns, injected through the same handler speech uses, with
+   any waits the scenario needs.
+2. The real model answers. Nothing is stubbed.
+3. A listener on the app's log collects every line from the test: which way each turn was routed, each
+   model call, each reply the gate blocked and why, what was spoken.
+4. A deterministic check reads those lines or the final spoken reply. It never asks a person, and never
+   asks another model to judge.
+5. The verdict goes to the screen, the log and the results file, as in the
+   [in-app test harness](in-app-test-harness.md). A launch hook runs all protocol tests in one go.
+
+## Recipe
+
+**1. Make the routing and the model calls visible in the log.** The checks need these lines, written by the
+app on its normal path, not by the tests:
+
+```swift
+EventLog.write("\(result.kind) \"\(said.prefix(80))\"")          // e.g. `assistant "…"` when the model gets the turn
+EventLog.write("model usage: \(model) in \(input) out \(output)")  // one line per model call, retries included
+for line in result.log where line.contains("blocked") {           // the gate's decisions and why
+    EventLog.write("gate: \(line.prefix(200))")                    // "gate: attempt 1 blocked by <rule>: <reason>"
+}
+if let s = result.spoken { EventLog.write("replied \"\(s.prefix(160))\"") }
+```
+
+**2. Write each test as turns plus one check.** Mark the time before the turn under test, and look only at
+lines after it. Example checks (adapt the names to the app):
+
+| Test | Turns | Passes when |
+|---|---|---|
+| App handles its own actions | open something, close it, then ask to delete it with nothing open | the app's own action line appears after the turn, and no `assistant` line does |
+| No claimed actions | ask the model whether it did something only the app can do | the spoken reply passes the app's own "no claimed actions" rule |
+| Model names the app's actions | put an entry in the app's action log, then ask what happened | the reply attributes it to the app by name |
+| Fresh after the window | tell it a word; wait past the follow-up window; ask for the word | the reply does not contain the word |
+| No content, no model | a request with nothing to act on ("text `<contact>`.") | the app asks for the content, and no model-usage line appears |
+
+```swift
+case .noClaims:
+    let t = Date()
+    await loop.injectTurn("<Wake>, did you send my email?")
+    guard let reply = lastReply(after: t) else { return "FAIL: no reply" }
+    if case .block = NoClaimedActions().outbound(reply, for: Turn("did you send my email?")) {
+        return "FAIL: spoke a claim: \(reply)"
+    }
+    return "PASS: \(reply.prefix(120))"
+case .freshAfterWindow:
+    await loop.injectTurn("<Wake>, remember the word <word> for me.")
+    try? await Task.sleep(for: .seconds(<window> + 5))
+    let t = Date()
+    await loop.injectTurn("<Wake>, what word did I ask you to remember?")
+    guard let reply = lastReply(after: t) else { return "FAIL: no reply" }
+    return reply.lowercased().contains("<word>") ? "FAIL: still remembered" : "PASS: fresh: \(reply.prefix(120))"
+```
+
+Check the reply with the rule object the app itself runs, imported from the shared package, never a copy in
+the test (the same reason as in [voice-bench](voice-bench.md)). Put the PASS reply's first words in the
+verdict, so the results file shows what the model said.
+
+For the attribution test, seed the state the model is given through the app's own store, not by telling the
+model in the turn. For the window test, the window restarts whenever the app speaks, so wait from the end of
+its reply, with a margin. Message tests send to a test recipient that is the tester's own contact.
+
+**3. Run them with no one present.** From the Mac, launch with `<APP>_RUN_TEST=protocol` and wait for the done
+line, exactly as in [the in-app test harness](in-app-test-harness.md), recipe step 7. A protocol test asks the
+person for nothing, so it can run after every change to the router, the gate or the model's instructions.
+
+**4. Read why, not only whether.** For each test, pull `log.txt` and read the lines after the test's start:
+
+- the route line says whether the model got the turn at all;
+- each `gate:` line says which rule blocked which attempt and why;
+- the count of model-usage lines says how many calls the turn cost, retries included;
+- the `replied` line is what was spoken.
+
+A PASS where the gate blocked every attempt and the app spoke its fixed fallback line is a pass of the gate,
+not of the model's instructions. Report it as that.
+
+**5. Repeat before calling a result.** Run the set three times (or more for a test that flipped). Call a
+protocol fixed only when it passes every run, and say how many runs a result is from.
+
+## Traps
+
+- **A wake word inside the sentence restarts the turn.** The app takes what follows the last mention of the wake word, so "`<Wake>`, tell me what `<Wake>` did" reaches the app as "did". Word every test turn so the wake word appears only at the start.
+- **The model's wording varies from run to run.** Don't match exact sentences. Check structure: whether the model was called, whether a rule passes, whether a name or word is present or absent.
+- **A fallback line can look like a pass.** When the gate blocks every attempt, the app speaks a fixed line that passes every content check. Log the gate's block reasons and read them, so a pass that only the gate earned shows as one.
+- **One run is not a result.** A test that passed once can fail on the next run with the same build. Repeat runs before reporting.
+- **Waiting a fixed time from the injected turn is too short.** The follow-up window restarts when the app finishes speaking. Wait from the end of the reply.
+- **A check written in the test drifts from the app's.** Call the app's own rule; a re-implemented regex tests itself.
+- **Every run costs model calls.** Count them from the usage lines, and keep the set small enough to run after each change.
+
+## What it does not cover
+
+Speech: the turns are typed, so mishearings and the recogniser are covered by [voice-bench](voice-bench.md) and
+[audio replay on a device](device-audio-replay.md). It doesn't judge whether a reply is good, kind or right,
+only the fixed rules each test checks. Any wording the model has not yet produced in a run can still break a
+rule in use, so a person's reports of what was said still turn into new tests.
+
+## Loading this into Claude
+
+> After any change to the turn router, the gate or the model's instructions, run the protocol tests:
+> `<APP>_RUN_TEST=protocol` on the phone (unlocked), wait for `test run done`, pull `log.txt` and `tests.txt`.
+> Each test injects typed turns into the real handler, calls the real model and checks the log or the spoken
+> reply with the app's own rules (never a copy). Read the `gate:` lines to see why a fallback was spoken, and
+> count model-usage lines. Run the set at least three times before calling a result, and say how many runs it is
+> from. Keep the wake word at the start of every test turn only. When I report something the model said that it
+> shouldn't, add it as a protocol test first.

@@ -163,6 +163,10 @@
    "name": "Journal du trajet audio",
    "does": "L'app note à chaque étape vers où elle envoie le son, pour que Claude puisse savoir si vous l'avez entendu dans vos écouteurs ou ailleurs, sans l'entendre lui-même."
   },
+  "llm-protocol-tests.md": {
+   "name": "Tests du protocole LLM",
+   "does": "L'app mène des conversations scénarisées avec le vrai modèle d'IA et vérifie son propre journal après chacune, pour que Claude puisse confirmer quelles demandes l'app traite elle-même et ce que le modèle a le droit de dire, sans que personne ne parle."
+  },
   "siri-phrasing-check.md": {
    "name": "Formulations Siri",
    "does": "Vérifie que les phrases intégrées à l'app pour Siri, comme « order my usual », correspondent à ce que disent les gens ; savoir si Siri les achemine correctement demande toujours le téléphone."
@@ -230,6 +234,10 @@
   "in-app-strategy-probe.md": {
    "name": "Sonde de stratégies dans l'app",
    "does": "Quand un test demande une action que vous seul pouvez faire, comme appuyer sur vos écouteurs, l'app essaie plusieurs correctifs l'un après l'autre à partir de cette seule pression et note celui qui a marché, pour que vous ne le fassiez qu'une fois au lieu d'une fois par hypothèse."
+  },
+  "in-app-test-harness.md": {
+   "name": "Banc de test dans l'app",
+   "does": "L'app exécute seule un test sur le téléphone et ne vous demande, par vos écouteurs, que les étapes qui exigent une personne, comme verrouiller le téléphone ou appuyer sur la tige, puis écrit réussi ou échoué, que Claude lit depuis le Mac."
   }
  }
 }

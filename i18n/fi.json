@@ -163,6 +163,10 @@
    "name": "Äänireitin lokitus",
    "does": "Sovellus kirjaa joka vaiheessa, minne sen ääni menee, joten Claude voi päätellä, kuulitko sen kuulokkeistasi vai jostain muualta, kuulematta sitä itse."
   },
+  "llm-protocol-tests.md": {
+   "name": "LLM-protokollatestit",
+   "does": "Sovellus käy käsikirjoitettuja keskusteluja oikean tekoälymallin kanssa ja tarkistaa oman lokinsa jokaisen jälkeen, joten Claude voi varmistaa, mitkä pyynnöt sovellus hoitaa itse ja mitä malli saa sanoa, ilman että kenenkään tarvitsee puhua."
+  },
   "siri-phrasing-check.md": {
    "name": "Siri-lauseet",
    "does": "Tarkistaa, että sovellukseen Siriä varten rakennetut lauseet, kuten \"order my usual\", vastaavat sitä, mitä ihmiset sanovat; se, ohjaako Siri ne oikein, vaatii yhä puhelimen."
@@ -230,6 +234,10 @@
   "in-app-strategy-probe.md": {
    "name": "Strategiakoe sovelluksessa",
    "does": "Kun testi vaatii jotain, minkä vain sinä voit tehdä, kuten kuulokkeiden painamisen, sovellus kokeilee siitä yhdestä painalluksesta useita korjauksia peräkkäin ja kirjaa, mikä toimi, joten teet sen vain kerran etkä kerran jokaista arvausta kohden."
+  },
+  "in-app-test-harness.md": {
+   "name": "Testikehys sovelluksessa",
+   "does": "Sovellus ajaa testin puhelimessa itse ja pyytää sinua nappikuulokkeiden kautta tekemään vain ne osat, joihin tarvitaan ihmistä, kuten puhelimen lukitsemisen tai varren painamisen, ja kirjaa sitten tuloksen hyväksytty tai hylätty, jonka Claude lukee Macilta."
   }
  }
 }

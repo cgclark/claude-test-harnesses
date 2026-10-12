@@ -163,6 +163,10 @@
    "name": "Logowanie ścieżki dźwięku",
    "does": "Aplikacja na każdym kroku zapisuje, dokąd trafia jej dźwięk, więc Claude może stwierdzić, czy był słyszalny w Twoich słuchawkach, czy gdzie indziej, choć sam go nie słyszy."
   },
+  "llm-protocol-tests.md": {
+   "name": "Testy protokołu LLM",
+   "does": "Aplikacja prowadzi rozmowy według scenariusza z prawdziwym modelem AI i po każdej sprawdza swój log, więc Claude może potwierdzić, które prośby aplikacja obsługuje sama i co model może powiedzieć, bez niczyjego mówienia."
+  },
   "siri-phrasing-check.md": {
    "name": "Frazy dla Siri",
    "does": "Sprawdza, czy frazy wbudowane w aplikację dla Siri, np. „order my usual”, odpowiadają temu, co mówią ludzie; to, czy Siri poprawnie je kieruje, nadal wymaga telefonu."
@@ -230,6 +234,10 @@
   "in-app-strategy-probe.md": {
    "name": "Próba strategii w aplikacji",
    "does": "Gdy test wymaga czegoś, co możesz zrobić tylko Ty, np. naciśnięcia słuchawek, aplikacja po tym jednym naciśnięciu próbuje kolejno kilku poprawek i zapisuje, która zadziałała, więc robisz to raz, a nie raz na każdy domysł."
+  },
+  "in-app-test-harness.md": {
+   "name": "Środowisko testowe w aplikacji",
+   "does": "Aplikacja sama uruchamia test na telefonie i przez słuchawki prosi Cię tylko o te kroki, które wymagają człowieka, np. zablokowanie telefonu lub naciśnięcie nóżki słuchawki, a potem zapisuje wynik: zaliczony albo niezaliczony, który Claude odczytuje z Maca."
   }
  }
 }

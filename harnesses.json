@@ -179,6 +179,15 @@
       "v26": "☐",
       "v27": "☑",
       "origin": "built"
+     },
+     {
+      "name": "In-app test harness",
+      "file": "in-app-test-harness.md",
+      "does": "The app runs a test on the phone by itself and only asks you, through your earbuds, to do the parts that need a person, such as locking the phone or pressing the stem, then writes a pass or fail that Claude reads from the Mac.",
+      "tech": "DEBUG Tests screen: turns injected through the real turn handler, lock wait on isProtectedDataAvailable, a log-writer listener checks each stage, verdict to screen, voice and a results file; <APP>_RUN_TEST launch hook",
+      "v26": "☐",
+      "v27": "☑",
+      "origin": "built"
      }
     ]
    }
@@ -349,6 +358,15 @@
       "file": "audio-route-logging.md",
       "does": "The app writes down where its sound is going at every step, so Claude can tell whether you heard it in your headphones or somewhere else without hearing it itself.",
       "tech": "AVAudioSession currentRoute (in/out ports) and categoryOptions logged at start, interruptions, reconnects and before speaking; the human's report is only a cross-check",
+      "v26": "☐",
+      "v27": "☑",
+      "origin": "built"
+     },
+     {
+      "name": "LLM protocol tests",
+      "file": "llm-protocol-tests.md",
+      "does": "The app has scripted conversations with the real AI model and checks its own log after each one, so Claude can confirm which requests the app handles itself and what the model is allowed to say, without anyone talking.",
+      "tech": "Multi-turn typed conversations against the live model, each checked by a fixed rule on the app log (route, model-use and gate block lines) or on the spoken reply; batch run with <APP>_RUN_TEST=protocol",
       "v26": "☐",
       "v27": "☑",
       "origin": "built"

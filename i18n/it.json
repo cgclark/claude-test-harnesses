@@ -163,6 +163,10 @@
    "name": "Registro del percorso audio",
    "does": "L'app annota a ogni passaggio dove va il suo audio, così Claude può capire se l'hai sentito nelle tue cuffie o altrove senza sentirlo da sé."
   },
+  "llm-protocol-tests.md": {
+   "name": "Test del protocollo LLM",
+   "does": "L'app fa conversazioni preimpostate con il vero modello di IA e controlla il proprio log dopo ognuna, così Claude può confermare quali richieste l'app gestisce da sé e cosa il modello può dire, senza che nessuno parli."
+  },
   "siri-phrasing-check.md": {
    "name": "Frasi per Siri",
    "does": "Verifica che le frasi integrate nell'app per Siri, come «order my usual», corrispondano a ciò che dice la gente; se Siri le instrada correttamente richiede ancora il telefono."
@@ -230,6 +234,10 @@
   "in-app-strategy-probe.md": {
    "name": "Sonda di strategie nell'app",
    "does": "Quando un test richiede qualcosa che solo tu puoi fare, come premere le cuffie, l'app tenta più soluzioni una dopo l'altra da quella sola pressione e annota quale ha funzionato, così lo fai una volta sola invece di una per ogni tentativo."
+  },
+  "in-app-test-harness.md": {
+   "name": "Banco di prova nell'app",
+   "does": "L'app esegue da sola un test sul telefono e ti chiede, tramite gli auricolari, solo le parti che richiedono una persona, come bloccare il telefono o premere lo stelo, poi scrive superato o fallito, che Claude legge dal Mac."
   }
  }
 }

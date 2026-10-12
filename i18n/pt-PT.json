@@ -163,6 +163,10 @@
    "name": "Registo da rota de áudio",
    "does": "A aplicação regista a cada passo para onde vai o som, para que o Claude saiba se chegou aos seus auscultadores ou a outro lado, sem o ouvir ele próprio."
   },
+  "llm-protocol-tests.md": {
+   "name": "Testes de protocolo LLM",
+   "does": "A aplicação tem conversas guionizadas com o modelo de IA real e verifica o próprio registo depois de cada uma, para que o Claude confirme que pedidos a aplicação trata sozinha e o que o modelo pode dizer, sem ninguém falar."
+  },
   "siri-phrasing-check.md": {
    "name": "Frases para a Siri",
    "does": "Verifica se as frases integradas na aplicação para a Siri, como «order my usual», correspondem ao que as pessoas dizem; saber se a Siri as encaminha corretamente ainda exige o telemóvel."
@@ -230,6 +234,10 @@
   "in-app-strategy-probe.md": {
    "name": "Sonda de estratégias na aplicação",
    "does": "Quando um teste precisa de algo que só pode ser feito por si, como carregar nos auscultadores, a aplicação tenta várias correções seguidas a partir desse único toque e regista qual resultou, para que só tenha de o fazer uma vez em vez de uma vez por palpite."
+  },
+  "in-app-test-harness.md": {
+   "name": "Ambiente de teste na aplicação",
+   "does": "A aplicação executa sozinha um teste no telemóvel e só lhe pede, através dos seus auriculares, que faça as partes que precisam de uma pessoa, como bloquear o telemóvel ou carregar na haste, e depois escreve se passou ou falhou, para o Claude ler a partir do Mac."
   }
  }
 }

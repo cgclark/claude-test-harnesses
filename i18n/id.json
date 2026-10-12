@@ -163,6 +163,10 @@
    "name": "Pencatatan rute audio",
    "does": "Aplikasi mencatat di setiap langkah ke mana suaranya pergi, sehingga Claude bisa tahu apakah Anda mendengarnya di headphone Anda atau di tempat lain tanpa mendengarnya sendiri."
   },
+  "llm-protocol-tests.md": {
+   "name": "Uji protokol LLM",
+   "does": "Aplikasi melakukan percakapan berskrip dengan model AI sungguhan dan memeriksa lognya sendiri setelah setiap percakapan, sehingga Claude bisa memastikan permintaan mana yang ditangani aplikasi sendiri dan apa yang boleh dikatakan model, tanpa ada yang berbicara."
+  },
   "siri-phrasing-check.md": {
    "name": "Frasa Siri",
    "does": "Memeriksa bahwa frasa yang tertanam di aplikasi untuk Siri, seperti \"order my usual\", sesuai dengan yang diucapkan orang; apakah Siri meneruskannya dengan benar masih memerlukan ponsel."
@@ -230,6 +234,10 @@
   "in-app-strategy-probe.md": {
    "name": "Uji strategi di dalam aplikasi",
    "does": "Saat sebuah uji membutuhkan sesuatu yang hanya bisa Anda lakukan, seperti menekan headphone Anda, aplikasi mencoba beberapa perbaikan satu per satu dari satu tekanan itu dan mencatat mana yang berhasil, sehingga Anda cukup melakukannya sekali, bukan sekali untuk setiap tebakan."
+  },
+  "in-app-test-harness.md": {
+   "name": "Harness pengujian di dalam aplikasi",
+   "does": "Aplikasi menjalankan uji di ponsel dengan sendirinya dan hanya meminta Anda, lewat earbud Anda, melakukan bagian yang membutuhkan orang, seperti mengunci ponsel atau menekan batang earbud, lalu menulis lulus atau gagal yang dibaca Claude dari Mac."
   }
  }
 }

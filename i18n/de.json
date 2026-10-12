@@ -163,6 +163,10 @@
    "name": "Protokoll des Audiowegs",
    "does": "Die App schreibt bei jedem Schritt auf, wohin ihr Ton geht, damit Claude erkennen kann, ob Sie ihn in Ihren Kopfhörern oder woanders gehört haben, ohne ihn selbst zu hören."
   },
+  "llm-protocol-tests.md": {
+   "name": "LLM-Protokolltests",
+   "does": "Die App führt vorgegebene Gespräche mit dem echten KI-Modell und prüft nach jedem ihr eigenes Log, damit Claude bestätigen kann, welche Anfragen die App selbst erledigt und was das Modell sagen darf, ohne dass jemand spricht."
+  },
   "siri-phrasing-check.md": {
    "name": "Siri-Formulierungen",
    "does": "Prüft, dass die in die App eingebauten Sätze für Siri, etwa „order my usual“, dem entsprechen, was Menschen sagen; ob Siri sie richtig weiterleitet, braucht weiterhin das Telefon."
@@ -230,6 +234,10 @@
   "in-app-strategy-probe.md": {
    "name": "Strategietest in der App",
    "does": "Wenn ein Test etwas braucht, das nur Sie tun können, etwa auf Ihre Kopfhörer drücken, probiert die App mit diesem einen Druck mehrere Lösungen nacheinander aus und notiert, welche funktioniert hat, sodass Sie es nur einmal tun müssen statt einmal pro Vermutung."
+  },
+  "in-app-test-harness.md": {
+   "name": "Testumgebung in der App",
+   "does": "Die App führt selbst einen Test auf dem Telefon aus und bittet Sie über Ihre Ohrhörer nur um die Schritte, für die ein Mensch nötig ist, etwa das Telefon sperren oder auf den Stiel drücken, und schreibt dann bestanden oder nicht bestanden auf, was Claude vom Mac aus liest."
   }
  }
 }

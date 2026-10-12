@@ -163,6 +163,10 @@
    "name": "Logg över ljudvägen",
    "does": "Appen skriver ner vid varje steg vart ljudet tar vägen, så att Claude kan avgöra om du hörde det i hörlurarna eller någon annanstans utan att höra det själv."
   },
+  "llm-protocol-tests.md": {
+   "name": "LLM-protokolltester",
+   "does": "Appen för manusstyrda samtal med den riktiga AI-modellen och kontrollerar sin egen logg efter varje samtal, så att Claude kan bekräfta vilka förfrågningar appen hanterar själv och vad modellen får säga, utan att någon pratar."
+  },
   "siri-phrasing-check.md": {
    "name": "Siri-fraser",
    "does": "Kontrollerar att fraserna som är inbyggda i appen för Siri, som \"order my usual\", stämmer med vad folk säger; om Siri dirigerar dem rätt kräver fortfarande telefonen."
@@ -230,6 +234,10 @@
   "in-app-strategy-probe.md": {
    "name": "Strategitest i appen",
    "does": "När ett test kräver något bara du kan göra, som att trycka på hörlurarna, provar appen flera lösningar efter varandra utifrån det enda trycket och noterar vilken som fungerade, så att du bara behöver göra det en gång i stället för en gång per gissning."
+  },
+  "in-app-test-harness.md": {
+   "name": "Testrigg i appen",
+   "does": "Appen kör själv ett test på telefonen och ber dig bara, via hörlurarna, göra de delar som kräver en människa, som att låsa telefonen eller trycka på skaftet, och skriver sedan godkänt eller underkänt, som Claude läser från Macen."
   }
  }
 }
