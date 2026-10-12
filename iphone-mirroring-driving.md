@@ -157,8 +157,8 @@ The window can drift, even half off the screen. Put it somewhere fully visible f
 bounds:
 
 ```bash
-open -a "iPhone Mirroring"
-osascript -e 'tell application "System Events" to set position of window 1 of process "iPhone Mirroring" to {<x>, <y>}'
+osascript -e 'tell application "iPhone Mirroring" to activate'
+osascript -e 'tell application "System Events" to tell process "iPhone Mirroring" to set position of window 1 to {<x>, <y>}'
 ./winid "iPhone Mirroring"          # e.g. 4711 1200 180 336 744
 screencapture -x -o -l 4711 phone.png
 sips -g pixelWidth -g pixelHeight phone.png
@@ -184,7 +184,7 @@ actions: other apps (the Claude desktop app among them) take focus back between 
 posted while another app is frontmost land nowhere.
 
 ```bash
-open -a "iPhone Mirroring"                 # activate it before each batch
+osascript -e 'tell application "iPhone Mirroring" to activate'; sleep 0.5   # before each batch
 ./tap <screenX> <screenY>                  # tap
 ./tap <screenX> <screenY> 1.2              # long-press
 ./scrollpx <x> <y> -600                    # scroll: negative brings up what is further down
@@ -223,7 +223,7 @@ shows `devicectl device copy from`); it is stronger proof than a picture.
 
 - **System Events clicks don't reach the phone.** `click at` and AppleScript UI clicks hit the Mac window only. Post CGEvents at `.cghidEventTap`.
 - **Line-unit scroll-wheel events don't scroll the phone.** Plain wheel events (line units, no phase) moved nothing. Pixel-unit scroll events with a scroll phase (began, changed, ended), as a trackpad sends, do: use `scrollpx`. A drag, as a finger would make it, is the other way.
-- **Clicks land nowhere when another app is in front.** Other apps, the Claude desktop app among them, keep taking focus between batches. Activate iPhone Mirroring before every batch of clicks or keystrokes, and capture to check the first one took.
+- **Clicks land nowhere when another app is in front.** Other apps, the Claude desktop app among them, keep taking focus between batches. Activate iPhone Mirroring before every batch of clicks or keystrokes (`tell application "iPhone Mirroring" to activate`, then about 0.5 s before the first click). Check which app is in front with `osascript -e 'tell application "System Events" to get name of first process whose frontmost is true'`. For an app where `activate` doesn't stick while another app is in front (Shortcuts did this), use `tell application "System Events" to set frontmost of process "<App>" to true` before every keystroke. Then capture to check the first one took.
 - **The window moves.** It can end up somewhere else, even half off the screen, and coordinates computed from old bounds miss. Set its position with System Events (`set position of window 1`), then re-run `winid` before computing any click.
 - **Mirroring takes the phone's microphone and its audio session.** While it is connected the phone reports "iPhone microphone is not available from Mac", and connecting or disconnecting interrupts the app's audio session. Never run a mic or audio test through mirroring: quit it first. The flip side: quitting Mirroring is a reproducible audio interruption Claude can trigger on purpose, to exercise an app's interruption path. It only approximates a real interruption, since the app may get no "interruption ended" for it; check what the app logged.
 - **A plain drag doesn't reorder a list.** Reordering needs press-and-hold (about 0.8 s) and then a slow drag (`holddrag`). The reverse also bites: a long-press on a home-screen or Shortcuts tile can start moving it by accident; capture and press Done or tap empty space if it did.
