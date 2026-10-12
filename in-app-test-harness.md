@@ -170,7 +170,7 @@ Run a test that needs a body three times before calling it fixed, as with [the s
 
 ## Traps
 
-- **A launch from the Mac fails while the phone is locked.** `devicectl` returns "device was not, or could not be, unlocked". Unlock the phone, launch, and let the test ask for the lock itself.
+- **A launch from the Mac fails while the phone is locked.** `devicectl` returns "Unable to launch <bundle id> because the device was not, or could not be, unlocked." (`BSErrorCodeDescription = Locked`). Unlock the phone, launch, and let the test ask for the lock itself.
 - **Two lines spoken at once hung the app.** A turn injected while the app was still speaking overlapped two spoken lines, and the first never reported finishing. Inject only after the app has finished speaking (wait while its state is "speaking"), and queue speech one line at a time.
 - **With no earbuds, the app hears itself.** Its own voice from the loudspeaker reached the mic and was taken as a turn. Run spoken tests with earbuds connected; with the loudspeaker, a pause while speaking is not enough.
 - **Stage lines from before the test count as this test's.** Match lines only after the step's start time, and clear the collected lines at the start of each test.
